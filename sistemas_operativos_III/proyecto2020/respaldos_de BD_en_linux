@@ -1,0 +1,45 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RESPALDAR SOLO LA ESTRUCTURA DE LA BASE DE DATOS
+
+mysqldump -v --opt --no-data --default-character-set=utf8 -u USUARIO -p NOMBRE_DE_LA_BD > NOMBRE_DE_LA_BD.sql
+
+ejemplo:
+mysqldump -v --opt --no-data --default-character-set=utf8 -u root -p crudlitesystem > crudlitesystem.sql
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RESPALDAR TODA LA BASE DE DATOS
+
+mysqldump --opt --events --routines --triggers --default-character-set=utf8 -u USUARIO -p NOMBRE_DE_LA_BD | gzip -c > NOMBRE_DE_LA_BD.sql.gz
+
+ejemplo:
+mysqldump --opt --events --routines --triggers --default-character-set=utf8 -u root -p crudlitesystem > crudlitesystem.sql
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RESPALDO REMOTO USANDO TCP/IP
+
+mysqldump -v --opt -h DNS_O_IP_DEL_SERVIDOR -P 3306 --compress --events --routines --triggers --default-character-set=utf8 -u USUARIO -p NOMBRE_DE_LA_BD > NOMBRE_DE_LA_BD.sql
+
+mysqldump -v --opt -h localhost -P 3306 --compress --events --routines --triggers --default-character-set=utf8 -u root -p crudlitesystem > crudlitesystem.sql
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RESTAURAR DATOS DE UN ARCHIVO .SQL
+
+mysql -u USUARIO -P NOMBRE_DE_LA_BD < NOMBRE_DE_LA_BD.sql
+
+ejemplo:
+
+mysql -u root -P crudlitesystem < crudlitesystem.sql
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+REALIZAR CONSULTAS A LA BASE DE DATO DESDE SHELLSCRIPTING
+
+echo "LA CONSULTA QUE QUIERO REALIZAR" | mysql -u USUARIO -pCONTRASEÑA
+
+ejemplo:
+
+echo "use crudlitesystem; select * from usuario" | mysql -u root -proot

@@ -1,0 +1,57 @@
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\bin\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\bin\Debug\Logica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\bin\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\obj\Debug\Logica.vbproj.GenerateResource.Cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\obj\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\obj\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\obj\Debug\Logica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Logica\obj\Debug\Logica.vbprojResolveAssemblyReference.cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\bin\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\bin\Debug\Logica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\bin\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\obj\Debug\Logica.vbprojResolveAssemblyReference.cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\obj\Debug\Logica.vbproj.GenerateResource.Cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\obj\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\obj\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Logica\obj\Debug\Logica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\bin\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\bin\Debug\Logica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\bin\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.vbprojResolveAssemblyReference.cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.vbproj.GenerateResource.Cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.pdb
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\bin\Debug\Logica.dll
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\bin\Debug\Logica.pdb
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\bin\Debug\Logica.xml
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.vbprojResolveAssemblyReference.cache
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.vbproj.GenerateResource.Cache
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.vbproj.CoreCompileInputs.cache
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.dll
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.xml
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Logica\obj\Debug\Logica.pdb
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\bin\Debug\Logica.dll
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\bin\Debug\Logica.pdb
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\bin\Debug\Logica.xml
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.vbproj.CoreCompileInputs.cache
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.dll
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.xml
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\bin\Debug\Logica.dll
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\bin\Debug\Logica.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\bin\Debug\Logica.xml
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.Resources.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.vbproj.CoreCompileInputs.cache
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.dll
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.xml
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Logica\obj\Debug\Logica.pdb

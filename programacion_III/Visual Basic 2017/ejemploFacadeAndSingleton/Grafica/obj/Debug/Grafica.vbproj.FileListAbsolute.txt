@@ -1,0 +1,125 @@
+c:\users\15-p263ca\documents\visual studio 2015\Projects\Instituto\Grafica\bin\Debug\Grafica.exe.config
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.vbprojResolveAssemblyReference.cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.Resources.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.vbproj.GenerateResource.Cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\bin\Debug\Grafica.exe
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\bin\Debug\Grafica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\bin\Debug\Grafica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.exe
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.Principal.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.Creditos.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.AgregarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\bin\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\bin\Debug\Logica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\bin\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.ListarAlumnos.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.BuscarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.BorrarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\Instituto\Grafica\obj\Debug\Grafica.ModificarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\bin\Debug\Grafica.exe.config
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.exe
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\bin\Debug\Grafica.exe
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\bin\Debug\Grafica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\bin\Debug\Grafica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\bin\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\bin\Debug\Logica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\bin\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.vbprojResolveAssemblyReference.cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.AgregarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.BorrarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.BuscarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.Creditos.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.ListarAlumnos.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.ModificarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.Resources.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.Principal.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\Instituto\Grafica\obj\Debug\Grafica.vbproj.GenerateResource.Cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Grafica.exe.config
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Grafica.exe
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Grafica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Grafica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Logica.dll
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Logica.pdb
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Logica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.vbprojResolveAssemblyReference.cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.AgregarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.BorrarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.BuscarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.Creditos.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.ListarAlumnos.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.ModificarAlumno.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.Resources.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.Principal.resources
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.vbproj.GenerateResource.Cache
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.exe
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.xml
+C:\Users\15-P263ca\Documents\Visual Studio 2015\Projects\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.pdb
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Grafica.exe.config
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Grafica.exe
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Grafica.pdb
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Grafica.xml
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Logica.dll
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Logica.pdb
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\bin\Debug\Logica.xml
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.vbprojResolveAssemblyReference.cache
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.AgregarAlumno.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.BorrarAlumno.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.BuscarAlumno.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.Creditos.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.ListarAlumnos.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.ModificarAlumno.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.Resources.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.Principal.resources
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.vbproj.GenerateResource.Cache
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.vbproj.CoreCompileInputs.cache
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.exe
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.xml
+C:\Users\luise\Dropbox\Programacion\VisualBasic.NET\ejemplo_facade_and_singleton\Grafica\obj\Debug\Grafica.pdb
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\bin\Debug\Grafica.exe.config
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\bin\Debug\Grafica.exe
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\bin\Debug\Grafica.pdb
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\bin\Debug\Grafica.xml
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\bin\Debug\Logica.dll
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\bin\Debug\Logica.pdb
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\bin\Debug\Logica.xml
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.vbprojAssemblyReference.cache
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.AgregarAlumno.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.BorrarAlumno.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.BuscarAlumno.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.Creditos.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.ListarAlumnos.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.ModificarAlumno.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.Resources.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.Principal.resources
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.vbproj.GenerateResource.cache
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.vbproj.CoreCompileInputs.cache
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.vbproj.CopyComplete
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.exe
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.xml
+C:\Users\luise\Desktop\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.vbprojAssemblyReference.cache
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.AgregarAlumno.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.BorrarAlumno.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.BuscarAlumno.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.Creditos.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.ListarAlumnos.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.ModificarAlumno.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.Resources.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.Principal.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.vbproj.GenerateResource.cache
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.vbproj.CoreCompileInputs.cache
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.exe
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.xml
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\bin\Debug\Grafica.exe.config
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\bin\Debug\Grafica.exe
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\bin\Debug\Grafica.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\bin\Debug\Grafica.xml
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\bin\Debug\Logica.dll
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\bin\Debug\Logica.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\bin\Debug\Logica.xml
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2017\ejemploFacadeAndSingleton\Grafica\obj\Debug\Grafica.vbproj.CopyComplete

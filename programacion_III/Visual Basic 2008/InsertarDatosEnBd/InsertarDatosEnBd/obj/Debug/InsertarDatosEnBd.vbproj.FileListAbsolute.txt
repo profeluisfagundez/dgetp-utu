@@ -1,0 +1,30 @@
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.Principal.resources
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\InsertarDatosEnBd.vbproj.GenerateResource.Cache
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\LAB1\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\bin\Debug\InsertarDatosEnBd.exe
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\bin\Debug\InsertarDatosEnBd.pdb
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\bin\Debug\InsertarDatosEnBd.xml
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\WindowsApplication1.Principal.resources
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\InsertarDatosEnBd.vbproj.GenerateResource.Cache
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\InsertarDatosEnBd.exe
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\InsertarDatosEnBd.xml
+C:\Users\LAB1\Documents\Visual Studio 2008\Projects\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\InsertarDatosEnBd.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\InsertarDatosEnBd.exe
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\InsertarDatosEnBd.xml
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\InsertarDatosEnBd.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\bin\Debug\InsertarDatosEnBd.exe
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\bin\Debug\InsertarDatosEnBd.pdb
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\bin\Debug\InsertarDatosEnBd.xml
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\ResolveAssemblyReference.cache
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\WindowsApplication1.Resources.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\WindowsApplication1.Principal.resources
+D:\GIT\cetp-utu\programacion_III\Visual Basic 2008\InsertarDatosEnBd\InsertarDatosEnBd\obj\Debug\InsertarDatosEnBd.vbproj.GenerateResource.Cache

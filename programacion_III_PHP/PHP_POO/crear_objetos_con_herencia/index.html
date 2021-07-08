@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Ejemplo de clases</title>
+</head>
+<body>
+    <h2>Formulario para crear objetos del tipo "Persona"</h2>
+    <form action="crear.php" method="POST">
+        <input type="text" placeholder="Cédula" name="ci" required="">
+        <br>
+        <input type="text" placeholder="Nombre" name="nombre" required="">
+        <br>
+        <input type="text" placeholder="Apellido" name="apellido" required="">
+        <br>
+        <p>Seleccione su código de área:</p>
+        <input type="radio" id="admin" name="codigoArea" value="admin">
+        <label for="admin">1 - Administración</label>
+        <input type="radio" id="urgencia" name="codigoArea" value="urgencia">
+        <label for="urgencia">2 - Sala de urgencia</label>
+        <input type="radio" id="consultorio" name="codigoArea" value="consultorio">
+        <label for="consultorio">3 - Consultorio</label>
+        <input type="radio" id="policlinica" name="codigoArea" value="policlinica">
+        <label for="policlinica">4 - Policlinica</label>
+        <input type="radio" id="cliente" name="codigoArea" value="cliente">
+        <label for="cliente">5 - Atención al cliente</label>
+        <p>Seleccione su especialidad:</p>
+        <input type="radio" id="cirujano" name="especialidad" value="cirujano">
+        <label for="cirujano">1 - cirujano</label>
+        <input type="submit" value="Crear persona">
+    </form>
+</body>
+</html>

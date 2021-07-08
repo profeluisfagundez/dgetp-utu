@@ -1,0 +1,12 @@
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\bin\Debug\InsertarDatosEnBD.exe.config
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\bin\Debug\InsertarDatosEnBD.exe
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\bin\Debug\InsertarDatosEnBD.pdb
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\bin\Debug\InsertarDatosEnBD.xml
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\obj\Debug\grafica.vbprojAssemblyReference.cache
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\obj\Debug\InsertarDatosEnBD.Resources.resources
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\obj\Debug\InsertarDatosEnBD.Principal.resources
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\obj\Debug\grafica.vbproj.GenerateResource.cache
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\obj\Debug\grafica.vbproj.CoreCompileInputs.cache
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\obj\Debug\InsertarDatosEnBD.exe
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\obj\Debug\InsertarDatosEnBD.xml
+C:\Users\luise\source\repos\InsertarDatosEnBD\InsertarDatosEnBD\obj\Debug\InsertarDatosEnBD.pdb

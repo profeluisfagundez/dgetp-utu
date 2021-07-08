@@ -1,0 +1,12 @@
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\bin\Debug\grafica.exe.config
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\bin\Debug\grafica.exe
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\bin\Debug\grafica.pdb
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\bin\Debug\grafica.xml
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\obj\Debug\grafica.vbprojAssemblyReference.cache
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\obj\Debug\grafica.Principal.resources
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\obj\Debug\grafica.Resources.resources
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\obj\Debug\grafica.vbproj.GenerateResource.cache
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\obj\Debug\grafica.vbproj.CoreCompileInputs.cache
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\obj\Debug\grafica.exe
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\obj\Debug\grafica.xml
+C:\Users\luise\source\repos\EjemploDeObjetos\grafica\obj\Debug\grafica.pdb

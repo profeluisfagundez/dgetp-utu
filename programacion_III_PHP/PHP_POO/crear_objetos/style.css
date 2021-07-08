@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2,p {
+    padding: 15px;
+    text-align: center;
+}
+
+form {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+input {
+    margin: 15px;
+    padding: 10px;
+    width: 640px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="submit"] {
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 660px;
+}
+
+input[type="button"] {
+    width: 700px;
+    margin-left: 25%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 660px;
+
+}
