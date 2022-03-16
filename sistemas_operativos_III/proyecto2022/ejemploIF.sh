@@ -1,4 +1,8 @@
 #!/bin/bash
+# Programador: Luis E. Fagúndez
+# Fecha: 16/03/2022
+# Proposito: ejemplo de uso de estructura IF
+# Descripción: En este ejemplo se crea un ejemplo de como trabajar la esctructura if usando diferentes comparadores
 echo "Vamos a trabajar con la estructura IF"
 read -p "Ingrese un número del 1 al 10, sin hacer trampas :P " numero
 if [ $numero -le 10 ]
