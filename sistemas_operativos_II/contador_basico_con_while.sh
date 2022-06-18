@@ -16,7 +16,7 @@ else
         while [ $contador -lt 10 ]
         do
                 echo -e "Contador : $contador\n"
-                contador=$[ $contador + 1 ]
+                contador=$(($contador + 1))
         done
         sleep 5
 fi

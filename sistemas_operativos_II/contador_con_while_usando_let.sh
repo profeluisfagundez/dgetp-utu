@@ -3,7 +3,7 @@
 #PROGRAMADOR: Luis Eduardo Fagúndez
 #FECHA DE ÚLTIMA MODIFICACIÓN: 26/11/2016
 #LICENCIA: GPL3
-echo "Ingrese el tamaño de el contador menor a 20: "
+echo "Ingrese el./ tamaño de el contador menor a 20: "
 read contador
 if [ $contador -gt 20 ];
 then

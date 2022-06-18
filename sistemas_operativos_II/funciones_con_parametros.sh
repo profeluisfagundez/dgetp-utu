@@ -4,15 +4,17 @@
 #LICENCIA: GPL3
 
 function suma(){
+	#declaramos dos variables locales para la función para hacer la suma
 	local a=$1
 	local b=$2
 	echo $(($a + $b))
 }
 
 function resta(){
+	#declaramos dos variables locales para la función para hacer la resta
 	local a=$1
 	local b=$2
-	echo $(( $a - $b ))
+	echo $(($a - $b))
 }
 
 echo "La suma de 2 + 7 es: "

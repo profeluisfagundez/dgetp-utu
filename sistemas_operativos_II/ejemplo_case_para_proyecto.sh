@@ -7,7 +7,7 @@ do
 	read opc
 	case $opc in
 		1)
-			echo 'Opciópn 1' 
+			echo 'Opción 1' 
 			;;
 		2)
 			echo 'Opción 2' 

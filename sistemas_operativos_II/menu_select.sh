@@ -1,6 +1,6 @@
 #! /bin/bash
 clear
-PS3="Introduce una opcion"
+PS3="Introduce una opción: "
 select opcion in "1" "2" "3" "4"; do
 case $opcion in
 	1) echo "Opcion 1" ;;
