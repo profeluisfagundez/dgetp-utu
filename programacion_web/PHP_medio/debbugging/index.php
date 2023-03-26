@@ -33,24 +33,23 @@ class puertasDelAuto {
 }
 
 $fabrica_de_autos = array(
-    "nombre" => "Cherry QQ",
+    "nombre" => "Cherry",
     "ubicacion" => [
         "pais" => "Uruguay",
         "fabricante" => "Montevideo",
         "tipo" => "deportivo",
         "numero" => 27
     ],
-    "numero_de_autos" => 3,
+    "numero_de_autos_en_la_fabrica" => 3,
     "autos" => [
         new Auto("blanco"),
         new Auto("negro"),
         new Auto("gris"),
     ]
 );
-
-dd($fabrica_de_autos);
-echo "<hr>";
 echo "<pre>";
 var_dump($fabrica_de_autos);
 echo "</pre>";
+echo "<hr>";
+dd($fabrica_de_autos);
 ?>
