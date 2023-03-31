@@ -1,6 +1,6 @@
 <?php
 
-$outside_variable = "Esto es una variable global";
+$outside_variable = "Esto es una variable global uno";
 
 function my_function() 
 {
@@ -16,6 +16,6 @@ function my_function_two()
     echo $GLOBALS["outside_variable"];
 }
 
-my_function_two(); 
+echo "<br>";
 
-echo "\n";
+my_function_two(); 

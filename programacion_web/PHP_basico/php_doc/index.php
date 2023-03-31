@@ -13,6 +13,6 @@ function sumar($n1, $n2) {
 
 $resultado = sumar(1, 5);
 
-echo "\n";
+echo "<p>$resultado</p>";
 
 ?>
