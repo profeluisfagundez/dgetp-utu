@@ -15,6 +15,7 @@ $course = [
 ];
 echo '<pre>';
 var_dump($course);
+echo '</pre>';
 
 //Array con Key o clave definida 
 $courses = [
@@ -25,3 +26,4 @@ $courses = [
 ];
 echo '<pre>';
 var_dump($courses);
+echo '</pre>';

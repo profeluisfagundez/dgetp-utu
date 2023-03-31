@@ -30,6 +30,8 @@ function get_country_name_match($country): String
     };
 }
 
-echo get_country_name_match("MX");
+$resultado = get_country_name_match("MX");
+
+echo "<p>$resultado</p>";
 
 echo "\n";
