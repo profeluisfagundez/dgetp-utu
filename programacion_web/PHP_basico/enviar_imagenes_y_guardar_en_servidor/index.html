@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de imagenes al servidor con persistentecia local</title>
+    <style>
+        * {
+            margin: auto;
+            padding: 0px;
+        }
+        h1,label,input{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Envio de imagenes al servidor con persistentecia local</h1>
+    <form action="servidor.php" method="post" enctype="multipart/form-data">
+        <label for="name">Nombre: </label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="image">Imagen: </label>
+        <input type="file" id="image" name="image">
+        <br>
+        <button type="submit">Enviar imagen</button>
+    </form>
+</body>
+</html>
