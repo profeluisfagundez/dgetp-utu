@@ -9,8 +9,9 @@ $numbers_by_2 = array_map(function($current){
     return $current * 2;
 },$numbers);
 
+echo "<pre>";
 print_r($numbers_by_2);
-
-echo "\n";
+echo "</pre>";
+echo "<br>";
 
 ?>

@@ -9,8 +9,8 @@ function realizaSonido(&$cat_dog) {
 
 realizaSonido($sonidoAnimal);
 
-echo $sonidoAnimal;
+echo "<p>".$sonidoAnimal."</p>";
 
-echo "\n";
+echo "<br>";
 
 ?>

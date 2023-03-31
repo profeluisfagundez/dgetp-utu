@@ -1,7 +1,7 @@
 <?php
 
 function get_person_info($name, $age, $country) {
-    echo "Tengo la información de $name, tiene $age años y vive en $country";
+    echo "<p>Tengo la información de $name, tiene $age años y vive en $country</p>";
 }
 
 get_person_info(
@@ -10,6 +10,6 @@ get_person_info(
     name: "Luis"
 );
 
-echo "\n";
+echo "<br>";
 
 ?>

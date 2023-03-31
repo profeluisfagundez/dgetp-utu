@@ -3,7 +3,7 @@
 function sumar_edades($edades = array(13, 17, 35)) {
     return array_sum($edades);
 }
-echo sumar_edades(array(5, 10, 15));
+echo "<p>".sumar_edades(array(5, 10, 15))."</p>";
 
 
 function multiplicar(
@@ -13,7 +13,7 @@ function multiplicar(
 ) {
     return $n1 * $n2 * $n3;
 }
-echo multiplicar();
+echo "<p>".multiplicar()."<p>";
 
 class UnaClaseRandom {}
 class OtraClaseRandom {}
@@ -26,8 +26,8 @@ function suma($n1, $n2 = 8) {
     return $n1 + $n2;
 }
 
-echo suma(8);
+echo "<p>".suma(8)."<p>";
 
-echo "\n";
+echo "<br>";
 
 ?>
