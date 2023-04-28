@@ -1,10 +1,10 @@
 #!/bin/bash
 #Script de usuarios
-#*************VARIABLES GLOBALES************
+#*************VARIABLES GLOBALES*****************************************************************
 opc=0
-#*******************************************
+#************************************************************************************************
 
-#**************FUNCIONES********************
+#**************FUNCIONES*************************************************************************
 function menu(){
 	echo "MENU"
 	echo "1 - Agregar usuario"
@@ -45,9 +45,35 @@ function altaUsuario(){
 	fi
 }
 
-#*******************************************
+function listarUsuario(){
+	#Función que lista los usuarios en el sistema y devuelve su información
+	cut -d ":" -f1 /etc/passwd
+	echo "Presione enter para continuar"
+	read pause
+}
 
-#***************MAIN************************
+function buscarUsuario(){
+	#Función que busca un usuario en el sistema y devuelve su información
+	clear
+	#Nomeclatura del usuario apellidonombre
+	echo "Ingrese el apellido y nombre del usuario en formato: apellidonombre: "
+	read nombre
+	usuario=$(echo $nombre | tr [:upper:] [:lower:])
+	nomb=$(cat /etc/passwd | grep -c $usuario)
+	if [ $nomb -eq 1 ]; then
+		cat /etc/passwd | grep $usuario
+		echo "presione enter para continuar"
+		read pausa
+	else
+		echo "El usuario no existe, presione enter para continuar"
+		read pausa
+		fi
+	fi
+}
+
+#************************************************************************************************
+
+#***************MAIN*****************************************************************************
 while [ $opc -ne 8 ];
 do
     menu
@@ -66,4 +92,4 @@ do
     *) echo "OPCIÓN POR DEFECTO - " ;;
     esac
 done
-#*******************************************
+#************************************************************************************************
