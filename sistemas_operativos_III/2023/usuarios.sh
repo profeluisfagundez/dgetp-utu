@@ -67,7 +67,6 @@ function buscarUsuario(){
 	else
 		echo "El usuario no existe, presione enter para continuar"
 		read pausa
-		fi
 	fi
 }
 
