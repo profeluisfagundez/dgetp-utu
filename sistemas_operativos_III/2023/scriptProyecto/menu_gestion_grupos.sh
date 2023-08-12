@@ -19,11 +19,11 @@ while [ $opc -ne 5 ]
         echo "Ingrese una opción: "
         read opc
         case $opc in
-            1) echo "hola 1" ; read a ;;
-            2) echo "hola 2" ; read a ;;
-            3) echo "hola 3" ; read a ;;
-            4) echo "hola 4" ; read a ;;
-            5) echo "Adios" ; break ;;
+            1) echo "1 - Agregar grupo" ; read a ;;
+            2) echo "2 - Eliminar grupo" ; read a ;;
+            3) echo "3 - Listar grupos del sistema" ; read a ;;
+            4) echo "4 - Buscar un grupo en el sistema" ; read a ;;
+            5) echo "5 - Volver" ; break ;;
             *) echo "Opción no valida" ; read pausa ;;
         esac
     done
