@@ -81,7 +81,7 @@ do
     1)
 		echo "OPCIÓN 1 - ALTA DE USUARIOS" ;
 		altaUsuario;;
-    2) echo "OPCIÓN 2 - " ;;
+    2) echo "OPCIÓN 2 - LISTAR USUARIOS" ;;
     3) echo "OPCIÓN 3 - " ;;
     4) echo "OPCIÓN 4 - " ;;
     5) echo "OPCIÓN 5 - " ;;
