@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+
+  wordpress:
+    container_name: servidor_wp
+    image: wordpress
+    restart: always
+    env ironment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: user_wp
+      WORDPRESS_DB_PASSWORD: 12345
+      WORDPRESS_DB_NAME: bd_wp
+    ports:
+      - 80:80
+    volumes:
+      - /opt/wordpress:/var/www/html/wp-content
+
+  db:
+    container_name: servidor_mysql
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: bd_wp
+      MYSQL_USER: user_wp
+      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: 12345
+    volumes:
+      - /opt/mysql_wp:/var/lib/mysql
+
+#docker-compose up -d
