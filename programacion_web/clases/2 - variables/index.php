@@ -18,14 +18,14 @@
     <h1>Ejemplo de variables en PHP</h1>
     <h4>Comenzamos..</h4>
     <table>
-        <tr>
-            <th>Nombre del trabajador</th>
+        <tr> <!-- Table row -->
+            <th>Nombre del trabajador</th> <!-- Table header -->
             <th>Fecha de nacimiento</th>
             <th>Ciudad</th>
             <th>Está trabajando?</th>
         </tr>
         <tr>
-            <td> <?php echo $nombre ?> </td>
+            <td> <?php echo $nombre ?> </td> <!-- Table column -->
             <td> <?php echo $nacimiento ?> </td>
             <td> <?php echo $ciudad ?> </td>
             <td> 
@@ -40,6 +40,15 @@
             </td>
         </tr>
     </table>
+    <script>
+        //Es importante recordar que estos valores pueden ser alterados desde el navegador
+        //Javascript es interpretado por el navegador.
+        var nombre = "luis";
+        var nacimiento = "1992-12-21";
+        var ciudad = "Tacuarembó";
+        var trabaja = true;
+    </script>
+
 </body>
 
 </html>

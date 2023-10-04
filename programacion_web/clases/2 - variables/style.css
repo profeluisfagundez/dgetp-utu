@@ -4,5 +4,14 @@
 }
 
 table {
-    border: red 5px solid;
+    border: black 5px solid;
+    border-collapse: collapse;
+}
+
+h1, h4{
+    text-align: center;
+}
+
+th, td {
+    border: 5px solid;
 }
