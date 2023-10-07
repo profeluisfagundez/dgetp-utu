@@ -28,10 +28,10 @@
         //Ejemplos de usos: menú, opciones en general
         switch ($nombre) {
             case 'Luis':
-                echo "<h2>Soy el Luis pero del SWITCH</h2>";
+                echo "<h2>Soy Luis pero del SWITCH</h2>";
                 break;
             case 'Carlos':
-                echo "<h2>Soy el carlos pero del SWITCH</h2>";
+                echo "<h2>Soy Carlos pero del SWITCH</h2>";
                 break;
             default:
                 echo "<h2>Bienvenido Usuario anonimo del Switch uwu</h2>";
