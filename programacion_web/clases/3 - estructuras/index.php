@@ -39,8 +39,9 @@
         }
         //---------------------------------------------------------------
         for ($i = 1; $i <= 10; $i++) {
-            //Contatenación
-            //Cuando tengamos que recorrer arreglos
+            //Concatenación
+            //Cuando tengamos que recorrer arreglos usaremos la estructura
+            //for
             echo "Hola " . $nombre . " " . $i . "<br >";
         }
         //----------------------------------------------------------------
