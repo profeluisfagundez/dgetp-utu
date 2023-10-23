@@ -32,10 +32,10 @@
                 <td><label for="sector_trabajo">Sector de Trabajo:</label></td>
                 <td>
                     <select name="sector_trabajo" id="sector_trabajo" required>
-                        <option value="IT">Tecnología de la Información</option>
-                        <option value="Salud">Salud</option>
+                        <option value="IT">Tecnologías de la Información</option>
+                        <option value="Salud">Educación Física y Deporte</option>
                         <option value="Educación">Educación</option>
-                        <option value="Finanzas">Finanzas</option>
+                        <option value="Finanzas">Economía y Finanzas</option>
                     </select>
                 </td>
             </tr>
