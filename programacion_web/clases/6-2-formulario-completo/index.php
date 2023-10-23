@@ -33,7 +33,7 @@
                 <td>
                     <select name="sector_trabajo" id="sector_trabajo" required>
                         <option value="IT">Tecnologías de la Información</option>
-                        <option value="Salud">Educación Física y Deporte</option>
+                        <option value="Salud">Ciencias de la salud</option>
                         <option value="Educación">Educación</option>
                         <option value="Finanzas">Economía y Finanzas</option>
                     </select>
