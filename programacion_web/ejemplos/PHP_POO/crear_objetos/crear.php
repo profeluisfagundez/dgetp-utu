@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        require('Persona.php'); 
+        require_once('Persona.php'); 
         $ci = $_POST['ci'];
         $nomb = $_POST['nombre'];
         $apell = $_POST['apellido'];
