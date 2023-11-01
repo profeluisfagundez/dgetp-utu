@@ -1,15 +1,15 @@
-GET REQUEST (CONSULTAR TODO)
-curl http://localhost/ejemploApiPersonas/personas
+GET REQUEST (CONSULTAR TODO) (listo)
+curl http://localhost:8000/personas
 
-GET REQUEST (CONSULAR UNA ÚNICA PERSONA)
-curl http://localhost/ejemploApiPersonas/personas/1
+GET REQUEST (CONSULAR UNA ÚNICA PERSONA) (listo)
+curl http://localhost:8000/personas/1
 
-POST REQUEST (AGREGAR UNA NUEVA PERSONA)
-curl -X POST -H "Content-Type: application/json" -d '{"nombre": "NuevaPersona", "apellido": "Apellido", "edad": 25}' http://localhost/ejemploApiPersonas/personas
+DELETE REQUEST (ELIMINAR UNA PERSONA) (listo)
+curl -X DELETE http://localhost:8000/personas/1
 
-PUT REQUEST (ACTUALIZAR UNA NUEVA PERSONA)
-curl -X PUT -H "Content-Type: application/json" -d '{"nombre": "NuevoNombre", "apellido": "NuevoApellido", "edad": 30}' http://localhost/ejemploApiPersonas/personas/1
+POST REQUEST (AGREGAR UNA NUEVA PERSONA) (listo)
+curl -X POST -H "Content-Type: application/json" -d '{"nombre": "NuevaPersona", "apellido": "Apellido", "edad": 25}' http://localhost:8000/personas
 
-DELETE REQUEST (ELIMINAR UNA PERSONA)
-curl -X DELETE http://localhost/ejemploApiPersonas/personas/1
+PUT REQUEST (ACTUALIZAR UNA NUEVA PERSONA) (listo)
+curl -X PUT -H "Content-Type: application/json" -d '{"nombre": "NuevoNombre", "apellido": "NuevoApellido", "edad": 30}' http://localhost:8000/personas/1
 
