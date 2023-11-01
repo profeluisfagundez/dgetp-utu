@@ -19,13 +19,13 @@ class PersonasController
                 $sql = "SELECT * FROM personas";
                 $result = $conn->query($sql);
                 $persons = array();
-
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         $persons[] = $row;
                     }
+                    //Esto es unicamente a efectos de testing
+                    var_dump($persons);
                 }
-
                 header("Content-Type: application/json");
                 echo json_encode($persons);
             } elseif (count($uri_segments) == 3 && is_numeric($uri_segments[2])) {
@@ -33,11 +33,12 @@ class PersonasController
                 $person_id = $uri_segments[2];
                 $sql = "SELECT * FROM personas WHERE id = $person_id";
                 $result = $conn->query($sql);
-
                 if ($result->num_rows > 0) {
                     $person = $result->fetch_assoc();
                     header("Content-Type: application/json");
                     echo json_encode($person);
+                    //Esto es unicamente a efectos de testing
+                    var_dump($person);
                 } else {
                     header("HTTP/1.1 404 Not Found");
                 }
@@ -54,7 +55,6 @@ class PersonasController
                 $nombre = $conn->real_escape_string($data->nombre);
                 $apellido = $conn->real_escape_string($data->apellido);
                 $edad = $data->edad;
-
                 $sql = "INSERT INTO personas (nombre, apellido, edad) VALUES ('$nombre', '$apellido', $edad)";
                 if ($conn->query($sql) === TRUE) {
                     header("HTTP/1.1 201 Created");
