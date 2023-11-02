@@ -23,8 +23,7 @@ class PersonasController
                     while ($row = $result->fetch_assoc()) {
                         $persons[] = $row;
                     }
-                    //Esto es unicamente a efectos de testing
-                    var_dump($persons);
+                    print_r($persons);
                 }
                 header("Content-Type: application/json");
                 echo json_encode($persons);
@@ -37,8 +36,6 @@ class PersonasController
                     $person = $result->fetch_assoc();
                     header("Content-Type: application/json");
                     echo json_encode($person);
-                    //Esto es unicamente a efectos de testing
-                    var_dump($person);
                 } else {
                     header("HTTP/1.1 404 Not Found");
                 }

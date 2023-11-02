@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Personas</title>
+</head>
+<body>
+    <h1>Lista de Personas</h1>
+    <table id="personasTable" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se mostrarán los datos de las personas -->
+        </tbody>
+    </table>
+
+    <script>
+        const tableBody = document.querySelector("#personasTable tbody");
+
+        // Realiza una solicitud GET a la API.
+        fetch("http://localhost:8000/personas", {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+            },
+        })
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error("No se pudieron obtener datos válidos.");
+            }
+        })
+        .then(data => {
+            // Itera a través de los datos y construye las filas de la tabla.
+            data.forEach(persona => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${persona.id}</td>
+                    <td>${persona.nombre}</td>
+                    <td>${persona.apellido}</td>
+                    <td>${persona.edad}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => {
+            console.error("Error al cargar los datos:", error);
+        });
+    </script>
+</body>
+</html>
+
