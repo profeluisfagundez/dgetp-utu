@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Piedra, Papel, Tijera, Lagarto, Spock</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesIndex.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Piedra, Papel, Tijera, Lagarto, Spock</h1>
+        <form action="procesar.php" method="post">
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="usuario" value="piedra" id="piedra">
+                    <label for="piedra">
+                        <img src="imagenes/piedra.png" alt="Piedra">
+                        <p>Piedra</p>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="usuario" value="papel" id="papel">
+                    <label for="papel">
+                        <img src="imagenes/papel.png" alt="Papel">
+                        <p>Papel</p>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="usuario" value="tijera" id="tijera">
+                    <label for="tijera">
+                        <img src="imagenes/tijera.png" alt="Tijera">
+                        <p>Tijera</p>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="usuario" value="lagarto" id="lagarto">
+                    <label for="lagarto">
+                        <img src="imagenes/lagarto.png" alt="Lagarto">
+                        <p>Lagarto</p>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="usuario" value="spock" id="spock">
+                    <label for="spock">
+                        <img src="imagenes/spock.png" alt="Spock">
+                        <p>Spock</p>
+                    </label>
+                </div>
+            </div>
+            <input type="submit" value="Jugar">
+        </form>
+    </div>
+</body>
+</html>
