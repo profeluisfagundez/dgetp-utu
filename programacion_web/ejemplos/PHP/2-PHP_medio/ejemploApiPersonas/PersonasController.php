@@ -36,6 +36,7 @@ class PersonasController
                     $person = $result->fetch_assoc();
                     header("Content-Type: application/json");
                     echo json_encode($person);
+                    print_r($person);
                 } else {
                     header("HTTP/1.1 404 Not Found");
                 }
