@@ -18,13 +18,13 @@
                     exit;
                 }
 
-                // Array de opciones para el juego
+                //Array de opciones para el juego
                 $opciones = ["piedra", "papel", "tijera", "lagarto", "spock"];
 
-                // Elige una opción aleatoria para el otro jugador
+                //Opción aleatoria para el otro jugador
                 $eleccion_aleatoria = $opciones[array_rand($opciones)];
 
-                // Muestra las elecciones de ambos jugadores
+                //Muestra las elecciones de ambos jugadores
                 echo "<img src='imagenes/$usuario.png' alt='$usuario'>";
                 echo "<img src='imagenes/$eleccion_aleatoria.png' alt='$eleccion_aleatoria'>";
             } else {
