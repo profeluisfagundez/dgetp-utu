@@ -12,7 +12,8 @@
     para indicarle a la función que lo codifique como un arreglo y no como un objeto.*/
     $arreglo = json_decode($json, true); 
     //En este caso le pido que me muestre solamente la url de la imagen del día
-    echo $arreglo['img'].PHP_EOL;
+    echo $arreglo['img'];
+    echo '<br>';
 ?>
     <img src="<?php echo $arreglo['img'];?>" alt="media">
 </body>
