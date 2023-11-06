@@ -13,7 +13,7 @@
         $nomb = $_POST['nombre'];
         $apell = $_POST['apellido'];
         $persona = new Persona($ci, $nomb, $apell);
-        $valor = $persona->toString();
+        $valor = $persona->__toString();
         echo("<h2>Se ha creado la persona con los siguientes atributos:</h2>");
         echo("<p>$valor</p>");
     ?>

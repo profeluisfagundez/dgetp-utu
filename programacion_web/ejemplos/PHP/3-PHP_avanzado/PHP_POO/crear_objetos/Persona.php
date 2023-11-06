@@ -36,10 +36,8 @@ public function setApellido(String $value):void{
 }
 
 //Método toString de la clase Persona
-public function toString():String{
+public function __toString(): string {
     return "CI: {$this->getCi()} Nombre: {$this->getNombre()} Apellido: {$this->getApellido()}";
 }
 
 }
-
-?>
