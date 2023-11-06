@@ -1,5 +1,8 @@
-<?php class Persona {
+<?php 
 
+class Persona {
+
+//ATRIBUTOS
 private $ci;
 private $nombre;
 private $apellido; 
