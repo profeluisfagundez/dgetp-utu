@@ -12,4 +12,3 @@ curl -X POST -H "Content-Type: application/json" -d '{"nombre": "NuevaPersona", 
 
 PUT REQUEST (ACTUALIZAR UNA NUEVA PERSONA) (listo)
 curl -X PUT -H "Content-Type: application/json" -d '{"nombre": "NuevoNombre", "apellido": "NuevoApellido", "edad": 30}' http://localhost:8000/personas/1
-
