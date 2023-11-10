@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  # Servicio para el servidor web Apache con PHP
+  webserver:
+    image: php:apache
+    container_name: my-php-apache-app
+    ports:
+      - "8080:80"
+    volumes:
+      - php-code:/var/www/html  # Volumen para el servicio webserver
+    networks:
+      - mynetwork
+
+  # Servicio para la base de datos MariaDB
+  mariadb:
+    image: mariadb
+    container_name: my-mariadb
+    ports:
+      - "33066:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: myuserpassword
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+
+volumes:
+  php-code:  # Volumen para el servicio webserver
+  mariadb-data:  # Volumen para MariaDB

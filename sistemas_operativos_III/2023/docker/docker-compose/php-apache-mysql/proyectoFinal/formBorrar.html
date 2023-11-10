@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S.G.T - Sistema de Gestión de Trabajadores</title>
+    <link rel="stylesheet" href="css/style.css" media="all" />
+</head>
+<body>
+    <header>
+        <h1>S.G.T - Sistema de Gestión de Trabajadores</h1>
+        <nav>
+            <ul>
+                <li><a title="Volver al principio" href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Eliminar trabajador de la empresa</h2>
+        <form class="formulario_borrar" action="/eliminarTrabajador.php" method="post">
+            <table>
+                <tr>
+                    <td><label for='ci'>Cédula: </label></td>
+                    <td> <input type="text" id="ci" name="ci" placeholder="56748764" minlength="8" maxlength="8" pattern="[0-9]+" required/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="enviar"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</body>
+</html>
