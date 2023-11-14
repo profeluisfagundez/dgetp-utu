@@ -6,7 +6,7 @@ require_once('Coche.php');
 $miCoche = new Coche("Toyota", "Corolla", 4);
 
 // Acceder a un método de la clase base
-echo $miCoche->obtenerInformacion();  // Imprime: Marca: Toyota, Modelo: Corolla
+echo $miCoche->getInformacion();  // Imprime: Marca: Toyota, Modelo: Corolla
 
 // Acceder a un método de la clase derivada
-echo $miCoche->obtenerNumeroPuertas();  // Imprime: 4
+echo $miCoche->getNumeroPuertas();  // Imprime: 4

@@ -1,15 +1,20 @@
 <?php
 // Clase base (superclase)
 class Vehiculo {
-    protected $marca;
+    //Atributos
+    //Alcance Público, protegido, privado
+    protected $marca; //Permite ser visualizado a través de las clases que hereden vehículo
     protected $modelo;
 
+    //Constructor
     public function __construct($marca, $modelo) {
         $this->marca = $marca;
         $this->modelo = $modelo;
     }
 
-    public function obtenerInformacion() {
+    //Métodos / Comportamientos
+    public function getInformacion() {
         return "Marca: {$this->marca}, Modelo: {$this->modelo}";
     }
+
 }
