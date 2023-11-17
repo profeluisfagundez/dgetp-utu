@@ -1,4 +1,5 @@
-<?php class Persona {
+<?php 
+class Persona {
 
 private $ci;
 private $nombre;
@@ -11,10 +12,12 @@ function __construct(string $ciU, string $nombreU, string $apellidoU){
     $this->apellido = $apellidoU;
 }
 
+//Obtener los datos desde un objeto de la clase Persona
 public function getCi():String{
     return $this->ci;
 }
 
+//Modificar el dato desde la clase Persona
 public function setCi(String $value):void{
     $this->ci = $value;
 }

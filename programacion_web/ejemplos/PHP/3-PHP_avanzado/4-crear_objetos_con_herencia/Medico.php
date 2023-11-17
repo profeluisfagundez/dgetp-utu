@@ -1,5 +1,4 @@
 <?php
-require('Persona.php');
 class Medico extends Persona {
 
     private $codigo_area;

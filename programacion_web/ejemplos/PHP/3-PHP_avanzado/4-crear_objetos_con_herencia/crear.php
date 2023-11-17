@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+        require('Persona.php');
         require('Medico.php'); 
         $ci = $_POST['ci'];
         $nomb = $_POST['nombre'];
@@ -15,6 +16,7 @@
         $codArea = $_POST['codigoArea'];
         $especial = $_POST['especialidad'];
         $medico = new Medico($ci, $nomb, $apell, $codArea, $especial);
+        $walter = new Medico("48225577","Walter", "Pérez","4","Jungla en el LOL");
         $valor = $medico->toString();
         echo("<h2>Se ha creado el médico con los siguientes atributos:</h2>");
         echo("<p>$valor</p>");
