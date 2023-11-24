@@ -4,7 +4,7 @@ include 'includes/functions.php';
 // Ruta al archivo que almacena la información de los estudiantes
 $archivoEstudiantes = 'data/estudiantes.json';
 
-// Cargar estudiantes desde el archivo
+// Cargar estudiantes desde el archivo en formato JSON
 $estudiantes = cargarEstudiantesDesdeArchivo($archivoEstudiantes);
 
 // Contador de visitas
