@@ -1,0 +1,36 @@
+{
+    "48225577": {
+        "ci": "48225577",
+        "nombre": "Luis Eduardo",
+        "apellido": "Fag\u00fandez Pedrozo",
+        "fechaNacimiento": "1992-12-21",
+        "curso": "Redes y Software",
+        "materias": {
+            "Matematica": {
+                "nombre": "Matematica",
+                "nota": ""
+            },
+            "Historia": {
+                "nombre": "Historia",
+                "nota": ""
+            }
+        }
+    },
+    "12345678": {
+        "ci": "12345678",
+        "nombre": "Eduardo Luis",
+        "apellido": "Pedrozo Fag\u00fandez",
+        "fechaNacimiento": "1992-12-12",
+        "curso": "Administraci\u00f3n",
+        "materias": {
+            "Matematica": {
+                "nombre": "Matematica",
+                "nota": ""
+            },
+            "Historia": {
+                "nombre": "Historia",
+                "nota": ""
+            }
+        }
+    }
+}

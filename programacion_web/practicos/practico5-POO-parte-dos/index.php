@@ -30,10 +30,11 @@ $contadorVisitas = contarVisitas($archivoContador);
     <nav>
         <!-- Barra de navegación o menú -->
         <ul>
-            <li><a href="listar_estudiantes.php">Listar Estudiantes</a></li>
-            <li><a href="registro_estudiante.php">Registrar Estudiante</a></li>
-            <li><a href="editar_estudiante.php">Editar Estudiante</a></li>
-            <li><a href="dar_de_baja.php">Dar de Baja Estudiante</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="listarEstudiantes.php">Listar Estudiantes</a></li>
+            <li><a href="registroEstudiantes.php">Registrar Estudiante</a></li>
+            <li><a href="editarEstudiante.php">Editar Estudiante</a></li>
+            <li><a href="darDeBaja.php">Dar de Baja Estudiante</a></li>
             <li><a href="contacto.php">Contacto</a></li>
         </ul>
     </nav>
