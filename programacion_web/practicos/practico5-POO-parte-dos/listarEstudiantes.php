@@ -42,7 +42,7 @@ $estudiantes = cargarEstudiantesDesdeArchivo($archivoEstudiantes);
         <h2>Estudiantes Registrados</h2>
 
         <?php
-        // Verificar si hay estudiantes para mostrar
+        // Verificamos si hay estudiantes para mostrar
         if (!empty($estudiantes)) {
             echo '<table border="1">';
             echo '<tr> <th>CI</th> <th>Nombre</th> <th>Apellido</th> <th>Fecha de Nacimiento</th> <th>Curso</th> <th>Materias</th> </tr>';

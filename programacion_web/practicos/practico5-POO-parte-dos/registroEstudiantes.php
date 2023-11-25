@@ -22,14 +22,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fechaNacimiento = $_POST['fechaNacimiento'];
     $curso = $_POST['curso'];
 
-    // Validar datos (puedes agregar validaciones más complejas)
+    // Validar datos
     if (empty($ci) || empty($nombre) || empty($apellido) || empty($fechaNacimiento) || empty($curso)) {
         $error = 'Todos los campos son obligatorios.';
     } else {
         // Crear objeto Estudiante
         $nuevoEstudiante = new Estudiante($ci, $nombre, $apellido, $fechaNacimiento, $curso);
 
-        // Agregar materias (puedes mejorar esta parte según tus necesidades)
+        // Agregar materias 
         if (isset($_POST['materias'])) {
             foreach ($_POST['materias'] as $nombreMateria) {
                 $nota = $_POST[$nombreMateria . '_nota'];
@@ -63,8 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
 
     <nav>
-        <!-- Barra de navegación o menú -->
+        <!-- Barra de navegación -->
         <ul>
+        <li><a href="index.php">Inicio</a></li>
             <li><a href="listarEstudiantes.php">Listar Estudiantes</a></li>
             <li><a href="registroEstudiantes.php">Registrar Estudiante</a></li>
             <li><a href="editarEstudiante.php">Editar Estudiante</a></li>
@@ -77,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>Registrar Estudiante</h2>
 
         <?php
-        // Mostrar mensajes de error o éxito
+        // Mostrar mensajes de error o éxito al usuario
         if (!empty($error)) {
             echo '<p style="color: red;">' . $error . '</p>';
         }

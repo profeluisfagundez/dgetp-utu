@@ -1,18 +1,18 @@
 {
     "48225577": {
         "ci": "48225577",
-        "nombre": "Luis Eduardo",
-        "apellido": "Fag\u00fandez Pedrozo",
+        "nombre": "aaaaaaaaaa",
+        "apellido": "aaaaaaaaaaaa",
         "fechaNacimiento": "1992-12-21",
-        "curso": "Redes y Software",
+        "curso": "Redes y Datos",
         "materias": {
             "Matematica": {
                 "nombre": "Matematica",
-                "nota": ""
+                "nota": "8"
             },
             "Historia": {
                 "nombre": "Historia",
-                "nota": ""
+                "nota": "10"
             }
         }
     },
