@@ -17,7 +17,7 @@ $exito = '';
 $cursos = [
     'CTT Redes y Software' => [
         'Primer Semestre' => ['Introducción al proyecto I', 'Seguridad Informática', 'Bases de Datos I', 'Programación I', 'Conectividad I', 'Diseño Web I', 'Ingeniería del Software I', 'Redes Microsoft I', 'Redes Posix I', 'Idioma Electivo Inglés I'],
-        'Segundo Semestre' => ['Auditoria y Redes', 'Bases de Datos II', 'Conectividad II', 'Diseño Web II', 'Ingeniería del Software II', 'Idioma Electivo Inglés II', 'Programación II', 'Introducción al proyecto II', 'Redes Microsoft II', 'Redes Posix II']
+        'Segundo Semestre' => ['Introducción al proyecto II', 'Auditoria y Redes', 'Bases de Datos II', 'Programación II', 'Conectividad II', 'Diseño Web II', 'Ingeniería del Software II', 'Redes Microsoft II', 'Redes Posix II', 'Idioma Electivo Inglés II']
     ]
 ];
 

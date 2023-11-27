@@ -15,12 +15,14 @@ $contadorVisitas = contarVisitas($archivoContador);
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Registro de Estudiantes</title>
 </head>
+
 <body>
     <header>
         <h1>Bienvenido al Registro de Estudiantes</h1>
@@ -47,4 +49,5 @@ $contadorVisitas = contarVisitas($archivoContador);
         <!-- Pie de página -->
     </footer>
 </body>
+
 </html>
