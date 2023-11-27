@@ -13,6 +13,14 @@ $estudiantes = cargarEstudiantesDesdeArchivo($archivoEstudiantes);
 $error = '';
 $exito = '';
 
+// Lista de cursos y sus materias por semestre
+$cursos = [
+    'CTT Redes y Software' => [
+        'Primer Semestre' => ['Introducción al proyecto I', 'Seguridad Informática', 'Bases de Datos I', 'Programación I', 'Conectividad I', 'Diseño Web I', 'Ingeniería del Software I', 'Redes Microsoft I', 'Redes Posix I', 'Idioma Electivo Inglés I'],
+        'Segundo Semestre' => ['Auditoria y Redes', 'Bases de Datos II', 'Conectividad II', 'Diseño Web II', 'Ingeniería del Software II', 'Idioma Electivo Inglés II', 'Programación II', 'Introducción al proyecto II', 'Redes Microsoft II', 'Redes Posix II']
+    ]
+];
+
 // Procesar el formulario cuando se envíe
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener datos del formulario
@@ -56,6 +64,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Registro de Estudiantes</title>
+    <script>
+        function mostrarSemestre() {
+            var curso = document.getElementById('curso').value;
+            var semestre = document.getElementById('semestre').value;
+
+            // Ocultar todas las materias
+            var materias = document.getElementsByClassName('materia');
+            for (var i = 0; i < materias.length; i++) {
+                materias[i].style.display = 'none';
+            }
+
+            // Mostrar las materias del curso y semestre seleccionados
+            var materiasMostrar = document.getElementsByClassName(curso + '_' + semestre);
+            for (var i = 0; i < materiasMostrar.length; i++) {
+                materiasMostrar[i].style.display = 'block';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -65,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <nav>
         <!-- Barra de navegación -->
         <ul>
-        <li><a href="index.php">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="listarEstudiantes.php">Listar Estudiantes</a></li>
             <li><a href="registroEstudiantes.php">Registrar Estudiante</a></li>
             <li><a href="editarEstudiante.php">Editar Estudiante</a></li>
@@ -102,14 +128,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="date" name="fechaNacimiento" required>
 
             <label for="curso">Curso:</label>
-            <input type="text" name="curso" required>
+            <select id="curso" name="curso" onchange="mostrarSemestre()" required>
+                <?php foreach (array_keys($cursos) as $curso) : ?>
+                    <option value="<?= $curso ?>"><?= $curso ?></option>
+                <?php endforeach; ?>
+            </select>
 
-            <p>Materias:</p>
-            <input type="checkbox" name="materias[]" value="Matematica"> Matemática
-            <input type="number" name="Matematica_nota" placeholder="Nota">
+            <label for="semestre">Semestre:</label>
+            <select id="semestre" name="semestre" onchange="mostrarSemestre()" required>
+                <?php foreach (array_keys($cursos['CTT Redes y Software']) as $semestre) : ?>
+                    <option value="<?= $semestre ?>"><?= $semestre ?></option>
+                <?php endforeach; ?>
+            </select>
 
-            <input type="checkbox" name="materias[]" value="Historia"> Historia
-            <input type="number" name="Historia_nota" placeholder="Nota">
+            <!-- Materias ocultas por defecto -->
+            <?php foreach ($cursos as $curso => $semestres) : ?>
+                <?php foreach ($semestres as $semestre => $materias) : ?>
+                    <?php foreach ($materias as $materia) : ?>
+                        <div class="materia <?= $curso . '_' . $semestre ?>" style="display: none;">
+                            <input type="checkbox" name="materias[]" value="<?= $materia ?>"> <?= $materia ?>
+                            <input type="number" name="<?= $materia . '_nota' ?>" placeholder="Nota"><br>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
 
             <button type="submit">Registrar</button>
         </form>

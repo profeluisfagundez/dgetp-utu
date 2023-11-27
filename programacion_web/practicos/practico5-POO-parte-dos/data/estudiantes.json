@@ -1,35 +1,50 @@
 {
     "48225577": {
         "ci": "48225577",
-        "nombre": "aaaaaaaaaa",
-        "apellido": "aaaaaaaaaaaa",
+        "nombre": "Luis Eduardo",
+        "apellido": "Fag\u00fandez Pedrozo",
         "fechaNacimiento": "1992-12-21",
-        "curso": "Redes y Datos",
+        "curso": "CTT Redes y Software",
         "materias": {
-            "Matematica": {
-                "nombre": "Matematica",
-                "nota": "8"
+            "Auditoria y Redes": {
+                "nombre": "Auditoria y Redes",
+                "nota": null
             },
-            "Historia": {
-                "nombre": "Historia",
-                "nota": "10"
-            }
-        }
-    },
-    "12345678": {
-        "ci": "12345678",
-        "nombre": "Eduardo Luis",
-        "apellido": "Pedrozo Fag\u00fandez",
-        "fechaNacimiento": "1992-12-12",
-        "curso": "Administraci\u00f3n",
-        "materias": {
-            "Matematica": {
-                "nombre": "Matematica",
-                "nota": ""
+            "Bases de Datos II": {
+                "nombre": "Bases de Datos II",
+                "nota": null
             },
-            "Historia": {
-                "nombre": "Historia",
-                "nota": ""
+            "Conectividad II": {
+                "nombre": "Conectividad II",
+                "nota": null
+            },
+            "Dise\u00f1o Web II": {
+                "nombre": "Dise\u00f1o Web II",
+                "nota": null
+            },
+            "Ingenier\u00eda del Software II": {
+                "nombre": "Ingenier\u00eda del Software II",
+                "nota": null
+            },
+            "Idioma Electivo Ingl\u00e9s II": {
+                "nombre": "Idioma Electivo Ingl\u00e9s II",
+                "nota": null
+            },
+            "Programaci\u00f3n II": {
+                "nombre": "Programaci\u00f3n II",
+                "nota": null
+            },
+            "Introducci\u00f3n al proyecto II": {
+                "nombre": "Introducci\u00f3n al proyecto II",
+                "nota": null
+            },
+            "Redes Microsoft II": {
+                "nombre": "Redes Microsoft II",
+                "nota": null
+            },
+            "Redes Posix II": {
+                "nombre": "Redes Posix II",
+                "nota": null
             }
         }
     }
