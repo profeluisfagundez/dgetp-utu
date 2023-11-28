@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Carga los estudiantes desde un archivo y devuelve un array de estudiantes.
+ * @param string $archivo La ruta al archivo que contiene los datos de los estudiantes.
+ * @return array El array de estudiantes cargados desde el archivo, o un array vacío si el archivo no existe.
+ */
 function cargarEstudiantesDesdeArchivo($archivo) {
     if (file_exists($archivo)) {
         $contenido = file_get_contents($archivo);
