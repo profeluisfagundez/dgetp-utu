@@ -10,7 +10,6 @@ class Estudiante {
 
     /**
      * Constructor de la clase Estudiante.
-     *
      * @param string $ci Cédula de identidad.
      * @param string $nombre Nombre del estudiante.
      * @param string $apellido Apellido del estudiante.
