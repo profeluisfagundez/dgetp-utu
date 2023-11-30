@@ -1,6 +1,6 @@
 <?php
 
-class Materia {
+class MateriaModel {
     private $nombre;
     private $nota;
 
