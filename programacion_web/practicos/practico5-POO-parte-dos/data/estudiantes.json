@@ -1,0 +1,51 @@
+{
+    "48225577": {
+        "ci": "48225577",
+        "nombre": "Luis Eduardo",
+        "apellido": "Fag\u00fandez Pedrozo",
+        "fechaNacimiento": "1992-12-21",
+        "curso": "CTT Redes y Software",
+        "materias": {
+            "Introducci\u00f3n al proyecto I": {
+                "nombre": "Introducci\u00f3n al proyecto I",
+                "nota": null
+            },
+            "Seguridad Inform\u00e1tica": {
+                "nombre": "Seguridad Inform\u00e1tica",
+                "nota": null
+            },
+            "Bases de Datos I": {
+                "nombre": "Bases de Datos I",
+                "nota": null
+            },
+            "Programaci\u00f3n I": {
+                "nombre": "Programaci\u00f3n I",
+                "nota": null
+            },
+            "Conectividad I": {
+                "nombre": "Conectividad I",
+                "nota": null
+            },
+            "Dise\u00f1o Web I": {
+                "nombre": "Dise\u00f1o Web I",
+                "nota": null
+            },
+            "Ingenier\u00eda del Software I": {
+                "nombre": "Ingenier\u00eda del Software I",
+                "nota": null
+            },
+            "Redes Microsoft I": {
+                "nombre": "Redes Microsoft I",
+                "nota": null
+            },
+            "Redes Posix I": {
+                "nombre": "Redes Posix I",
+                "nota": null
+            },
+            "Idioma Electivo Ingl\u00e9s I": {
+                "nombre": "Idioma Electivo Ingl\u00e9s I",
+                "nota": null
+            }
+        }
+    }
+}
