@@ -3,7 +3,7 @@
 $server = "localhost";
 $database = "finanzas";
 $username = "root";
-$password = "root";
+$password = "";
 
 $conexion = new PDO("mysql:host=$server;dbname=$database", $username, $password);
 $setnames = $conexion->prepare("SET NAMES 'utf8'");

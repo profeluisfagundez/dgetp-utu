@@ -3,7 +3,7 @@
 $server = "localhost";
 $database = "finanzas";
 $username = "root";
-$password = "root";
+$password = "";
 
 //Forma procedimental
 //$mysqli = mysqli_connect($server,$username,$password,$database); 
