@@ -1,0 +1,12 @@
+{
+    "name": "eduardo/6-conexion-bdmsq-li",
+    "description": "conexion a BD con MSQLi",
+    "license": "GPL3",
+    "authors": [
+        {
+            "name": "Luis Eduardo Fagúndez",
+            "email": "profeluisfagundez@gmail.com"
+        }
+    ],
+    "require": {}
+}
