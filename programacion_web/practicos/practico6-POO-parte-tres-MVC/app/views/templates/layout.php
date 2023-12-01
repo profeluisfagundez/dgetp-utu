@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Registro de Estudiantes</title>
+    <title>SGET - Sistema de Gestión de Estudiantes Terciarios</title>
 </head>
 
 <body>
     <header>
-        <h1>Bienvenido al Registro de Estudiantes</h1>
-        <p>Visitas: <?php echo $contadorVisitas; ?></p>
+        <h1>BIENVENIDOS AL SGET - Sistema de Gestión de Estudiantes Terciarios</h1>
+        <?php echo $nombreSeccion; ?>
     </header>
 
     <nav>
