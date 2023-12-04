@@ -18,9 +18,12 @@ class IngresosController {
     public function store($data){
         $conn = ConexionModel::getInstance()->getDatabaseInstance();
         $consulta = $conn->prepare("INSERT INTO ingreso(metodo_pago,tipo,fecha_retiro,cantidad,descripcion) VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
-        $consulta->execute($data);
-        //$conn->bind_param("",$metodoPago, $tipo, $fechaRetiro, $cantidad, $descripcion);
-
+        $consulta->bindParam(":metodo_pago", $data['metodo_pago']);
+        $consulta->bindParam(":tipo", $data['tipo']);
+        $consulta->bindParam(":fecha_retiro", $data['fecha_retiro']);
+        $consulta->bindParam(":cantidad", $data['cantidad']);
+        $consulta->bindParam(":descripcion", $data['descripcion']);
+        $consulta->execute();
     }
     public function show(){}
     public function edit(){}
