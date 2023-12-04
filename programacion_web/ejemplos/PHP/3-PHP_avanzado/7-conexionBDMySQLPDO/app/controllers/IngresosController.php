@@ -15,7 +15,6 @@ class IngresosController {
      */
     public function index(){}
     public function create(){}
-    
     public function store($data){
         $conn = ConexionModel::getInstance()->getDatabaseInstance();
         $consulta = $conn->prepare("INSERT INTO ingreso(metodo_pago,tipo,fecha_retiro,cantidad,descripcion) VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
