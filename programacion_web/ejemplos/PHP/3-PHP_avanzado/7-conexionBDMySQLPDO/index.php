@@ -24,4 +24,6 @@ $retiroController->store([
     "descripcion" => "compre mucha comida"
 ]);
 
+$retiroController->index();
+
 ?>

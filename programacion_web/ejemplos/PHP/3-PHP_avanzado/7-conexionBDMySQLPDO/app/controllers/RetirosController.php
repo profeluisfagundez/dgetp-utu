@@ -1,28 +1,39 @@
 <?php 
-
+/**
+* Los 7 métodos que suelen tener los controladores:
+* index: muestra la lista de todos los recursos.
+* create: muestra un formulario para ingresar un nuevo recurso. (luego manda a llamar al método store).
+* store: registra dentro de la base de datos el nuevo recurso.
+* show: muestra un recurso específico.
+* edit: muestra un formulario para editar un recurso. (luego manda a llamar al método update).
+* update: actualiza el recurso dentro de la base de datos.
+* destroy: elimina un recurso.
+*/
 require_once("app/database/ConexionModel.php");
 
 class RetirosController {
-    /**
-    * Los 7 métodos que suelen tener los controladores:
-    * index: muestra la lista de todos los recursos.
-    * create: muestra un formulario para ingresar un nuevo recurso. (luego manda a llamar al método store).
-    * store: registra dentro de la base de datos el nuevo recurso.
-    * show: muestra un recurso específico.
-    * edit: muestra un formulario para editar un recurso. (luego manda a llamar al método update).
-    * update: actualiza el recurso dentro de la base de datos.
-    * destroy: elimina un recurso.
-     */
-    public function index(){}
+    private $conn;
+
+    public function __construct() {
+        $this->conn = ConexionModel::getInstance()->getDatabaseInstance();
+
+    }
+
+    public function index(){
+        $consulta = $this->conn->prepare("SELECT * from retiro;");
+        $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        var_dump($resultado);
+    }
     public function create(){}
     public function store($data){
-        $conn = ConexionModel::getInstance()->getDatabaseInstance();
-        $consulta = $conn->prepare("INSERT INTO retiro(metodo_pago,tipo,fecha_retiro,cantidad,descripcion) VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
-        $consulta->bindParam(":metodo_pago", $data['metodo_pago']);
-        $consulta->bindParam(":tipo", $data['tipo']);
-        $consulta->bindParam(":fecha_retiro", $data['fecha_retiro']);
-        $consulta->bindParam(":cantidad", $data['cantidad']);
-        $consulta->bindParam(":descripcion", $data['descripcion']);
+        $consulta = $this->conn->prepare("INSERT INTO retiro(metodo_pago,tipo,fecha_retiro,cantidad,descripcion)
+         VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
+        $consulta->bindValue(":metodo_pago", $data['metodo_pago']);
+        $consulta->bindValue(":tipo", $data['tipo']);
+        $consulta->bindValue(":fecha_retiro", $data['fecha_retiro']);
+        $consulta->bindValue(":cantidad", $data['cantidad']);
+        $consulta->bindValue(":descripcion", $data['descripcion']);
         $consulta->execute();
     }
     public function show(){}
