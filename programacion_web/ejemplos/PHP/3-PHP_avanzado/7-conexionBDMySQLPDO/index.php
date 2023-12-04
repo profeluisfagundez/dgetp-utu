@@ -12,7 +12,7 @@ $ingresoController->store([
     "tipo" => IngresoTipoEnum::Salario->value,
     "fecha_ingreso" => date("Y-m-d H:i:s"),
     "cantidad" => 65000,
-    "descripcion" => "ingreso un segundo sueldo jaja"
+    "descripcion" => "Se da de alta un sueldo"
 ]);
 
 $retiroController = new RetirosController();
@@ -20,8 +20,8 @@ $retiroController->store([
     "metodo_pago" => MetodoPagoEnum::TarjetaCredito->value,
     "tipo" => RetiroTipoEnum::Compra->value,
     "fecha_retiro" => date("Y-m-d H:i:s"),
-    "cantidad" => 650,
-    "descripcion" => "compre mucha comida"
+    "cantidad" => 350,
+    "descripcion" => "compre unos sandwich de pasta de queso"
 ]);
 
 $retiroController->index();

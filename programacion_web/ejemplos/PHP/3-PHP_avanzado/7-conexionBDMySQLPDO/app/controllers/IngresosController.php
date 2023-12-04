@@ -19,19 +19,24 @@ class IngresosController {
     }
 
     public function index(){}
+
     public function create(){}
+
     public function store($data){
-        $consulta = $this->conn->prepare("INSERT INTO ingreso(metodo_pago,tipo,fecha_retiro,cantidad,descripcion) VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
-        $consulta->bindParam(":metodo_pago", $data['metodo_pago']);
-        $consulta->bindParam(":tipo", $data['tipo']);
-        $consulta->bindParam(":fecha_retiro", $data['fecha_retiro']);
-        $consulta->bindParam(":cantidad", $data['cantidad']);
-        $consulta->bindParam(":descripcion", $data['descripcion']);
+        $consulta = $this->conn->prepare("INSERT INTO ingresos(metodo_pago,tipo,fecha_ingreso,cantidad,descripcion) VALUES (:metodo_pago,:tipo,:fecha_ingreso,:cantidad,:descripcion);");
+        $consulta->bindValue(":metodo_pago", $data['metodo_pago']);
+        $consulta->bindValue(":tipo", $data['tipo']);
+        $consulta->bindValue(":fecha_ingreso", $data['fecha_ingreso']);
+        $consulta->bindValue(":cantidad", $data['cantidad']);
+        $consulta->bindValue(":descripcion", $data['descripcion']);
         $consulta->execute();
     }
     public function show(){}
+
     public function edit(){}
+
     public function update(){}
+
     public function destroy(){}
 
 }

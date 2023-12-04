@@ -20,14 +20,16 @@ class RetirosController {
     }
 
     public function index(){
-        $consulta = $this->conn->prepare("SELECT * from retiro;");
+        $consulta = $this->conn->prepare("SELECT * from retiros;");
         $consulta->execute();
         $resultado = $consulta->fetchAll();
         var_dump($resultado);
     }
+
     public function create(){}
+
     public function store($data){
-        $consulta = $this->conn->prepare("INSERT INTO retiro(metodo_pago,tipo,fecha_retiro,cantidad,descripcion)
+        $consulta = $this->conn->prepare("INSERT INTO retiros(metodo_pago,tipo,fecha_retiro,cantidad,descripcion)
          VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
         $consulta->bindValue(":metodo_pago", $data['metodo_pago']);
         $consulta->bindValue(":tipo", $data['tipo']);
@@ -36,9 +38,13 @@ class RetirosController {
         $consulta->bindValue(":descripcion", $data['descripcion']);
         $consulta->execute();
     }
+
     public function show(){}
+
     public function edit(){}
+
     public function update(){}
+    
     public function destroy(){}
 
 }
