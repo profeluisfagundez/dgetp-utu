@@ -10,7 +10,7 @@ $ingresoController = new IngresosController();
 $ingresoController->store([
     "metodo_pago" => MetodoPagoEnum::CuentaDeBanco->value,
     "tipo" => IngresoTipoEnum::Salario->value,
-    "fecha_retiro" => date("Y-m-d H:i:s"),
+    "fecha_ingreso" => date("Y-m-d H:i:s"),
     "cantidad" => 65000,
     "descripcion" => "ingreso un segundo sueldo jaja"
 ]);
