@@ -1,5 +1,7 @@
 <?php 
 
+require_once("app/database/ConexionModel.php");
+
 class RetirosController {
     /**
     * Los 7 métodos que suelen tener los controladores:
@@ -13,7 +15,12 @@ class RetirosController {
      */
     public function index(){}
     public function create(){}
-    public function store(){}
+    public function store($data){
+        $conn = ConexionModel::getInstance()->getDatabaseInstance();
+        $consulta = $conn->prepare("INSERT INTO retiro(metodo_pago,tipo,fecha_retiro,cantidad,descripcion) VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
+        $consulta->execute($data);
+        //$conn->bind_param("",$metodoPago, $tipo, $fechaRetiro, $cantidad, $descripcion);
+    }
     public function show(){}
     public function edit(){}
     public function update(){}
