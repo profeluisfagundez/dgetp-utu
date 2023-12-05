@@ -48,13 +48,12 @@ class IngresosController {
             ":id" => $id
         ]);
         $resultados = $consulta->fetch();
-        foreach ($resultados as $resultado){
-            echo "Método de pago: " . $resultado['metodo_pago'] . "<br>";
-            echo "Tipo: " . $resultado['tipo'] . "<br>";
-            echo "Fecha de ingreso: " . $resultado['fecha_ingreso'] . "<br>";
-            echo "Cantidad: " . $resultado['cantidad'] . "<br>";
-            echo "Descripción: " . $resultado['descripcion'] . "<br>";            
-        }        
+        echo "DATOS IMPORTANTES DEL ID: " . $id . "<br>";
+        echo $resultados['metodo_pago'] . "<br>";
+        echo $resultados['tipo'] . "<br>";
+        echo $resultados['fecha_ingreso'] . "<br>";
+        echo $resultados['cantidad'] . "<br>";
+        echo $resultados['descripcion'] . "<br>";
     }
 
     public function edit(){}

@@ -30,5 +30,6 @@ echo "******************************************************************<br>";
 echo "ACA COMIENZA EL INGRESO <br>";
 $ingresoController->index();
 echo "******************************************************************<br>";
+$ingresoController->show("5");
 
 ?>
