@@ -42,7 +42,20 @@ class IngresosController {
         $consulta->bindValue(":descripcion", $data['descripcion']);
         $consulta->execute();
     }
-    public function show(){}
+    public function show($id){
+        $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
+        $consulta->execute([
+            ":id" => $id
+        ]);
+        $resultados = $consulta->fetch();
+        foreach ($resultados as $resultado){
+            echo "Método de pago: " . $resultado['metodo_pago'] . "<br>";
+            echo "Tipo: " . $resultado['tipo'] . "<br>";
+            echo "Fecha de ingreso: " . $resultado['fecha_ingreso'] . "<br>";
+            echo "Cantidad: " . $resultado['cantidad'] . "<br>";
+            echo "Descripción: " . $resultado['descripcion'] . "<br>";            
+        }        
+    }
 
     public function edit(){}
 

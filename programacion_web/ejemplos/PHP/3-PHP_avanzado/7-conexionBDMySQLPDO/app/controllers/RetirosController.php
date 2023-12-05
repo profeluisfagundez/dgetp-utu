@@ -14,7 +14,7 @@ require_once("app/models/ConexionModel.php");
 class RetirosController {
     private $conn;
 
-    public function __construct() {
+    public function __construct(){
         $this->conn = ConexionModel::getInstance()->getDatabaseInstance();
 
     }
@@ -45,7 +45,9 @@ class RetirosController {
         $consulta->execute();
     }
 
-    public function show(){}
+    public function show(){
+        
+    }
 
     public function edit(){}
 
