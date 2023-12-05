@@ -31,7 +31,7 @@ class RetirosController {
     public function store($data){
         $consulta = $this->conn->prepare("INSERT INTO retiros(metodo_pago,tipo,fecha_retiro,cantidad,descripcion)
          VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
-        $consulta->bindValue(":metodo_pago", $data['metodo_pago']);
+        $consulta->bindValue(":metodo_pago", $data['metodo_pago']); // $_POST["nombre"];
         $consulta->bindValue(":tipo", $data['tipo']);
         $consulta->bindValue(":fecha_retiro", $data['fecha_retiro']);
         $consulta->bindValue(":cantidad", $data['cantidad']);
