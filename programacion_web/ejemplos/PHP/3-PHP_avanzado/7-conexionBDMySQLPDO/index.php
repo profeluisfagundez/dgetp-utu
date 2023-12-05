@@ -24,6 +24,11 @@ $retiroController->store([
     "descripcion" => "compre unos sandwich de pasta de queso"
 ]);
 
+echo "ACA COMIENZA EL RETIRO <br>";
 $retiroController->index();
+echo "******************************************************************<br>";
+echo "ACA COMIENZA EL INGRESO <br>";
+$ingresoController->index();
+echo "******************************************************************<br>";
 
 ?>

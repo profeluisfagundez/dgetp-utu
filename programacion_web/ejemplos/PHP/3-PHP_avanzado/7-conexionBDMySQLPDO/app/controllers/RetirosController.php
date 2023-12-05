@@ -22,8 +22,14 @@ class RetirosController {
     public function index(){
         $consulta = $this->conn->prepare("SELECT * from retiros;");
         $consulta->execute();
-        $resultado = $consulta->fetchAll();
-        var_dump($resultado);
+        $resultados = $consulta->fetchAll();
+        foreach ($resultados as $resultado){
+            echo "Método de pago: " . $resultado['metodo_pago'] . "<br>";
+            echo "Tipo: " . $resultado['tipo'] . "<br>";
+            echo "Fecha de retiro: " . $resultado['fecha_retiro'] . "<br>";
+            echo "Cantidad: " . $resultado['cantidad'] . "<br>";
+            echo "Descripción: " . $resultado['descripcion'] . "<br>";
+        }
     }
 
     public function create(){}
