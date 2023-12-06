@@ -32,6 +32,6 @@ $retiroController->store([
 //echo "******************************************************************<br>";
 //$ingresoController->show("5");
 //echo "******************************************************************<br>";
-$ingresoController->destroy(2);
+//$ingresoController->destroy(2);
 
 ?>
