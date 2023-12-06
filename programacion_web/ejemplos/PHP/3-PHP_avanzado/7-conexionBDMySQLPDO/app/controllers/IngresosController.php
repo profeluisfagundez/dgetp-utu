@@ -60,7 +60,21 @@ class IngresosController {
 
     public function update(){}
 
-    public function destroy(){}
+    public function destroy($id){
+        $consulta = $this->conn->beginTransaction();
+        $consulta = $this->conn->prepare("DELETE FROM ingresos WHERE id=:id;");
+        $consulta->execute([
+            ":id" => $id
+        ]); 
+        $validar = readline("Esta completamente seguro que desea eliminar el registro?");
+        if($validar == 'no') {
+            $this->conn->rollBack();
+        } elseif($validar == 'si') {
+            $this->conn->commit();
+        } else {
+            echo "Error al procesar la transacción";
+        }
+    }
 
 }
 
