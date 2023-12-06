@@ -12,9 +12,10 @@
 require_once("app/models/ConexionModel.php");
 
 class RetirosController {
-    private $conn;
+    private $conn; //Atributo que usaramos para trabajar con la conexión de la BD
 
     public function __construct(){
+        //Llamamos al método getInstance (patrón singleton) y obtenemos la conexión a la BD
         $this->conn = ConexionModel::getInstance()->getDatabaseInstance();
 
     }
@@ -45,16 +46,61 @@ class RetirosController {
         $consulta->execute();
     }
 
-    public function show(){
-        
+    public function show($id){
+        $consulta = $this->conn->prepare("SELECT * FROM retiros WHERE id=:id;");
+        $consulta->execute([
+            ":id" => $id
+        ]);
+        $resultados = $consulta->fetch();
+        echo "DATOS IMPORTANTES DEL ID: " . $id . "<br>";
+        echo $resultados['metodo_pago'] . "<br>";
+        echo $resultados['tipo'] . "<br>";
+        echo $resultados['fecha_retiro'] . "<br>";
+        echo $resultados['cantidad'] . "<br>";
+        echo $resultados['descripcion'] . "<br>"; 
     }
 
     public function edit(){}
 
-    public function update(){}
+    public function update($data, $id){
+        $consulta = $this->conn->prepare("UPDATE retiros SET 
+        metodo_pago = :metodo_pago,
+        tipo = :tipo,
+        fecha_retiro = :fecha_retiro,
+        cantidad = :cantidad,
+        descripcion = :descripcion WHERE id=:id;");
+        $consulta->execute([
+            ":id" => $id,
+            ":metodo_pago" => $data['metodo_pago'],
+            ":tipo", $data['tipo'],
+            ":fecha_retiro", $data['fecha_retiro'],
+            ":cantidad", $data['cantidad'],
+            ":descripcion", $data['descripcion'],
+        ]);        
+    }
     
-    public function destroy(){}
+    public function destroy($id) {
+        $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
+        $consulta->execute([
+            ":id" => $id
+        ]); 
+    }
 
+    /*public function destroy($id) {
+        $consulta = $this->conn->beginTransaction();
+        $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
+        $consulta->execute([
+            ":id" => $id
+        ]); 
+        $validar = readline("Esta completamente seguro que desea eliminar el registro?");
+        if($validar == 'no') {
+            $this->conn->rollBack();
+        } elseif($validar == 'si') {
+            $this->conn->commit();
+        } else {
+            echo "Error al procesar la transacción";
+        }
+    }*/
 }
 
 ?>

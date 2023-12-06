@@ -75,7 +75,6 @@ class IngresosController {
             echo "Error al procesar la transacción";
         }
     }
-
 }
 
 ?>
