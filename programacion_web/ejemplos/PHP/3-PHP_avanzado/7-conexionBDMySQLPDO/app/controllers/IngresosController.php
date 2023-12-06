@@ -58,7 +58,22 @@ class IngresosController {
 
     public function edit(){}
 
-    public function update(){}
+    public function update($data, $id){
+        $consulta = $this->conn->prepare("UPDATE ingresos SET 
+        metodo_pago = :metodo_pago,
+        tipo = :tipo,
+        fecha_ingreso = :fecha_ingreso,
+        cantidad = :cantidad,
+        descripcion = :descripcion WHERE id=:id;");
+        $consulta->execute([
+            ":id" => $id,
+            ":metodo_pago" => $data['metodo_pago'],
+            ":tipo", $data['tipo'],
+            ":fecha_ingreso", $data['fecha_ingreso'],
+            ":cantidad", $data['cantidad'],
+            ":descripcion", $data['descripcion'],
+        ]);         
+    }
 
     public function destroy($id){
         $consulta = $this->conn->beginTransaction();
