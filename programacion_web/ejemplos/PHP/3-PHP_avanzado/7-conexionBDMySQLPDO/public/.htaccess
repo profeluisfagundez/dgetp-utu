@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{REPLACEUEST_FILENAME} !-f
+RewriteCond %{REPLACEUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?slug$1 [L]
