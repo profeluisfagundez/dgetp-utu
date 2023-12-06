@@ -1,6 +1,8 @@
 RewriteEngine On
 
-RewriteCond %{REPLACEUEST_FILENAME} !-f
-RewriteCond %{REPLACEUEST_FILENAME} !-d
+# Verifica si el archivo o directorio no existe
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^(.*)$ index.php?slug$1 [L]
+# Reescribe la URL y pasa como parámetro a index.php
+RewriteRule ^(.*)$ index.php?slug=$1 [L]

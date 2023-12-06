@@ -9,7 +9,7 @@
 * update: actualiza el recurso dentro de la base de datos.
 * destroy: elimina un recurso.
 */
-require_once("app/models/ConexionModel.php");
+require_once("../app/models/ConexionModel.php");
 
 class IngresosController {
     private $conn;
