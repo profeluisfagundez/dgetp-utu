@@ -5,11 +5,11 @@ class RouterHandler{
     protected $data;
 
     public function setMethod($method){
-        $this->method -> $method;
+        $this->method = $method;
     }
 
     public function setData($data){
-        $this->data -> $data;
+        $this->data = $data;
     }
 
     public function route($controller, $id){
