@@ -6,3 +6,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # Reescribe la URL y pasa como parámetro a index.php
 RewriteRule ^(.*)$ index.php?slug=$1 [L]
+
