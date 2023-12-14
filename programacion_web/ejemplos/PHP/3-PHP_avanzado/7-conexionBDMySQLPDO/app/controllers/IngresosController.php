@@ -22,13 +22,7 @@ class IngresosController {
         $consulta = $this->conn->prepare("SELECT * from ingresos;");
         $consulta->execute();
         $resultados = $consulta->fetchAll();
-        foreach ($resultados as $resultado){
-            echo "Método de pago: " . $resultado['metodo_pago'] . "<br>";
-            echo "Tipo: " . $resultado['tipo'] . "<br>";
-            echo "Fecha de ingreso: " . $resultado['fecha_ingreso'] . "<br>";
-            echo "Cantidad: " . $resultado['cantidad'] . "<br>";
-            echo "Descripción: " . $resultado['descripcion'] . "<br>";
-        }
+        require_once("../app/views/ingresos/index.php");
     }
 
     public function create(){}
