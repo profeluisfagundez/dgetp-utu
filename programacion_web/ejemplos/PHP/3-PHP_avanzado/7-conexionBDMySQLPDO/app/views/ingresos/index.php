@@ -44,7 +44,7 @@
         </thead>
         <tbody>
             <?php
-            /*
+                /*
                 *IMPORTANTE -> LA VARIABLE RESULTADOS VIENE EL CONTROLADOR AUTOMÁTICAMENTE 
                 *Esto es gracias a que se carga desde el enruteador y se hace el require_once();
                 */
