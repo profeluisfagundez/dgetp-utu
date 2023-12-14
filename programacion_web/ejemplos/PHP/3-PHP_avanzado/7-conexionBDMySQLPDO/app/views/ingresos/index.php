@@ -6,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de ingresos</title>
     <style>
-        *{
-            margin: auto;
-            padding: 0px;
+        body {
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
             text-align: center;
             padding: 20px;
         }
+
         table {
-            border: solid;
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
         }
-        table, thead, tr, th {
-            border: solid;
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
         }
-        table, tbody, tr, td {
-            border: solid;
+
+        th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
@@ -43,22 +50,16 @@
             </tr>
         </thead>
         <tbody>
-            <?php
-                /*
-                *IMPORTANTE -> LA VARIABLE RESULTADOS VIENE EL CONTROLADOR AUTOMÁTICAMENTE 
-                *Esto es gracias a que se carga desde el enruteador y se hace el require_once();
-                */
-            foreach ($resultados as $resultado) {
-                echo "<tr>";
-                echo "<td> ID en BD: " . $resultado['id'] . "</td>";
-                echo "<td> Método de pago: " . $resultado['metodo_pago'] . "</td>";
-                echo "<td> Tipo: " . $resultado['tipo'] . "</td>";
-                echo "<td> Fecha de ingreso: " . $resultado['fecha_ingreso'] . "</td>";
-                echo "<td> Cantidad: " . $resultado['cantidad'] . "</td>";
-                echo "<td> Descripción: " . $resultado['descripcion'] . "</td>";
-                echo "</tr>";
-            }
-            ?>
+            <?php foreach ($resultados as $resultado): ?>
+                <tr>
+                    <td>ID en BD: <?php echo $resultado['id']; ?></td>
+                    <td>Método de pago: <?php echo $resultado['metodo_pago']; ?></td>
+                    <td>Tipo: <?php echo $resultado['tipo']; ?></td>
+                    <td>Fecha de ingreso: <?php echo $resultado['fecha_ingreso']; ?></td>
+                    <td>Cantidad: <?php echo $resultado['cantidad']; ?></td>
+                    <td>Descripción: <?php echo $resultado['descripcion']; ?></td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </body>
