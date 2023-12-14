@@ -63,7 +63,7 @@
     <header>
         <h1>Cargar un ingreso en el sistema</h1>
     </header>
-    <form action="/ingresos" method="get">
+    <form action="/ingresos" method="post">
         <div>
             <label for="metodo_pago">Método de Pago</label>
             <select name="metodo_pago" id="metodo_pago">
@@ -91,6 +91,9 @@
             <input type="text" name="descripcion" id="descripcion">
         </div>
         <div>
+            <!--Nuestro RouterHandler espera que le indiquemos que tipo de método
+            va a usar, por eso creamos un input hidden con el valor POST-->
+            <input type="hidden" name="method" id="method" value="post">
             <input type="submit" value="Registrar">
         </div>
     </form>
