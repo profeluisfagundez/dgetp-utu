@@ -25,7 +25,9 @@ class IngresosController {
         require_once("../app/views/ingresos/index.php");
     }
 
-    public function create(){}
+    public function create(){
+        require_once("../app/views/ingresos/create.php");
+    }
 
     public function store($data){
         $consulta = $this->conn->prepare("INSERT INTO ingresos(metodo_pago,tipo,fecha_ingreso,cantidad,descripcion) VALUES (:metodo_pago,:tipo,:fecha_ingreso,:cantidad,:descripcion);");

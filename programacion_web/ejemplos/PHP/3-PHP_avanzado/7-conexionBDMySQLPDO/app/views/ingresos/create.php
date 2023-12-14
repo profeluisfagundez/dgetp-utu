@@ -93,7 +93,7 @@
         <div>
             <!--Nuestro RouterHandler espera que le indiquemos que tipo de método
             va a usar, por eso creamos un input hidden con el valor POST-->
-            <input type="hidden" name="method" id="method" value="post">
+            <input type="hidden" name="method" id="method" value="POST">
             <input type="submit" value="Registrar">
         </div>
     </form>
