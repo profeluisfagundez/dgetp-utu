@@ -38,6 +38,7 @@ class IngresosController {
         $consulta->bindValue(":descripcion", $data['descripcion']);
         $consulta->execute();
     }
+    
     public function show($id){
         $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
         $consulta->execute([
@@ -64,10 +65,10 @@ class IngresosController {
         $consulta->execute([
             ":id" => $id,
             ":metodo_pago" => $data['metodo_pago'],
-            ":tipo", $data['tipo'],
-            ":fecha_ingreso", $data['fecha_ingreso'],
-            ":cantidad", $data['cantidad'],
-            ":descripcion", $data['descripcion'],
+            ":tipo" => $data['tipo'],
+            ":fecha_ingreso" => $data['fecha_ingreso'],
+            ":cantidad" => $data['cantidad'],
+            ":descripcion" => $data['descripcion'],
         ]);         
     }
 
