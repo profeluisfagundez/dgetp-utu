@@ -23,7 +23,7 @@ $router = new RouterHandler();
 
 switch ($resource) {
     case '/':
-        echo "Estás en la página principal";
+        require_once("../app/views/inicio.php");
         break;
     case 'ingresos': {
         $method = $_POST['method'] ?? 'GET';

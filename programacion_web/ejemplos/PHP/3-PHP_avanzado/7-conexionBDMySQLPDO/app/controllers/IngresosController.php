@@ -37,6 +37,7 @@ class IngresosController {
         $consulta->bindValue(":cantidad", $data['cantidad']);
         $consulta->bindValue(":descripcion", $data['descripcion']);
         $consulta->execute();
+        header("location: ingresos");
     }
     
     public function show($id){
