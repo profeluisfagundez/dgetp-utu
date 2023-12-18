@@ -46,12 +46,7 @@ class IngresosController {
             ":id" => $id
         ]);
         $resultados = $consulta->fetch();
-        echo "DATOS IMPORTANTES DEL ID: " . $id . "<br>";
-        echo $resultados['metodo_pago'] . "<br>";
-        echo $resultados['tipo'] . "<br>";
-        echo $resultados['fecha_ingreso'] . "<br>";
-        echo $resultados['cantidad'] . "<br>";
-        echo $resultados['descripcion'] . "<br>";
+        require_once("../app/views/ingresos/ingreso.php");
     }
 
     public function edit(){}
