@@ -32,7 +32,8 @@ class RouterHandler{
                 break;
             }
             case "DELETE": {
-                $resources->delete($this->data);
+                $resources->destroy($this->data);
+                break;
             }
         }
     }

@@ -27,7 +27,7 @@
             <li><a href="#">Editar un ingreso</a></li>
             <li>
             <li>
-                <form id="formEliminar" method="post" action="ingresos" onsubmit="return confirmarEliminar()">
+                <form id="formEliminar" method="post" onsubmit="return confirmarEliminar()">
                     <input type="hidden" name="method" id="method" value="DELETE">
                     <label for="eliminarID">ID a Eliminar:</label>
                     <input type="number" name="id" id="eliminarID" required>
