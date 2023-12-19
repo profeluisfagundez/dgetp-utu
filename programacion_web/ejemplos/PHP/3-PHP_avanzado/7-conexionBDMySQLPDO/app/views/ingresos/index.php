@@ -37,7 +37,7 @@
         </tbody>
     </table>
     <form action="<?php echo "/"; ?>" method="post">
-        <input type="submit" value="Ir a la Página de Destino">
+        <input type="submit" value="INICIO">
     </form>
 </body>
 

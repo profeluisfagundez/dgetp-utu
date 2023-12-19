@@ -52,7 +52,7 @@ a:hover {
     background-color: #ddd;
 }
 
-#buscarForm {
+#buscarForm, #formEliminar {
     text-align: center;
     margin-top: 20px;
     color: #333;
@@ -60,12 +60,12 @@ a:hover {
     font-size: 16px;
 }
 
-#buscarID {
+#buscarID, #eliminarID {
     padding: 10px;
     margin-right: 10px;
 }
 
-#buscarForm input[type="button"] {
+#buscarForm input[type="button"], #formEliminar button {
     background-color: #555;
     color: white;
     padding: 10px 20px;
@@ -76,6 +76,6 @@ a:hover {
     transition: background-color 0.3s;
 }
 
-#buscarForm input[type="button"]:hover {
+#buscarForm input[type="button"]:hover, #formEliminar button:hover {
     background-color: #333;
 }

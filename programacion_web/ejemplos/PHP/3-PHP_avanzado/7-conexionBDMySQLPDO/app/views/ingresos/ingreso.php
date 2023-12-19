@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1>Datos del ingreso con el ID: <?php echo $resultado['id']; ?></h1>
+        <h1>Datos del ingreso con el ID: <?php echo $resultados['id']; ?></h1>
     </header>
     <table>
         <thead>

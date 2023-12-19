@@ -17,7 +17,6 @@
         <ul>
             <li><a href="<?php echo 'ingresos' ?>">Listar ingresos</a></li>
             <li><a href="<?php echo 'ingresos/create' ?>">Crear un ingreso</a></li>
-            <!--<li><a href="#">Buscar un ingreso</a></li>-->
             <li>
                 <form id="buscarForm">
                     <label for="buscarID">Buscar un ingreso por ID:</label>
@@ -26,7 +25,17 @@
                 </form>
             </li>
             <li><a href="#">Editar un ingreso</a></li>
-            <li><a href="#">Eliminar un ingreso</a></li>
+            <li>
+            <li>
+                <form id="formEliminar" method="post" action="ingresos" onsubmit="return confirmarEliminar()">
+                    <input type="hidden" name="method" id="method" value="DELETE">
+                    <label for="eliminarID">ID a Eliminar:</label>
+                    <input type="number" name="id" id="eliminarID" required>
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+
+            </li>
             <li><a href="#">Listar retiros</a></li>
             <li><a href="#">Crear un retiro</a></li>
             <li><a href="#">Buscar un retiro</a></li>
@@ -39,6 +48,11 @@
         function buscarIngreso() {
             var idBuscado = document.getElementById("buscarID").value;
             window.location.href = "ingresos/" + idBuscado;
+        }
+
+        function confirmarEliminar() {
+            var confirmacion = confirm("¿Estás seguro de que deseas eliminar el registro?");
+            return confirmacion;
         }
     </script>
 
