@@ -60,7 +60,7 @@ a:hover {
     font-size: 16px;
 }
 
-#buscarID, #eliminarID {
+#buscarIDIngreso, #buscarIDRetiro, #eliminarID {
     padding: 10px;
     margin-right: 10px;
 }

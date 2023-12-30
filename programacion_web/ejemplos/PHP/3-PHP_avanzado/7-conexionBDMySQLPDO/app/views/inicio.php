@@ -19,8 +19,8 @@
             <li><a href="<?php echo 'ingresos/create' ?>">Crear un ingreso</a></li>
             <li>
                 <form id="buscarForm">
-                    <label for="buscarID">Buscar un ingreso por ID:</label>
-                    <input type="number" name="id" id="buscarID" required>
+                    <label for="buscarIDIngreso">Buscar un ingreso por ID:</label>
+                    <input type="number" name="id" id="buscarIDIngreso" required>
                     <input type="button" value="Buscar" onclick="buscarIngreso()">
                 </form>
             </li>
@@ -37,8 +37,14 @@
 
             </li>
             <li><a href="<?php echo 'retiros' ?>">Listar retiros</a></li>
-            <li><a href="<?php echo 'retiros/create'?>">Crear un retiro</a></li>
-            <li><a href="#">Buscar un retiro</a></li>
+            <li><a href="<?php echo 'retiros/create' ?>">Crear un retiro</a></li>
+            <li>
+                <form id="buscarForm">
+                    <label for="buscarIDRetiro">Buscar un ingreso por ID:</label>
+                    <input type="number" name="id" id="buscarIDRetiro" required>
+                    <input type="button" value="Buscar" onclick="buscarRetiro()">
+                </form>
+            </li>
             <li><a href="#">Editar un retiro</a></li>
             <li><a href="#">Eliminar un retiro</a></li>
         </ul>
@@ -46,8 +52,13 @@
 
     <script>
         function buscarIngreso() {
-            var idBuscado = document.getElementById("buscarID").value;
+            var idBuscado = document.getElementById("buscarIDIngreso").value;
             window.location.href = "ingresos/" + idBuscado;
+        }
+
+        function buscarRetiro() {
+            var idBuscado = document.getElementById("buscarIDRetiro").value;
+            window.location.href = "retiros/" + idBuscado;
         }
 
         function confirmarEliminar() {
