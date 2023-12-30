@@ -36,8 +36,8 @@
             </li>
 
             </li>
-            <li><a href="#">Listar retiros</a></li>
-            <li><a href="#">Crear un retiro</a></li>
+            <li><a href="<?php echo 'retiros' ?>">Listar retiros</a></li>
+            <li><a href="<?php echo 'retiros/create'?>">Crear un retiro</a></li>
             <li><a href="#">Buscar un retiro</a></li>
             <li><a href="#">Editar un retiro</a></li>
             <li><a href="#">Eliminar un retiro</a></li>
