@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1>Lista de retiro en el sistema</h1>
+        <h1>Lista de retiros en el sistema</h1>
     </header>
     <table>
         <thead>
