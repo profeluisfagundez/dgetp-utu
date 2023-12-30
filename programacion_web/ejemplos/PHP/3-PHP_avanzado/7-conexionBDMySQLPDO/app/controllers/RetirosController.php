@@ -24,16 +24,13 @@ class RetirosController {
         $consulta = $this->conn->prepare("SELECT * from retiros;");
         $consulta->execute();
         $resultados = $consulta->fetchAll();
-        foreach ($resultados as $resultado){
-            echo "Método de pago: " . $resultado['metodo_pago'] . "<br>";
-            echo "Tipo: " . $resultado['tipo'] . "<br>";
-            echo "Fecha de retiro: " . $resultado['fecha_retiro'] . "<br>";
-            echo "Cantidad: " . $resultado['cantidad'] . "<br>";
-            echo "Descripción: " . $resultado['descripcion'] . "<br>";
-        }
+        require_once("../app/views/retiros/index.php");
     }
 
-    public function create(){}
+    public function create()
+    {
+        require_once("../app/views/retiros/create.php");
+    }
 
     public function store($data){
         $consulta = $this->conn->prepare("INSERT INTO retiros(metodo_pago,tipo,fecha_retiro,cantidad,descripcion)
@@ -44,6 +41,7 @@ class RetirosController {
         $consulta->bindValue(":cantidad", $data['cantidad']);
         $consulta->bindValue(":descripcion", $data['descripcion']);
         $consulta->execute();
+        header("location: retiros");
     }
 
     public function show($id){
@@ -52,12 +50,7 @@ class RetirosController {
             ":id" => $id
         ]);
         $resultados = $consulta->fetch();
-        echo "DATOS IMPORTANTES DEL ID: " . $id . "<br>";
-        echo $resultados['metodo_pago'] . "<br>";
-        echo $resultados['tipo'] . "<br>";
-        echo $resultados['fecha_retiro'] . "<br>";
-        echo $resultados['cantidad'] . "<br>";
-        echo $resultados['descripcion'] . "<br>"; 
+        require_once("../app/views/retiros/retiro.php");
     }
 
     public function edit(){}
@@ -72,18 +65,23 @@ class RetirosController {
         $consulta->execute([
             ":id" => $id,
             ":metodo_pago" => $data['metodo_pago'],
-            ":tipo", $data['tipo'],
-            ":fecha_retiro", $data['fecha_retiro'],
-            ":cantidad", $data['cantidad'],
-            ":descripcion", $data['descripcion'],
+            ":tipo" => $data['tipo'],
+            ":fecha_retiro" => $data['fecha_retiro'],
+            ":cantidad" => $data['cantidad'],
+            ":descripcion" => $data['descripcion'],
         ]);        
     }
     
     public function destroy($id) {
-        $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
-        $consulta->execute([
-            ":id" => $id
-        ]); 
+        if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+            $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
+            $consulta->execute([
+                ":id" => $id
+            ]);
+            header("location: retiros");
+        } else {
+            echo "Método no permitido";
+        } 
     }
 
     /*public function destroy($id) {
