@@ -27,10 +27,10 @@
             <li><a href="#">Editar un ingreso</a></li>
             <li>
             <li>
-                <form id="formEliminar" method="post" onsubmit="return confirmarEliminar()">
+                <form id="formEliminarIngreso" method="post" onsubmit="return confirmarEliminar()">
                     <input type="hidden" name="method" id="method" value="DELETE">
-                    <label for="eliminarID">Eliminar un ingreso por ID:</label>
-                    <input type="number" name="id" id="eliminarID" required>
+                    <label for="eliminarIDIngreso">Eliminar un ingreso por ID:</label>
+                    <input type="number" name="id" id="eliminarIDIngreso" required>
                     <button type="submit">Eliminar</button>
                 </form>
             </li>
@@ -46,7 +46,14 @@
                 </form>
             </li>
             <li><a href="#">Editar un retiro</a></li>
-            <li><a href="#">Eliminar un retiro por ID: </a></li>
+            <li>
+                <form id="formEliminarRetiro" method="post" onsubmit="return confirmarEliminar()">
+                    <input type="hidden" name="method" id="method" value="DELETE">
+                    <label for="eliminarIDRetiro">Eliminar un ingreso por ID:</label>
+                    <input type="number" name="id" id="eliminarIDRetiro" required>
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
         </ul>
     </nav>
 
