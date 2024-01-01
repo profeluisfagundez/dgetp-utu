@@ -29,7 +29,7 @@
             <li>
                 <form id="formEliminar" method="post" onsubmit="return confirmarEliminar()">
                     <input type="hidden" name="method" id="method" value="DELETE">
-                    <label for="eliminarID">ID a Eliminar:</label>
+                    <label for="eliminarID">Eliminar un ingreso por ID:</label>
                     <input type="number" name="id" id="eliminarID" required>
                     <button type="submit">Eliminar</button>
                 </form>
@@ -40,13 +40,13 @@
             <li><a href="<?php echo 'retiros/create' ?>">Crear un retiro</a></li>
             <li>
                 <form id="buscarForm">
-                    <label for="buscarIDRetiro">Buscar un ingreso por ID:</label>
+                    <label for="buscarIDRetiro">Buscar un retiro por ID:</label>
                     <input type="number" name="id" id="buscarIDRetiro" required>
                     <input type="button" value="Buscar" onclick="buscarRetiro()">
                 </form>
             </li>
             <li><a href="#">Editar un retiro</a></li>
-            <li><a href="#">Eliminar un retiro</a></li>
+            <li><a href="#">Eliminar un retiro por ID: </a></li>
         </ul>
     </nav>
 
