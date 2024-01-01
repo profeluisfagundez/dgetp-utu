@@ -18,7 +18,7 @@
             <li><a href="<?php echo 'ingresos' ?>">Listar ingresos</a></li>
             <li><a href="<?php echo 'ingresos/create' ?>">Crear un ingreso</a></li>
             <li>
-                <form id="buscarForm">
+                <form id="buscarFormIngreso">
                     <label for="buscarIDIngreso">Buscar un ingreso por ID:</label>
                     <input type="number" name="id" id="buscarIDIngreso" required>
                     <input type="button" value="Buscar" onclick="buscarIngreso()">
@@ -39,7 +39,7 @@
             <li><a href="<?php echo 'retiros' ?>">Listar retiros</a></li>
             <li><a href="<?php echo 'retiros/create' ?>">Crear un retiro</a></li>
             <li>
-                <form id="buscarForm">
+                <form id="buscarFormRetiro">
                     <label for="buscarIDRetiro">Buscar un retiro por ID:</label>
                     <input type="number" name="id" id="buscarIDRetiro" required>
                     <input type="button" value="Buscar" onclick="buscarRetiro()">
