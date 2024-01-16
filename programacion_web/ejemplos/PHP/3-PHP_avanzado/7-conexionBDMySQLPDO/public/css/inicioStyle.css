@@ -9,6 +9,13 @@ li {
     padding: 0;
 }
 
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;

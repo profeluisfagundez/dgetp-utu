@@ -14,6 +14,7 @@
     </header>
 
     <nav>
+        <h3>Sección de Ingresos</h3>
         <ul>
             <li><a href="<?php echo 'ingresos' ?>">Listar ingresos</a></li>
             <li><a href="<?php echo 'ingresos/create' ?>">Crear un ingreso</a></li>
@@ -33,7 +34,10 @@
                     <button type="submit">Eliminar</button>
                 </form>
             </li>
-
+        </ul>
+        <br>
+        <h3>Sección de Retiros</h3>
+        <ul>
             </li>
             <li><a href="<?php echo 'retiros' ?>">Listar retiros</a></li>
             <li><a href="<?php echo 'retiros/create' ?>">Crear un retiro</a></li>
