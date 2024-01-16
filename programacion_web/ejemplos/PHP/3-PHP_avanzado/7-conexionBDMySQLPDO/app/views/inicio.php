@@ -26,14 +26,7 @@
                 </form>
             </li>
             <li><a href="#">Editar un ingreso</a></li>
-            <li>
-                <form id="formEliminarIngreso" method="post" onsubmit="return confirmarEliminar('formEliminarIngreso')">
-                    <input type="hidden" name="method" id="method" value="DELETE">
-                    <label for="eliminarIDIngreso">Eliminar un ingreso por ID:</label>
-                    <input type="number" name="id" id="eliminarIDIngreso" required>
-                    <button type="submit">Eliminar</button>
-                </form>
-            </li>
+            <li><a href="<?php echo 'ingresos/delete' ?>">Eliminar un ingreso</a></li>
         </ul>
         <br>
         <h3>Sección de Retiros</h3>
