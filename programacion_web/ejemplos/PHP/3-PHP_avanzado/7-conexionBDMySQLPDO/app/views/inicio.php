@@ -26,8 +26,7 @@
             </li>
             <li><a href="#">Editar un ingreso</a></li>
             <li>
-            <li>
-                <form id="formEliminarIngreso" method="post" onsubmit="return confirmarEliminar()">
+                <form id="formEliminarIngreso" method="post" onsubmit="return confirmarEliminar('formEliminarIngreso')">
                     <input type="hidden" name="method" id="method" value="DELETE">
                     <label for="eliminarIDIngreso">Eliminar un ingreso por ID:</label>
                     <input type="number" name="id" id="eliminarIDIngreso" required>
@@ -47,9 +46,9 @@
             </li>
             <li><a href="#">Editar un retiro</a></li>
             <li>
-                <form id="formEliminarRetiro" method="post" onsubmit="return confirmarEliminar()">
+                <form id="formEliminarRetiro" method="post" onsubmit="return confirmarEliminar('formEliminarRetiro')">
                     <input type="hidden" name="method" id="method" value="DELETE">
-                    <label for="eliminarIDRetiro">Eliminar un ingreso por ID:</label>
+                    <label for="eliminarIDRetiro">Eliminar un retiro por ID:</label>
                     <input type="number" name="id" id="eliminarIDRetiro" required>
                     <button type="submit">Eliminar</button>
                 </form>
@@ -60,17 +59,30 @@
     <script>
         function buscarIngreso() {
             var idBuscado = document.getElementById("buscarIDIngreso").value;
-            window.location.href = "ingresos/" + idBuscado;
+            if (idBuscado) {
+                window.location.href = "ingresos/" + idBuscado;
+            } else {
+                alert("Por favor, introduce un ID.");
+            }
+            
         }
 
         function buscarRetiro() {
             var idBuscado = document.getElementById("buscarIDRetiro").value;
-            window.location.href = "retiros/" + idBuscado;
+            if (idBuscado) {
+                window.location.href = "retiros/" + idBuscado;
+            }
+            else {
+                alert("Por favor, introduce un ID.");
+            }
         }
 
-        function confirmarEliminar() {
+        function confirmarEliminar(formId) {
             var confirmacion = confirm("¿Estás seguro de que deseas eliminar el registro?");
-            return confirmacion;
+            if (confirmacion) {
+                document.getElementById(formId).submit();
+            }
+            return false;
         }
     </script>
 

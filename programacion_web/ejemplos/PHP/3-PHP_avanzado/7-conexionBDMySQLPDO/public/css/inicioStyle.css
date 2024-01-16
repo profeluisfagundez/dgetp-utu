@@ -64,8 +64,8 @@ a:hover {
 }
 
 #buscarIDIngreso,
-#buscarIDRetiro,
 #eliminarIDIngreso,
+#buscarIDRetiro,
 #eliminarIDRetiro {
     padding: 10px;
     margin-right: 10px;
