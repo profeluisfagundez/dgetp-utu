@@ -39,12 +39,10 @@ input {
     margin-bottom: 10px;
 }
 
-input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    cursor: pointer;
+form[action="/"] input[type="submit"] {
+    background-color: #555;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+form[action="/"] input[type="submit"]:hover {
+    background-color: #333;
 }

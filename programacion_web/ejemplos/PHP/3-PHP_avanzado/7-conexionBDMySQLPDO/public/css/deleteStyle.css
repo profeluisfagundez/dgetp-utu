@@ -1,10 +1,4 @@
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-li {
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
@@ -54,7 +48,6 @@ input[type="submit"]:hover {
     background-color: #333;
 }
 
-/* Estilo para el botón de regreso a INICIO */
 form[action="/"] input[type="submit"] {
     background-color: #555;
 }
