@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elminar un ingreso en el sistema</title>
-    <link rel="stylesheet" href="/css/createStyle.css">
+    <link rel="stylesheet" href="/css/deleteStyle.css">
 </head>
 
 <body>
     <header>
         <h1>Elminar un ingreso en el sistema</h1>
     </header>
-    <form id="formEliminarIngreso" method="post">
+    <form method="post">
         <!--Nuestro RouterHandler espera que le indiquemos que tipo de método
             va a usar, por eso creamos un input hidden con el valor POST-->
         <input type="hidden" name="method" id="method" value="DELETE">
