@@ -23,8 +23,8 @@
         <div>
             <label for="tipo">Tipo de retiro</label>
             <select name="tipo" id="tipo">
-                <option value="1" selected>Tarjeta de credito</option>
-                <option value="2">Cuenta de banco</option>
+                <option value="1" selected>Retiro de un producto</option>
+                <option value="2">Compra de un producto</option>
             </select>
         </div>
         <div>
