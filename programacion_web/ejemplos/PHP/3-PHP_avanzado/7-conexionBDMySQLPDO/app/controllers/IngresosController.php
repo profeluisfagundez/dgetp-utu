@@ -34,6 +34,10 @@ class IngresosController
         require_once("../app/views/ingresos/create.php");
     }
 
+    public function delete(){
+        require_once("../app/views/ingresos/delete.php");
+    } 
+
     public function store($data)
     {
         $consulta = $this->conn->prepare("INSERT INTO ingresos(metodo_pago,tipo,fecha_ingreso,cantidad,descripcion) VALUES (:metodo_pago,:tipo,:fecha_ingreso,:cantidad,:descripcion);");

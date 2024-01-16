@@ -19,6 +19,9 @@ class RouterHandler{
                 if ($id && $id == "create") {
                     $resources->create();
                 }
+                else if ($id && $id == "delete") {
+                    $resources->delete();
+                }
                 else if ($id) {
                     $resources->show($id);
                 }
