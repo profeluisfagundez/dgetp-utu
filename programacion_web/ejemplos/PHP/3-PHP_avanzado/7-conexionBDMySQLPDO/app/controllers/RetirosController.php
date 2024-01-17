@@ -79,7 +79,7 @@ class RetirosController {
     
     public function destroy($data) {
         $id = $data['id'];
-        if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
             $consulta->execute([
                 ":id" => $id
