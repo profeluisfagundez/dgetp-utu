@@ -62,13 +62,24 @@ class IngresosController
     {
         try {
             $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
-            $consulta->execute([":id" => $id]);
+            $consulta->execute([
+                ":id" => $id
+            ]);
+    
+            // Verificar si se encontraron resultados
             $resultados = $consulta->fetch();
+            if (!$resultados) {
+                // Puedes lanzar una excepción personalizada aquí si lo deseas
+                throw new Exception("No se encontró el dato con ID: $id");
+            }
+            // Continuar con el procesamiento normal y mostrar los resultados
             require_once("../app/views/ingresos/ingreso.php");
-        } catch (PDOException $e) {
-            echo "Error al obtener los detalles del ingreso: " . $e->getMessage();
+        } catch (Exception $e) {
+            // Manejar la excepción, puedes loguearla, redirigir a una página de error, etc.
+            echo "Se ha producido una excepción: " . $e->getMessage();
         }
     }
+    
 
     public function edit()
     {
