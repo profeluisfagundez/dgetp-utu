@@ -9,7 +9,7 @@ require_once("../app/enums/RetiroTipoEnum.php");
 $ingresoController = new IngresosController();
 $retiroController = new RetirosController();
 
-$ingresoController->store([
+/*$ingresoController->store([
     "metodo_pago" => MetodoPagoEnum::CuentaDeBanco->value,
     "tipo" => IngresoTipoEnum::Salario->value,
     "fecha_ingreso" => date("Y-m-d H:i:s"),
@@ -23,9 +23,9 @@ $retiroController->store([
     "fecha_retiro" => date("Y-m-d H:i:s"),
     "cantidad" => 400,
     "descripcion" => "Walter compra un sandwich y estaba rico"
-]);
+]);*/
 
-echo "ACA COMIENZA EL RETIRO <br>";
+/*echo "ACA COMIENZA EL RETIRO <br>";
 $retiroController->index();
 echo "******************************************************************<br>";
 echo "ACA COMIENZA EL INGRESO <br>";
@@ -33,6 +33,6 @@ $ingresoController->index();
 echo "******************************************************************<br>";
 $ingresoController->show("5");
 echo "******************************************************************<br>";
-$ingresoController->destroy(3);
+*/$ingresoController->destroy(4);
 
 ?>

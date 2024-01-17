@@ -15,7 +15,7 @@
     <form method="post">
         <!--Nuestro RouterHandler espera que le indiquemos que tipo de método
             va a usar, por eso creamos un input hidden con el valor POST-->
-        <input type="hidden" name="method" id="method" value="DELETE">
+        <input type="hidden" name="_method" id="_method" value="delete">
         <label for="eliminarIDIngreso">Eliminar un ingreso por ID:</label>
         <input type="number" name="id" id="eliminarIDIngreso" required>
         <input type="submit" value="Eliminar">

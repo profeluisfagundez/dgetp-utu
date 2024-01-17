@@ -34,9 +34,10 @@ class IngresosController
         require_once("../app/views/ingresos/create.php");
     }
 
-    public function delete(){
+    public function delete()
+    {
         require_once("../app/views/ingresos/delete.php");
-    } 
+    }
 
     public function store($data)
     {
@@ -81,9 +82,10 @@ class IngresosController
             ":descripcion" => $data['descripcion'],
         ]);
     }
-
-    public function destroy($id)
+    
+    public function destroy($data)
     {
+        $id = $data['eliminarIDIngreso'];
         echo "<script>alert('ando afuera del IF')</script>";
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $consulta = $this->conn->prepare("DELETE FROM ingresos WHERE id=:id;");

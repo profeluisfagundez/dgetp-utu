@@ -26,14 +26,14 @@ switch ($resource) {
         require_once("../app/views/inicio.php");
         break;
     case 'ingresos': {
-        $method = $_POST['method'] ?? 'GET';
+        $method = $_POST['_method'] ?? 'GET';
         $router->setMethod($method);
         $router->setData($_POST);
         $router->route(IngresosController::class, $id);
         break;
     }
     case 'retiros':
-        $method = $_POST['method'] ?? 'GET';
+        $method = $_POST['_method'] ?? 'GET';
         $router->setMethod($method);
         $router->setData($_POST);
         $router->route(RetirosController::class, $id);
