@@ -89,22 +89,6 @@ class RetirosController {
             echo "Método no permitido";
         } 
     }
-
-    /*public function destroy($id) {
-        $consulta = $this->conn->beginTransaction();
-        $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
-        $consulta->execute([
-            ":id" => $id
-        ]); 
-        $validar = readline("Esta completamente seguro que desea eliminar el registro?");
-        if($validar == 'no') {
-            $this->conn->rollBack();
-        } elseif($validar == 'si') {
-            $this->conn->commit();
-        } else {
-            echo "Error al procesar la transacción";
-        }
-    }*/
 }
 
 ?>
