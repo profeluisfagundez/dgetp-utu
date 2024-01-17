@@ -32,6 +32,11 @@ class RetirosController {
         require_once("../app/views/retiros/create.php");
     }
 
+    public function delete()
+    {
+        require_once("../app/views/ingresos/delete.php");
+    }
+
     public function store($data){
         $consulta = $this->conn->prepare("INSERT INTO retiros(metodo_pago,tipo,fecha_retiro,cantidad,descripcion)
          VALUES (:metodo_pago,:tipo,:fecha_retiro,:cantidad,:descripcion);");
@@ -72,13 +77,14 @@ class RetirosController {
         ]);        
     }
     
-    public function destroy($id) {
+    public function destroy($data) {
+        $id = $data['id'];
         if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
             $consulta->execute([
                 ":id" => $id
             ]);
-            header("location: retiros");
+            header("location: /");
         } else {
             echo "Método no permitido";
         } 

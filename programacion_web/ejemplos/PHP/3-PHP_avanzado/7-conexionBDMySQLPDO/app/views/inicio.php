@@ -42,14 +42,7 @@
                 </form>
             </li>
             <li><a href="#">Editar un retiro</a></li>
-            <li>
-                <form id="formEliminarRetiro" method="post" onsubmit="return confirmarEliminar('formEliminarRetiro')">
-                    <input type="hidden" name="method" id="method" value="DELETE">
-                    <label for="eliminarIDRetiro">Eliminar un retiro por ID:</label>
-                    <input type="number" name="id" id="eliminarIDRetiro" required>
-                    <button type="submit">Eliminar</button>
-                </form>
-            </li>
+            <li><a href="<?php echo 'retiros/delete' ?>">Eliminar un retiro</a></li>
         </ul>
     </nav>
 
@@ -72,14 +65,6 @@
             else {
                 alert("Por favor, introduce un ID.");
             }
-        }
-
-        function confirmarEliminar(formId) {
-            var confirmacion = confirm("¿Estás seguro de que deseas eliminar el registro?");
-            if (confirmacion) {
-                document.getElementById(formId).submit();
-            }
-            return false;
         }
     </script>
 
