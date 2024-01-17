@@ -61,18 +61,27 @@ class RetirosController
     public function show($id)
     {
         try {
-            $consulta = $this->conn->prepare("SELECT * FROM retiros WHERE id=:id;");
-            $consulta->execute([":id" => $id]);
+            $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
+            $consulta->execute([
+                ":id" => $id
+            ]);
+    
+            // Verificamos si se encontraron resultados pedidos en la vista 
             $resultados = $consulta->fetch();
-            require_once("../app/views/retiros/retiro.php");
-        } catch (PDOException $e) {
-            echo "Error al obtener los detalles del retiro: " . $e->getMessage();
+            if (!$resultados) {
+                //Lanzamos una excepción zuculenta si no existe el valor
+                throw new Exception("No se encontró el dato con ID: $id");
+            }
+            require_once("../app/views/ingresos/ingreso.php");
+        } catch (Exception $e) {
+            // Se captura la excepción
+            echo "Se ha producido una excepción: " . $e->getMessage();
         }
     }
 
     public function edit()
     {
-        // Método no implementado
+        // Método no implementado xd
     }
 
     public function update($data, $id)

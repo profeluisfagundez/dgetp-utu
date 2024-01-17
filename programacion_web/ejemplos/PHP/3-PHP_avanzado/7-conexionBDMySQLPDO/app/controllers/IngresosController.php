@@ -66,16 +66,15 @@ class IngresosController
                 ":id" => $id
             ]);
     
-            // Verificar si se encontraron resultados
+            // Verificamos si se encontraron resultados pedidos en la vista 
             $resultados = $consulta->fetch();
             if (!$resultados) {
-                // Puedes lanzar una excepción personalizada aquí si lo deseas
+                //Lanzamos una excepción zuculenta si no existe el valor
                 throw new Exception("No se encontró el dato con ID: $id");
             }
-            // Continuar con el procesamiento normal y mostrar los resultados
             require_once("../app/views/ingresos/ingreso.php");
         } catch (Exception $e) {
-            // Manejar la excepción, puedes loguearla, redirigir a una página de error, etc.
+            // Se captura la excepción
             echo "Se ha producido una excepción: " . $e->getMessage();
         }
     }
@@ -83,7 +82,7 @@ class IngresosController
 
     public function edit()
     {
-        // Método no implementado
+        // Método no implementado xd
     }
 
     public function update($data, $id)
@@ -124,4 +123,3 @@ class IngresosController
         }
     }
 }
-
