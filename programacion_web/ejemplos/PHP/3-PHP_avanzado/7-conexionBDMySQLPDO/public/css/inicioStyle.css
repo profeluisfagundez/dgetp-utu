@@ -1,36 +1,37 @@
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-li {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-h3 {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
-    font-weight: bold;
-}
-
-body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 header {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 1em;
+    border-radius: 10px 10px 0 0;
 }
 
 nav {
-    text-align: center;
     margin-top: 20px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 ul {
@@ -40,61 +41,24 @@ ul {
 }
 
 li {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px;
+    margin-bottom: 10px;
 }
 
 a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 a:hover {
-    background-color: #ddd;
+    color: #0066cc;
 }
 
-#buscarFormIngreso,
-#formEliminarIngreso,
-#buscarFormRetiro,
-#formEliminarRetiro {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
+form {
+    margin-top: 10px;
 }
 
-#buscarIDIngreso,
-#eliminarIDIngreso,
-#buscarIDRetiro,
-#eliminarIDRetiro {
-    padding: 10px;
-    margin-right: 10px;
-}
-
-#buscarFormIngreso input[type="button"],
-#formEliminarIngreso button,
-#buscarFormRetiro input[type="button"],
-#formEliminarRetiro button {
-    background-color: #555;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-#buscarFormIngreso input[type="button"]:hover,
-#formEliminarIngreso button:hover,
-#buscarFormRetiro input[type="button"]:hover,
-#formEliminarRetiro button:hover {
-    background-color: #333;
+input {
+    padding: 5px;
 }
