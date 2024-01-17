@@ -85,15 +85,13 @@ class IngresosController
     
     public function destroy($data)
     {
-        $id = $data['eliminarIDIngreso'];
-        echo "<script>alert('ando afuera del IF')</script>";
+        $id = $data['id'];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $consulta = $this->conn->prepare("DELETE FROM ingresos WHERE id=:id;");
             $consulta->execute([
                 ":id" => $id
             ]);
-            echo "<script>alert('ando adentro del IF')</script>";
-            //header("location: /");
+            header("location: /");
         } else {
             echo "Método no permitido";
         }
