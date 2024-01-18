@@ -40,7 +40,7 @@ switch ($resource) {
         break;
     
     default:
-        echo "ERROR 404, no se encuentra la ruta";
+        require_once("../app/exceptions/404.php");
         break;
 }
 
