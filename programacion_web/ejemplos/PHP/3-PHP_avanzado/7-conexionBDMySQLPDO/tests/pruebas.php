@@ -33,6 +33,13 @@ $ingresoController->index();
 echo "******************************************************************<br>";
 $ingresoController->show("5");
 echo "******************************************************************<br>";
-*/$ingresoController->destroy(4);
+$ingresoController->destroy(4);
+$ingresoController->update([
+    "metodo_pago" => MetodoPagoEnum::CuentaDeBanco->value,
+    "tipo" => IngresoTipoEnum::Salario->value,
+    "fecha_ingreso" => date("Y-m-d H:i:s"),
+    "cantidad" => 60000,
+    "descripcion" => "Este método fue actualizado para testear el update"
+], 10)*/
 
 ?>
