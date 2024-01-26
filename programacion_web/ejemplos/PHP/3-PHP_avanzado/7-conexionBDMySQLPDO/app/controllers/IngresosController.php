@@ -2,15 +2,15 @@
 
 require_once("../app/models/ConexionModel.php");
 /**
-* Los 7 métodos que suelen tener los controladores:
-* index: muestra la lista de todos los recursos.
-* create: muestra un formulario para ingresar un nuevo recurso. (luego manda a llamar al método store).
-* store: registra dentro de la base de datos el nuevo recurso.
-* show: muestra un recurso específico.
-* edit: muestra un formulario para editar un recurso. (luego manda a llamar al método update).
-* update: actualiza el recurso dentro de la base de datos.
-* destroy: elimina un recurso.
-*/
+ * Los 7 métodos que suelen tener los controladores:
+ * index: muestra la lista de todos los recursos.
+ * create: muestra un formulario para ingresar un nuevo recurso. (luego manda a llamar al método store).
+ * store: registra dentro de la base de datos el nuevo recurso.
+ * show: muestra un recurso específico.
+ * edit: muestra un formulario para editar un recurso. (luego manda a llamar al método update).
+ * update: actualiza el recurso dentro de la base de datos.
+ * destroy: elimina un recurso.
+ */
 class IngresosController
 {
     private $conn;
@@ -65,7 +65,7 @@ class IngresosController
             $consulta->execute([
                 ":id" => $id
             ]);
-    
+
             // Verificamos si se encontraron resultados pedidos en la vista 
             $resultados = $consulta->fetch();
             if (!$resultados) {
@@ -78,11 +78,15 @@ class IngresosController
             echo "Se ha producido una excepción: " . $e->getMessage();
         }
     }
-    
 
-    public function edit()
+
+    public function edit($id)
     {
-        // Método no implementado xd
+        $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
+        $consulta->execute([":id" => $id]);
+        $datosIngreso = $consulta->fetch();
+        // Acá mostramos el formulario, idem show
+        require_once("../app/views/ingresos/edit.php");
     }
 
     public function update($data, $id)
@@ -102,11 +106,12 @@ class IngresosController
                 ":cantidad" => $data['cantidad'],
                 ":descripcion" => $data['descripcion'],
             ]);
+            header("location: ingresos/$id");
         } catch (PDOException $e) {
             echo "Error al actualizar el ingreso: " . $e->getMessage();
         }
     }
-    
+
     public function destroy($data)
     {
         $id = $data['id'];
@@ -123,4 +128,3 @@ class IngresosController
         }
     }
 }
-
