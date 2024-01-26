@@ -22,7 +22,7 @@ $retiroController->store([
     "tipo" => RetiroTipoEnum::Compra->value,
     "fecha_retiro" => date("Y-m-d H:i:s"),
     "cantidad" => 400,
-    "descripcion" => "Walter compra un sandwich y estaba rico"
+    "descripcion" => "prueba del metodo store de retiro"
 ]);*/
 
 /*echo "ACA COMIENZA EL RETIRO <br>";
