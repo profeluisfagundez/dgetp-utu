@@ -61,7 +61,7 @@ class RetirosController
     public function show($id)
     {
         try {
-            $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
+            $consulta = $this->conn->prepare("SELECT * FROM retiros WHERE id=:id;");
             $consulta->execute([
                 ":id" => $id
             ]);
@@ -72,7 +72,7 @@ class RetirosController
                 //Lanzamos una excepción zuculenta si no existe el valor
                 throw new Exception("No se encontró el dato con ID: $id");
             }
-            require_once("../app/views/ingresos/ingreso.php");
+            require_once("../app/views/retiros/retiro.php");
         } catch (Exception $e) {
             // Se captura la excepción
             echo "Se ha producido una excepción: " . $e->getMessage();
