@@ -27,7 +27,13 @@
                             <input type="button" value="Buscar" onclick="buscarIngreso()">
                         </form>
                     </li>
-                    <li><a href="#">Editar un ingreso</a></li>
+                    <li>
+                        <form id="editarFormIngreso">
+                            <label for="editarIDIngreso">Editar un ingreso por ID:</label>
+                            <input type="number" name="id" id="editarIDIngreso" required>
+                            <input type="button" value="editar" onclick="editarIngreso()">
+                        </form>
+                    </li>
                     <li><a href="<?php echo 'ingresos/delete' ?>">Eliminar un ingreso</a></li>
                 </ul>
             </div>
@@ -56,6 +62,15 @@
             var idBuscado = document.getElementById("buscarIDIngreso").value;
             if (idBuscado) {
                 window.location.href = "ingresos/" + idBuscado;
+            } else {
+                alert("Por favor, introduce un ID.");
+            }
+        }
+
+        function editarIngreso() {
+            var idEditar = document.getElementById("editarIDIngreso").value;
+            if (idEditar) {
+                window.location.href = "ingresos/edit/" + idEditar;
             } else {
                 alert("Por favor, introduce un ID.");
             }

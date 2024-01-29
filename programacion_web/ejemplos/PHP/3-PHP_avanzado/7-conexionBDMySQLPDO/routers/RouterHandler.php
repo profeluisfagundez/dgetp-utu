@@ -42,6 +42,10 @@ class RouterHandler
                     $resources->destroy($this->data);
                     break;
                 }
+            case "PUT": {
+                    $resources->update($this->data);
+                    break;
+                }
         }
     }
 }

@@ -62,11 +62,7 @@ class IngresosController
     {
         try {
             $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
-            $consulta->execute([
-                ":id" => $id
-            ]);
-
-            // Verificamos si se encontraron resultados pedidos en la vista 
+            $consulta->execute([":id" => $id]);
             $resultados = $consulta->fetch();
             if (!$resultados) {
                 //Lanzamos una excepción zuculenta si no existe el valor
@@ -82,11 +78,20 @@ class IngresosController
 
     public function edit($id)
     {
-        $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
-        $consulta->execute([":id" => $id]);
-        $datosIngreso = $consulta->fetch();
-        // Acá mostramos el formulario, idem show
-        require_once("../app/views/ingresos/edit.php");
+        try {
+            $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
+            $consulta->execute([":id" => $id]);
+            $resultados = $consulta->fetch();
+            if (!$resultados) {
+                //Lanzamos una excepción zuculenta si no existe el valor
+                throw new Exception("No se encontró el dato con ID: $id");
+            }
+            // Acá mostramos el formulario, idem show
+            require_once("../app/views/ingresos/edit.php");
+        } catch (Exception $e) {
+            // Se captura la excepción
+            echo "Se ha producido una excepción: " . $e->getMessage();
+        }
     }
 
     public function update($data, $id)
