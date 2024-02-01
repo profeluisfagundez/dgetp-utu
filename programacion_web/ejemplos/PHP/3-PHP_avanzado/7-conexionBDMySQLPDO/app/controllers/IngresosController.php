@@ -97,9 +97,10 @@ class IngresosController
         }
     }
 
-    public function update($data, $id)
+    public function update($data)
     {
         try {
+            echo "<script>alert('estoy aqui cabrones');</script>";
             $consulta = $this->conn->prepare("UPDATE ingresos SET 
             metodo_pago = :metodo_pago,
             tipo = :tipo,
@@ -107,14 +108,14 @@ class IngresosController
             cantidad = :cantidad,
             descripcion = :descripcion WHERE id=:id;");
             $consulta->execute([
-                ":id" => $id,
+                ":id" => $data['id'],
                 ":metodo_pago" => $data['metodo_pago'],
                 ":tipo" => $data['tipo'],
                 ":fecha_ingreso" => $data['fecha_ingreso'],
                 ":cantidad" => $data['cantidad'],
                 ":descripcion" => $data['descripcion'],
             ]);
-            header("location: ingresos/$id");
+            header("location: /ingresos");
         } catch (PDOException $e) {
             echo "Error al actualizar el ingreso: " . $e->getMessage();
         }

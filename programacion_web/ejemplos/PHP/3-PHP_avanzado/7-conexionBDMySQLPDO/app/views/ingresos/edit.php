@@ -14,6 +14,7 @@
         <?php var_dump($resultados); ?>
     </header>
 
+    <!--  -->
     <form action="/ingresos/<?php echo $resultados['id']; ?>" method="post">
         <div>
             <label for="metodo_pago">Método de Pago</label>
@@ -42,7 +43,8 @@
             <input type="text" name="descripcion" id="descripcion" value="<?php echo $resultados['descripcion']; ?>">
         </div>
         <div>
-            <!-- Enviar el método PUT a través de un campo oculto -->
+            <input type="number" name="id" id="id" value="<?php echo $resultados['id']; ?>">
+            <!-- Enviar el método PUT a través de un campo oculto para el Handler Controller -->
             <input type="hidden" name="_method" id="_method" value="PUT">
             <input type="submit" value="Actualizar">
         </div>
