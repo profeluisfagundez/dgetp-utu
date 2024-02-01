@@ -14,7 +14,7 @@
         <?php var_dump($resultados); ?>
     </header>
 
-    <form action="/ingresos/edit/<?php echo $resultados['id']; ?>" method="post">
+    <form action="/ingresos/<?php echo $resultados['id']; ?>" method="post">
         <div>
             <label for="metodo_pago">Método de Pago</label>
             <select name="metodo_pago" id="metodo_pago">
@@ -31,7 +31,7 @@
         </div>
         <div>
             <label for="fecha_ingreso">Fecha de Ingreso</label>
-            <input type="date" name="fecha_ingreso" id="fecha_ingreso" value="<?php echo $resultados['fecha_ingreso']; ?>">
+            <input type="date" name="fecha_ingreso" id="fecha_ingreso" value="<?php echo (new DateTime($resultados['fecha_ingreso']))->format('Y-m-d'); ?>">
         </div>
         <div>
             <label for="cantidad">Cantidad</label>
