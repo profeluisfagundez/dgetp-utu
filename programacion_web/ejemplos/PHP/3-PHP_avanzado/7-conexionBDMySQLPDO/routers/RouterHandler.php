@@ -24,9 +24,8 @@ class RouterHandler
                         $resources->create();
                     } else if ($id && $id == "delete") {
                         $resources->delete();
-                    }
-                    if ($id && $id == "edit") {
-                        $resources->edit($id);
+                    } else if ( $id && $id == "edit") {
+                        $resources->edit();
                     } else if ($id) {
                         $resources->show($id);
                     } else {

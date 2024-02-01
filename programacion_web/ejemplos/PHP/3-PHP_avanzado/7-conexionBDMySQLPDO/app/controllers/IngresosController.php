@@ -75,10 +75,13 @@ class IngresosController
         }
     }
 
-
-    public function edit($id)
+    public function edit()
     {
         try {
+            $id = $_GET['slug'];
+            $valor = explode("/", $id);
+            $id = $valor[2];
+            $id = (int) $id;
             $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
             $consulta->execute([":id" => $id]);
             $resultados = $consulta->fetch();
