@@ -43,7 +43,7 @@
             <input type="text" name="descripcion" id="descripcion" value="<?php echo $resultados['descripcion']; ?>">
         </div>
         <div>
-            <input type="number" name="id" id="id" value="<?php echo $resultados['id']; ?>">
+            <input type="hidden" name="id" id="id" value="<?php echo $resultados['id']; ?>">
             <!-- Enviar el método PUT a través de un campo oculto para el Handler Controller -->
             <input type="hidden" name="_method" id="_method" value="PUT">
             <input type="submit" value="Actualizar">

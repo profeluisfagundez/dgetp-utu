@@ -4,57 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Sistema Financiero</title>
     <link rel="stylesheet" href="/css/inicioStyle.css">
 </head>
 
 <body>
+    <header>
+        <h1>Sistema Financiero</h1>
+    </header>
+
     <main>
-        <header>
-            <h1>Sistema Financiero</h1>
-        </header>
+        <section class="seccion-ingresos">
+            <h3>Sección de Ingresos</h3>
+            <ul>
+                <li><a href="<?php echo 'ingresos' ?>">Listar ingresos</a></li>
+                <li><a href="<?php echo 'ingresos/create' ?>">Crear un ingreso</a></li>
+                <li>
+                    <form id="buscarFormIngreso">
+                        <label for="buscarIDIngreso">Buscar un ingreso por ID:</label>
+                        <input type="number" name="id" id="buscarIDIngreso" required>
+                        <input type="button" value="Buscar" onclick="buscarIngreso()">
+                    </form>
+                </li>
+                <li>
+                    <form id="editarFormIngreso">
+                        <label for="editarIDIngreso">Editar un ingreso por ID:</label>
+                        <input type="number" name="id" id="editarIDIngreso" required>
+                        <input type="button" value="Editar" onclick="editarIngreso()">
+                    </form>
+                </li>
+                <li><a href="<?php echo 'ingresos/delete' ?>">Eliminar un ingreso</a></li>
+            </ul>
+        </section>
 
-        <nav>
-            <div>
-                <h3>Sección de Ingresos</h3>
-                <ul>
-                    <li><a href="<?php echo 'ingresos' ?>">Listar ingresos</a></li>
-                    <li><a href="<?php echo 'ingresos/create' ?>">Crear un ingreso</a></li>
-                    <li>
-                        <form id="buscarFormIngreso">
-                            <label for="buscarIDIngreso">Buscar un ingreso por ID:</label>
-                            <input type="number" name="id" id="buscarIDIngreso" required>
-                            <input type="button" value="Buscar" onclick="buscarIngreso()">
-                        </form>
-                    </li>
-                    <li>
-                        <form id="editarFormIngreso">
-                            <label for="editarIDIngreso">Editar un ingreso por ID:</label>
-                            <input type="number" name="id" id="editarIDIngreso" required>
-                            <input type="button" value="editar" onclick="editarIngreso()">
-                        </form>
-                    </li>
-                    <li><a href="<?php echo 'ingresos/delete' ?>">Eliminar un ingreso</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Sección de Retiros</h3>
-                <ul>
-                    <li><a href="<?php echo 'retiros' ?>">Listar retiros</a></li>
-                    <li><a href="<?php echo 'retiros/create' ?>">Crear un retiro</a></li>
-                    <li>
-                        <form id="buscarFormRetiro">
-                            <label for="buscarIDRetiro">Buscar un retiro por ID:</label>
-                            <input type="number" name="id" id="buscarIDRetiro" required>
-                            <input type="button" value="Buscar" onclick="buscarRetiro()">
-                        </form>
-                    </li>
-                    <li><a href="#">Editar un retiro</a></li>
-                    <li><a href="<?php echo 'retiros/delete' ?>">Eliminar un retiro</a></li>
-                </ul>
-            </div>
-        </nav>
+        <section class="seccion-retiros">
+            <h3>Sección de Retiros</h3>
+            <ul>
+                <li><a href="<?php echo 'retiros' ?>">Listar retiros</a></li>
+                <li><a href="<?php echo 'retiros/create' ?>">Crear un retiro</a></li>
+                <li>
+                    <form id="buscarFormRetiro">
+                        <label for="buscarIDRetiro">Buscar un retiro por ID:</label>
+                        <input type="number" name="id" id="buscarIDRetiro" required>
+                        <input type="button" value="Buscar" onclick="buscarRetiro()">
+                    </form>
+                </li>
+                <li><a href="#">Editar un retiro</a></li>
+                <li><a href="<?php echo 'retiros/delete' ?>">Eliminar un retiro</a></li>
+            </ul>
+        </section>
     </main>
 
     <script>
@@ -85,7 +83,6 @@
             }
         }
     </script>
-
 </body>
 
 </html>
