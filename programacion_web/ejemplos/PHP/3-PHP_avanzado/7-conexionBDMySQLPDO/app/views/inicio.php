@@ -15,20 +15,20 @@
 
     <main>
         <section class="seccion-ingresos">
-            <h3>Sección de Ingresos</h3>
+            <h2>Sección de Ingresos</h2>
             <ul>
                 <li><a href="<?php echo 'ingresos' ?>">Listar ingresos</a></li>
                 <li><a href="<?php echo 'ingresos/create' ?>">Crear un ingreso</a></li>
                 <li>
                     <form id="buscarFormIngreso">
-                        <label for="buscarIDIngreso">Buscar un ingreso por ID:</label>
+                        <label for="buscarIDIngreso">Buscar un ingreso por ID</label>
                         <input type="number" name="id" id="buscarIDIngreso" required>
                         <input type="button" value="Buscar" onclick="buscarIngreso()">
                     </form>
                 </li>
                 <li>
                     <form id="editarFormIngreso">
-                        <label for="editarIDIngreso">Editar un ingreso por ID:</label>
+                        <label for="editarIDIngreso">Editar un ingreso por ID</label>
                         <input type="number" name="id" id="editarIDIngreso" required>
                         <input type="button" value="Editar" onclick="editarIngreso()">
                     </form>
@@ -38,13 +38,14 @@
         </section>
 
         <section class="seccion-retiros">
-            <h3>Sección de Retiros</h3>
+            <h2>Sección de Retiros</h2>
+            <h3>~En construcción~</h3>
             <ul>
                 <li><a href="<?php echo 'retiros' ?>">Listar retiros</a></li>
                 <li><a href="<?php echo 'retiros/create' ?>">Crear un retiro</a></li>
                 <li>
                     <form id="buscarFormRetiro">
-                        <label for="buscarIDRetiro">Buscar un retiro por ID:</label>
+                        <label for="buscarIDRetiro">Buscar un retiro por ID</label>
                         <input type="number" name="id" id="buscarIDRetiro" required>
                         <input type="button" value="Buscar" onclick="buscarRetiro()">
                     </form>
