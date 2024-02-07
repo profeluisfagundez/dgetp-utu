@@ -100,7 +100,6 @@ class IngresosController
     public function update($data)
     {
         try {
-            echo "<script>alert('estoy aqui cabrones');</script>";
             $consulta = $this->conn->prepare("UPDATE ingresos SET 
             metodo_pago = :metodo_pago,
             tipo = :tipo,
