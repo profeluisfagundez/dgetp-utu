@@ -4,10 +4,10 @@ class Medico extends Persona {
     private $codigo_area;
     private $especialidad;
 
-    public function __construct(String $ci_u,String $nombre_u, String $apellido_u,String $codigo_area_u, String $especialidad_u){
-        parent::__construct($ci_u,$nombre_u,$apellido_u);
-        $this->codigo_area = $codigo_area_u;
-        $this->especialidad = $especialidad_u;
+    public function __construct(String $ci,String $nombre, String $apellido,String $codigoArea, String $especialidad){
+        parent::__construct($ci,$nombre,$apellido);
+        $this->codigo_area = $codigoArea;
+        $this->especialidad = $especialidad;
     }
 
     public function getCodigoArea():String{

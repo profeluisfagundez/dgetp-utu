@@ -16,8 +16,8 @@
     require_once('Perro.php');
     require_once('Pajaro.php');
     
-    $miGato = new Gato("Mittens");
-    $miPerro = new Perro("Rex");
+    $miGato = new Gato("Gatito");
+    $miPerro = new Perro("Perrito");
     $miPajaro = new Pajaro("Canario");
     ?>
     
