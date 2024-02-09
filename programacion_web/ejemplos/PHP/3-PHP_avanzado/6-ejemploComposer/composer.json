@@ -1,0 +1,21 @@
+{
+    "name": "eduardo/6-ejemplo-composer",
+    "description": "proyecto de ejemplo para usar composer",
+    "type": "project",
+    "license": "GPL3",
+    "autoload": {
+        "files": [
+            "app/Logic/creadorGatos.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luis Eduardo Fagúndez",
+            "email": "profeluisfagundez@gmail.com"
+        }
+    ],
+    "require": {}
+}
