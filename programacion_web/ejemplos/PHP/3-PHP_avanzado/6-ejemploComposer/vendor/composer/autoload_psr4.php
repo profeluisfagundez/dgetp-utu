@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Eduardo\\6EjemploComposer\\' => array($baseDir . '/src'),
+    'App\\' => array($baseDir . '/app'),
 );

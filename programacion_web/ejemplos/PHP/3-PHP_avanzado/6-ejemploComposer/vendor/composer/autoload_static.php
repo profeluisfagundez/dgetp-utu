@@ -6,17 +6,21 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitee7be885d05f0569b617887a6b73885a
 {
+    public static $files = array (
+        '65ed9065ba55c3a1a3db1dfda7d0b868' => __DIR__ . '/../..' . '/app/Logic/creadorGatos.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
-        'E' => 
+        'A' => 
         array (
-            'Eduardo\\6EjemploComposer\\' => 25,
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Eduardo\\6EjemploComposer\\' => 
+        'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 

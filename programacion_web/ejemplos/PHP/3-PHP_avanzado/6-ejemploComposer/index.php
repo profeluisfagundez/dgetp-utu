@@ -1,5 +1,8 @@
 <?php
 /*
+Para empezar a trabajar con composer: composer init
+Para actualziar los cambios: composer dump
+Para instalar composer: composer install
 PSR son un conjunto de reglas o estandares que definen como trabajar con el lenguaje. 
 Basicamente un grupo de programadores de PHP se reunieron, crearon PHP Fig y definieron esos estandares.
 PSR-4 hace referencia a que, todos los espacios de nombre deben hacer referrencia hacia la carpeta
