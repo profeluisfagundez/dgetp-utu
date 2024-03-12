@@ -15,6 +15,7 @@ class LogicaConsultas
             $consulta = $this->conn->prepare("SELECT * FROM ingresos;");
             $consulta->execute();
             $resultados = $consulta->fetchAll();
+            return $resultados;
         } catch (PDOException $e) {
             echo "Error al obtener la lista de ingresos: " . $e->getMessage();
         }
@@ -31,7 +32,6 @@ class LogicaConsultas
             $consulta->bindValue(":cantidad", $data['cantidad']);
             $consulta->bindValue(":descripcion", $data['descripcion']);
             $consulta->execute();
-            header("location: ingresos");
         } catch (PDOException $e) {
             echo "Error al almacenar el ingreso: " . $e->getMessage();
         }
@@ -43,10 +43,7 @@ class LogicaConsultas
             $consulta = $this->conn->prepare("SELECT * FROM ingresos WHERE id=:id;");
             $consulta->execute([":id" => $id]);
             $resultados = $consulta->fetch();
-            if (!$resultados) {
-                //Lanzamos una excepción zuculenta si no existe el valor
-                throw new Exception("No se encontró el dato con ID: $id");
-            }
+            return $resultados;
         } catch (Exception $e) {
             // Se captura la excepción
             echo "Se ha producido una excepción: " . $e->getMessage();
@@ -75,18 +72,13 @@ class LogicaConsultas
         }
     }
 
-    public function eliminarRegistro($data)
+    public function eliminarRegistro($id)
     {
-        $id = $data['id'];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            try {
-                $consulta = $this->conn->prepare("DELETE FROM ingresos WHERE id=:id;");
-                $consulta->execute([":id" => $id]);
-            } catch (PDOException $e) {
-                echo "Error al eliminar el ingreso: " . $e->getMessage();
-            }
-        } else {
-            echo "Método no permitido";
+        try {
+            $consulta = $this->conn->prepare("DELETE FROM ingresos WHERE id=:id;");
+            $consulta->execute([":id" => $id]);
+        } catch (PDOException $e) {
+            echo "Error al eliminar el ingreso: " . $e->getMessage();
         }
     }
 }
