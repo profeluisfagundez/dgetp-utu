@@ -1,9 +1,10 @@
 <?php
 
-function sumar_edades($edades = array(13, 17, 35)) {
+function sumar_edades($edades = array(13, 17, 35))
+{
     return array_sum($edades);
 }
-echo "<p>".sumar_edades(array(5, 10, 15))."</p>";
+echo "<p>" . sumar_edades(array(5, 10, 15)) . "</p>";
 
 
 function multiplicar(
@@ -13,21 +14,25 @@ function multiplicar(
 ) {
     return $n1 * $n2 * $n3;
 }
-echo "<p>".multiplicar()."<p>";
+echo "<p>" . multiplicar() . "<p>";
 
-class UnaClaseRandom {}
-class OtraClaseRandom {}
-function receive_a_class($class = new UnaClaseRandom) {
+class UnaClaseRandom
+{
+}
+class OtraClaseRandom
+{
+}
+function receive_a_class($class = new UnaClaseRandom)
+{
     echo $class::class;
 }
 receive_a_class(new OtraClaseRandom);
 
-function suma($n1, $n2 = 8) {
+function suma($n1, $n2 = 8)
+{
     return $n1 + $n2;
 }
 
-echo "<p>".suma(8)."<p>";
+echo "<p>" . suma(8) . "<p>";
 
 echo "<br>";
-
-?>
