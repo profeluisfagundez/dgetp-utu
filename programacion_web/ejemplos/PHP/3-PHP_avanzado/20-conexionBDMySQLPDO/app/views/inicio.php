@@ -50,7 +50,13 @@
                         <input type="button" value="Buscar" onclick="buscarRetiro()">
                     </form>
                 </li>
-                <li><a href="#">Editar un retiro</a></li>
+                <li>
+                    <form id="editarFormRetiro">
+                        <label for="editarIDRetiro">Editar un Retiro por ID</label>
+                        <input type="number" name="id" id="editarIDRetiro" required>
+                        <input type="button" value="Editar" onclick="editarRetiro()">
+                    </form>
+                </li>
                 <li><a href="<?php echo 'retiros/delete' ?>">Eliminar un retiro</a></li>
             </ul>
         </section>
@@ -70,6 +76,15 @@
             var idEditar = document.getElementById("editarIDIngreso").value;
             if (idEditar) {
                 window.location.href = "ingresos/edit/" + idEditar;
+            } else {
+                alert("Por favor, introduce un ID.");
+            }
+        }
+
+        function editarRetiro() {
+            var idEditar = document.getElementById("editarIDRetiro").value;
+            if (idEditar) {
+                window.location.href = "retiros/edit/" + idEditar;
             } else {
                 alert("Por favor, introduce un ID.");
             }
