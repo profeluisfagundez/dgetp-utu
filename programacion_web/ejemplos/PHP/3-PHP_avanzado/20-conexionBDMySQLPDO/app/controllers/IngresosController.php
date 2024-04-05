@@ -28,7 +28,8 @@ class IngresosController
             $resultados = $consulta->fetchAll();
             require_once("../app/views/ingresos/index.php");
         } catch (PDOException $e) {
-            echo "Error al obtener la lista de ingresos: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
@@ -54,7 +55,8 @@ class IngresosController
             $consulta->execute();
             header("location: ingresos");
         } catch (PDOException $e) {
-            echo "Error al almacenar el ingreso: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
@@ -94,7 +96,8 @@ class IngresosController
             require_once("../app/views/ingresos/edit.php");
         } catch (Exception $e) {
             // Se captura la excepción
-            echo "Se ha producido una excepción: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
@@ -117,7 +120,8 @@ class IngresosController
             ]);
             header("location: /ingresos");
         } catch (PDOException $e) {
-            echo "Error al actualizar el ingreso: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
@@ -130,10 +134,12 @@ class IngresosController
                 $consulta->execute([":id" => $id]);
                 header("location: /");
             } catch (PDOException $e) {
-                echo "Error al eliminar el ingreso: " . $e->getMessage();
+                $error = $e->getMessage();
+                require_once("../app/exceptions/error.php");
             }
         } else {
-            echo "Método no permitido";
+            $error = "Método no permitido";
+            require_once("../app/exceptions/error.php");
         }
     }
 }
