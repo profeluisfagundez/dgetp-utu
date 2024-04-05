@@ -28,7 +28,8 @@ class RetirosController
             $resultados = $consulta->fetchAll();
             require_once("../app/views/retiros/index.php");
         } catch (PDOException $e) {
-            echo "Error al obtener la lista de retiros: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
@@ -54,7 +55,8 @@ class RetirosController
             $consulta->execute();
             header("location: retiros");
         } catch (PDOException $e) {
-            echo "Error al almacenar el retiro: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
@@ -62,11 +64,7 @@ class RetirosController
     {
         try {
             $consulta = $this->conn->prepare("SELECT * FROM retiros WHERE id=:id;");
-            $consulta->execute([
-                ":id" => $id
-            ]);
-    
-            // Verificamos si se encontraron resultados pedidos en la vista 
+            $consulta->execute([":id" => $id]);
             $resultados = $consulta->fetch();
             if (!$resultados) {
                 //Lanzamos una excepción zuculenta si no existe el valor
@@ -75,13 +73,32 @@ class RetirosController
             require_once("../app/views/retiros/retiro.php");
         } catch (Exception $e) {
             // Se captura la excepción
-            echo "Se ha producido una excepción: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
     public function edit()
     {
-        // Método no implementado xd
+        try {
+            $id = $_GET['slug'];
+            $valor = explode("/", $id);
+            $id = $valor[2];
+            $id = (int) $id;
+            $consulta = $this->conn->prepare("SELECT * FROM retiros WHERE id=:id;");
+            $consulta->execute([":id" => $id]);
+            $resultados = $consulta->fetch();
+            if (!$resultados) {
+                //Lanzamos una excepción zuculenta si no existe el valor
+                throw new Exception("No se encontró el dato con ID: $id");
+            }
+            // Acá mostramos el formulario, idem show
+            require_once("../app/views/retiros/edit.php");
+        } catch (Exception $e) {
+            // Se captura la excepción
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
+        }
     }
 
     public function update($data, $id)
@@ -101,24 +118,32 @@ class RetirosController
                 ":cantidad" => $data['cantidad'],
                 ":descripcion" => $data['descripcion'],
             ]);
+            header("location: /retiros");
+            exit;
         } catch (PDOException $e) {
-            echo "Error al actualizar el retiro: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
     public function destroy($data)
     {
         $id = $data['id'];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            try {
-                $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
-                $consulta->execute([":id" => $id]);
-                header("location: /");
-            } catch (PDOException $e) {
-                echo "Error al eliminar el retiro: " . $e->getMessage();
+        try {
+            $consulta = $this->conn->prepare("DELETE FROM retiros WHERE id=:id;");
+            $consulta->execute([":id" => $id]);
+            if ($consulta->rowCount() > 0) {
+                header("Location: /");
+                exit;
+            } else {
+                throw new Exception("El registro con ID $id no existe.");
             }
-        } else {
-            echo "Método no permitido";
+        } catch (PDOException $e) {
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
+        } catch (Exception $e) {
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 }

@@ -119,6 +119,7 @@ class IngresosController
                 ":descripcion" => $data['descripcion'],
             ]);
             header("location: /ingresos");
+            exit;
         } catch (PDOException $e) {
             $error = $e->getMessage();
             require_once("../app/exceptions/error.php");
