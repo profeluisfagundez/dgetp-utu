@@ -125,23 +125,6 @@ class IngresosController
         }
     }
 
-    /*public function destroy($data)
-    {
-        $id = $data['id'];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            try {
-                $consulta = $this->conn->prepare("DELETE FROM ingresos WHERE id=:id;");
-                $consulta->execute([":id" => $id]);
-                header("location: /");
-            } catch (PDOException $e) {
-                $error = $e->getMessage();
-                require_once("../app/exceptions/error.php");
-            }
-        } else {
-            $error = "Método no permitido";
-            require_once("../app/exceptions/error.php");
-        }
-    }*/
     public function destroy($data)
     {
         $id = $data['id'];
