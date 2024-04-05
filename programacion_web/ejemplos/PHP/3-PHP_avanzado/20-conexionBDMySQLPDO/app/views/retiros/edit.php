@@ -50,8 +50,8 @@
         </div>
     </form>
 
-    <form action="/ingresos" method="post">
-        <input type="submit" value="Volver a la Lista de ingresos">
+    <form action="/retiros" method="post">
+        <input type="submit" value="Volver a la Lista de retiros">
     </form>
 </body>
 
