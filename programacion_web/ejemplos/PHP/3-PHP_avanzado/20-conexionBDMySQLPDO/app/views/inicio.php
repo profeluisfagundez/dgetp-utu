@@ -39,7 +39,6 @@
 
         <section class="seccion-retiros">
             <h2>Sección de Retiros</h2>
-            <h3>~En construcción~</h3>
             <ul>
                 <li><a href="<?php echo 'retiros' ?>">Listar retiros</a></li>
                 <li><a href="<?php echo 'retiros/create' ?>">Crear un retiro</a></li>
