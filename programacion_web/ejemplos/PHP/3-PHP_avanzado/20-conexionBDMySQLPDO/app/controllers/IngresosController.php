@@ -125,7 +125,7 @@ class IngresosController
         }
     }
 
-    public function destroy($data)
+    /*public function destroy($data)
     {
         $id = $data['id'];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -139,6 +139,26 @@ class IngresosController
             }
         } else {
             $error = "Método no permitido";
+            require_once("../app/exceptions/error.php");
+        }
+    }*/
+    public function destroy($data)
+    {
+        $id = $data['id'];
+        try {
+            $consulta = $this->conn->prepare("DELETE FROM ingresos WHERE id=:id;");
+            $consulta->execute([":id" => $id]);
+            if ($consulta->rowCount() > 0) {
+                header("Location: /");
+                exit;
+            } else {
+                throw new Exception("El registro con ID $id no existe.");
+            }
+        } catch (PDOException $e) {
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
+        } catch (Exception $e) {
+            $error = $e->getMessage();
             require_once("../app/exceptions/error.php");
         }
     }
