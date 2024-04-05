@@ -71,7 +71,8 @@ class IngresosController
             require_once("../app/views/ingresos/ingreso.php");
         } catch (Exception $e) {
             // Se captura la excepción
-            echo "Se ha producido una excepción: " . $e->getMessage();
+            $error = $e->getMessage();
+            require_once("../app/exceptions/error.php");
         }
     }
 
