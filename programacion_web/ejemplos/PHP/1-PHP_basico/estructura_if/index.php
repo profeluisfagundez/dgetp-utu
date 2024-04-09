@@ -1,8 +1,24 @@
 <?php
 //Estructura que permite evaluar una condición y tomar una decisión
 
-$numero_entero = 15;
+$nombre = "Luis";
+if ($nombre == "Eduardo") {
+    echo "El nombre es Eduardo";
+} else if($nombre == "Luis") {
+    echo "El nombre es Luis";
+} else {
+    echo "El nombre es Otro";
+}
 
+$nombre = "Luis";
+if ($nombre == "Eduardo") {
+    echo "El nombre es Eduardo";
+} else {
+    echo "El nombre es Luis";
+}
+
+
+$numero_entero = 15;
 //Estructura IF simple
 if ( $numero_entero >= 18 ){
     echo "<p>El usuario es mayor</p>";
