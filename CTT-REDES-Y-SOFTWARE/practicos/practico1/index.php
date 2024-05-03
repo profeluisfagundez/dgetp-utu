@@ -5,7 +5,7 @@ $numero2 = 5;
 
 // Suma
 $suma = $numero1 + $numero2;
-echo "Suma: " . $suma . "<br>";
+echo "Suma: $suma <br>";
 
 // Resta
 $resta = $numero1 - $numero2;

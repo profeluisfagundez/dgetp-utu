@@ -69,7 +69,7 @@ $celsius = ($fahrenheit - 32) * 5/9;
 if ($celsius > 27) {
     $mensaje = "Mayor a 27°C";
 } else {
-    $mensaje = "Menor o igual a 27°C";
+    $mensaje = "Menor a 27°C";
 }
 echo "La temperatura en Celsius es: $celsius°C, $mensaje<br>";
 
