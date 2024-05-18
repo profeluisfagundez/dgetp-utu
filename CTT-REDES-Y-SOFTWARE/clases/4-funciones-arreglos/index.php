@@ -18,11 +18,11 @@ array_push($arregloFrutas, "Mango");
 
 // array_pop: Extraer el último elemento del final del array.
 $ultimaFruta = array_pop($arregloFrutas);
-echo $ultimaFruta . "<br>";
+echo "El ultimo elemento es: " . $ultimaFruta . "<br>";
 
 // array_shift: Extraer el primer elemento del array.
 $primeraFruta = array_shift($arregloFrutas);
-echo $primeraFruta . "<br>";
+echo "El primer elemento es: " . $primeraFruta . "<br>";
 
 // array_unshift: Añadir uno o más elementos al inicio del array.
 array_unshift($arregloFrutas, "Cereza");
