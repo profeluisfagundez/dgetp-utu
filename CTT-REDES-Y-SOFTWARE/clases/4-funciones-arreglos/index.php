@@ -39,6 +39,7 @@ echo "---------------------------------------------<br>";
 
 // array_slice: Extraer una porción del array.
 $porcion = array_slice($arregloFrutas, 1, 3);
+echo "Porcion del arreglo: <br >";
 var_dump($porcion);
 echo "<br>";
 
