@@ -65,4 +65,10 @@ sort($arregloFrutas);
 // rsort: Ordena un array en orden descendente.
 rsort($arregloFrutas);
 
+//Explode: permite crear un arreglo en base a un separador en una variable
+$pizza  = "porción1 porción2 porción3 porción4 porción5 porción6";
+$porciones = explode(" ", $pizza);
+echo $porciones[0]; // porción1
+echo $porciones[1]; // porción2
+
 ?>
