@@ -1,0 +1,13 @@
+/proyecto
+    /src
+        /Model
+            ArregloModelo.php
+        /Controller
+            ArreglosController.php
+    /templates
+        arregloVista.html.twig
+    /vendor (esto lo crea Composer)
+    /public
+        index.php
+    /composer.json
+

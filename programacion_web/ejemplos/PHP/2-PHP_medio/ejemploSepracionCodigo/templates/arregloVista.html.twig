@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Arreglos</title>
+</head>
+<body>
+    <h1>Lista de Arreglos</h1>
+    <ul>
+        {% for item in datos %}
+            <li>{{ item.id }}: {{ item.nombre }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
