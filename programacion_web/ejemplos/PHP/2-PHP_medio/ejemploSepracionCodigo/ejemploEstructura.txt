@@ -10,4 +10,3 @@
     /public
         index.php
     /composer.json
-
