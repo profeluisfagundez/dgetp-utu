@@ -13,13 +13,15 @@ function existeUsuario($username, $password) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $inputUser = $_POST['username'];
-    $inputPassword = $_POST['password'];
+    $inputUser = htmlspecialchars($_POST['username']);
+    $inputPassword = htmlspecialchars($_POST['password']);
 
     if (existeUsuario($inputUser, $inputPassword)) {
-        echo "El usuario $inputUser existe.";
+        header("Location: principal.html");
+        exit();
     } else {
-        echo "El usuario $inputUser no existe o la contraseña es incorrecta.";
+        header("Location: index.html?error=1");
+        exit();
     }
 }
 ?>
