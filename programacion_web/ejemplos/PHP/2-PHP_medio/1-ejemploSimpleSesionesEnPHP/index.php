@@ -10,5 +10,8 @@ echo 'Username: ' . $_SESSION['username'] . "<br>";
 echo 'Role: ' . $_SESSION['role'] . "<br>";
 echo 'Password: ' . $_SESSION['password'] . "<br>";
 // Eliminamos la sesión
+echo "<pre>";
+var_dump($_SESSION['username']);
+echo "</pre>";
 session_destroy();
 ?>

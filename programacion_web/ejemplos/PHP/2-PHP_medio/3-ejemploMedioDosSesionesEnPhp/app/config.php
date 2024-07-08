@@ -14,7 +14,9 @@ $_SESSION['users'] = [
     ['user' => 'sergio', 'password' => '123456789012'],
     ['user' => 'rodrigo', 'password' => '1234567890123']
 ];
-//echo "<pre>";
-//var_dump($_SESSION['users']);
-//echo "</pre>";
+
+// Inicializar el arreglo global si no existe
+if (!isset($_SESSION['trabajadores'])) {
+    $_SESSION['trabajadores'] = [];
+}
 ?>
