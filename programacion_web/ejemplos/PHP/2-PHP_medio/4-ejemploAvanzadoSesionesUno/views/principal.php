@@ -17,9 +17,9 @@
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
                 <li><a href="../app/verTrabajadores.php">Ver Trabajadores</a></li>
-                <li><a href="cargarTrabajador.html">Cargar Trabajador</a></li>
+                <li><a href="cargarTrabajador.php">Cargar Trabajador</a></li>
                 <li><a href="../app/logout.php">Cerrar Sesión</a></li>
             </ul>
         </nav>

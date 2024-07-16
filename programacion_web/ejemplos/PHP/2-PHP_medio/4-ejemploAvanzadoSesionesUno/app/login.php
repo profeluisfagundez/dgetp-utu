@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (existeUsuario($inputUser, $inputPassword)) {
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $inputUser;
-        header("Location: ../html/principal.html");
+        header("Location: ../views/principal.php");
         exit();
     } else {
         header("Location: ../index.html?error=1");

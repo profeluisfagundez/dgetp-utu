@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $posicion = htmlspecialchars($_POST['posicion']);
     $email = htmlspecialchars($_POST['email']);
     agregarTrabajador($nombre, $posicion, $email);
-    header("Location: ../html/principal.html");
+    header("Location: ../views/principal.php");
     exit();
 }
 ?>

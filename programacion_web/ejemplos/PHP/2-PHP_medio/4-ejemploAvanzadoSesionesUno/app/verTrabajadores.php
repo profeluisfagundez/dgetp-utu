@@ -25,7 +25,7 @@ verificarSesion();
         echo "Email: " . htmlspecialchars($trabajador['email']) . "<br><br>";
     }
     ?>
-    <a href="../html/principal.html">Volver al menú principal</a>
+    <a href="../views/principal.php">Volver al menú principal</a>
 </body>
 
 </html>
