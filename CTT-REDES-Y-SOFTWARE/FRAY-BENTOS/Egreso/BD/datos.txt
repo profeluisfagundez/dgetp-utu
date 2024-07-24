@@ -1,0 +1,48 @@
+EJEMPLOS
+https://montevideo.gub.uy/formularios/buzon_ciudadano
+
+
+Supongamos que creamos un nuevo administrador con los siguientes datos:
+
+    Nombre de usuario: admin123
+    Correo electrónico: admin123@example.com
+    Contraseña: hash_de_contraseña
+    Nombre completo: Administrador Ejemplo
+
+Al crear este registro, la base de datos registraría automáticamente las fechas y horas de creación y actualización. 
+
+INSERT INTO administradores (nombre_usuario, correo_electronico, contraseña, nombre_completo)
+VALUES ('admin123', 'admin123@example.com', 'hash_de_contraseña', 'Administrador Ejemplo');
+
+Después de ejecutar esta consulta, suponiendo que el campo creado_en y actualizado_en están configurados con los valores por defecto 
+CURRENT_TIMESTAMP, la tabla administradores podría tener un registro similar a este:
+
+id	nombre_usuario	correo_electronico	contraseña	nombre_completo	creado_en	actualizado_en
+1	admin123	admin123@example.com	hash_de_contraseña	Administrador Ejemplo	2024-07-17 15:30:00	2024-07-17 15
+
+En este ejemplo:
+
+    El administrador con id 1 se creó el 17 de julio de 2024 a las 15:30:00 (hora del servidor).
+    El campo actualizado_en refleja la misma fecha y hora porque es la primera vez que se crea este registro.
+
+Posteriormente, si se actualizan los detalles del administrador (por ejemplo, se cambia la contraseña), el campo actualizado_en
+se actualizaría automáticamente con la nueva fecha y hora cada vez que se realice una modificación en el registro del administrador.
+
+Supongamos que el administrador con id_administrador = 1 decide responder a la pregunta con id_pregunta = 3. 
+La consulta SQL podría ser algo así:
+
+-- Actualización del texto de la pregunta (si es necesario)
+UPDATE preguntas
+SET texto_pregunta = 'Nuevo texto de la pregunta modificado por el administrador.'
+WHERE id = 3;
+
+-- Inserción de la respuesta
+INSERT INTO respuestas (id_pregunta, id_administrador, texto_respuesta)
+VALUES (3, 1, 'Esta es la respuesta proporcionada por el administrador.');
+
+En este ejemplo:
+
+    Se actualiza el texto de la pregunta con id = 3 en la tabla preguntas.
+    Se inserta una nueva respuesta en la tabla respuestas asociada a la pregunta con id_pregunta = 3 y al administrador con id_administrador = 1.
+
+Este flujo asegura que las preguntas sean atendidas y respondidas de manera eficiente por los administradores en la plataforma.
