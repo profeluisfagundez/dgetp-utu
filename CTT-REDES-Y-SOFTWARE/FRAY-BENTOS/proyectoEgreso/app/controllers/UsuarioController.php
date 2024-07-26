@@ -20,6 +20,9 @@ class UsuarioController
         $this->conn = ConexionModel::getInstance()->getDatabaseInstance();
     }
 
+    /**
+     * Retorna todos los usuarios cargados en el sistema
+     */
     public function index()
     {
         try {
@@ -36,7 +39,7 @@ class UsuarioController
                 echo $resultado['numero_telefono'] . " ";
                 echo $resultado['creado_en'] . " ";
                 echo $resultado['actualizado_en'] . " ";
-                echo "<br>\n";
+                echo "<br>";
             }
         } catch (PDOException $e) {
             $error = $e->getMessage();
@@ -66,9 +69,24 @@ class UsuarioController
     public function show($id)
     {
         try {
-
+            $consulta = $this->conn->prepare("SELECT * FROM usuarios WHERE id=:id;");
+            $consulta->execute([":id" => $id]);
+            $resultados = $consulta->fetch();
+            if (!$resultados) {
+                throw new Exception("No se encontró el dato con ID: $id");
+            }
+            echo $resultados['id'] . " ";
+            echo $resultados['nombre_usuario'] . " ";
+            echo $resultados['correo_electronico'] . " ";
+            echo $resultados['contrasena'] . " ";
+            echo $resultados['nombre_completo'] . " ";
+            echo $resultados['fecha_nacimiento'] . " ";
+            echo $resultados['numero_telefono'] . " ";
+            echo $resultados['creado_en'] . " ";
+            echo $resultados['actualizado_en'] . " ";
+            echo "<br>";
         } catch (Exception $e) {
-
+            echo $error = $e->getMessage();
         }
     }
 
