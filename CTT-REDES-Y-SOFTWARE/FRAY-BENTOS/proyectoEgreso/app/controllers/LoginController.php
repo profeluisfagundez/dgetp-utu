@@ -1,6 +1,6 @@
 <?php
+session_start();
 require_once("../../app/models/ConexionModel.php");
-
 /**
  * Los 7 métodos que suelen tener los controladores:
  * index: muestra la lista de todos los recursos.
@@ -29,7 +29,7 @@ class LoginController
     public function update($data) { }
     public function destroy($data) { }
 
-    public function userExists($data) {
+    public function initSystem($data) {
         try{
             $nombre = $data['username'];
             $password = $data['password'];
@@ -39,6 +39,7 @@ class LoginController
                 $consulta->execute([":nombre" => $nombre]);
                 $resultados = $consulta->fetch();
                 if ($resultados && $password == $resultados['contrasena']) {
+                    $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
                     require_once("../views/usuarios/index.php");
                     exit();
                 }
@@ -47,6 +48,7 @@ class LoginController
                 $consulta->execute([":nombre" => $nombre]);
                 $resultados = $consulta->fetch();
                 if ($resultados && $password == $resultados['contrasena']) {
+                    $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
                     require_once("../views/administrador/index.php");
                     exit();
                 }
@@ -59,7 +61,4 @@ class LoginController
             require_once("../app/exceptions/error.php");
         }
     }
-
-
-
 }
