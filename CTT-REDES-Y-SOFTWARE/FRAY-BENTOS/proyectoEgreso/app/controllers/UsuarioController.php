@@ -29,6 +29,7 @@ class UsuarioController
             $consulta = $this->conn->prepare("SELECT * FROM usuarios;");
             $consulta->execute();
             $resultados = $consulta->fetchAll();
+            // A futuro solo retornamos $resultados
             foreach ($resultados as $resultado) {
                 echo $resultado['id'] . " ";
                 echo $resultado['nombre_usuario'] . " ";
@@ -49,16 +50,17 @@ class UsuarioController
 
     public function create()
     {
-
+        // Hacemos un requiere de la vista para crear usuarios
     }
 
     public function delete()
     {
-
+        // Hacemos un requiere de la vista para eliminar usuarios
     }
 
     public function store($data)
     {
+        // Hacemos un Insert de un usuario
         try {
 
         } catch (PDOException $e) {
@@ -68,6 +70,7 @@ class UsuarioController
 
     public function show($id)
     {
+        //Mostramos un usuario en base a su ID o Cédula de identidad
         try {
             $consulta = $this->conn->prepare("SELECT * FROM usuarios WHERE id=:id;");
             $consulta->execute([":id" => $id]);
@@ -90,8 +93,10 @@ class UsuarioController
         }
     }
 
-    public function edit()
+    public function edit($id)
     {
+        //Dada una cédula o un ID hacemos la consulta y cargamos el resultado
+        //En un formulario
         try {
 
         } catch (Exception $e) {
@@ -101,6 +106,7 @@ class UsuarioController
 
     public function update($data)
     {
+        //Realizamos un update de SQL, se usa con el método edit
         try {
 
         } catch (PDOException $e) {
@@ -110,6 +116,7 @@ class UsuarioController
 
     public function destroy($data)
     {
+        //Dada una cédula o un id eliminamos el usuario
         try {
 
         } catch (PDOException $e) {
