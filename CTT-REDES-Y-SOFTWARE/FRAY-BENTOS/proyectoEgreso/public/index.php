@@ -20,7 +20,7 @@
                 <option value="administrador">Administrador</option>
             </select>
             
-            <button type="submit">Enviar</button>
+            <button type="submit">Iniciar Sesión</button>
         </form>
     </div>
 </body>
