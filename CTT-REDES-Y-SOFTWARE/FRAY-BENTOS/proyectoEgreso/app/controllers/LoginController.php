@@ -49,7 +49,7 @@ class LoginController
                 $resultados = $consulta->fetch();
                 if ($resultados && $password == $resultados['contrasena']) {
                     $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
-                    require_once("../views/administrador/index.php");
+                    require_once("../views/administradores/index.php");
                     exit();
                 }
             } else {
