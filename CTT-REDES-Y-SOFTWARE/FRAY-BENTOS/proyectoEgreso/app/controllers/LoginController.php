@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once("../../app/models/ConexionModel.php");
+require_once("../models/ConexionModel.php");
+
 /**
  * Los 7 métodos que suelen tener los controladores:
  * index: muestra la lista de todos los recursos.
@@ -29,36 +30,58 @@ class LoginController
     public function update($data) { }
     public function destroy($data) { }
 
-    public function initSystem($data) {
-        try{
+    /**
+     * Método para iniciar sesión en el sistema.
+     * @param array $data Datos del usuario (username, password, role)
+     */
+    public function logInApp($data) {
+        try {
             $nombre = $data['username'];
             $password = $data['password'];
             $role = $data['role'];
+
             if ($role == "usuario") {
                 $consulta = $this->conn->prepare("SELECT contrasena FROM usuarios WHERE nombre_usuario = :nombre;");
                 $consulta->execute([":nombre" => $nombre]);
                 $resultados = $consulta->fetch();
+
                 if ($resultados && $password == $resultados['contrasena']) {
                     $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
-                    require_once("../views/usuarios/index.php");
+                    header('Location: ../views/usuarios/index.php');
                     exit();
+                } else {
+                    echo "<p>El usuario no existe</p>";
                 }
             } elseif ($role == "administrador") {
                 $consulta = $this->conn->prepare("SELECT contrasena FROM administradores WHERE nombre_usuario = :nombre;");
                 $consulta->execute([":nombre" => $nombre]);
                 $resultados = $consulta->fetch();
+
                 if ($resultados && $password == $resultados['contrasena']) {
                     $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
-                    require_once("../views/administradores/index.php");
+                    header('Location: ../views/administradores/index.php');
                     exit();
+                } else {
+                    echo "<p>El administrador no existe</p>";
                 }
             } else {
-                require_once("../../public/index.php");
+                header('Location: ../../public/index.php');
                 exit();
             }
-        }catch(PDOException $e){
+        } catch (PDOException $e) {
             $error = $e->getMessage();
             require_once("../app/exceptions/error.php");
         }
     }
+
+    /**
+     * Método para verificar si un usuario está cargado en la sesión.
+     * Redirige a la página de inicio de sesión si no está cargado.
+     */
+    public function checkUserLoggedIn() {
+        if (!isset($_SESSION['usuario'])) {
+            header('Location: ../../public/index.php');
+            exit();
+        }
+    }    
 }

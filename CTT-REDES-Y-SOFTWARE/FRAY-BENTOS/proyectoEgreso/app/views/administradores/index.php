@@ -1,3 +1,9 @@
+<?php
+/*require_once("../../controllers/LoginController.php");
+
+$loginController = new LoginController();
+$loginController->checkUserLoggedIn();*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
