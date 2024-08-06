@@ -7,7 +7,7 @@ private $ci;
 private $nombre;
 private $apellido; 
 
-//Método constructor de la clase Persona
+
 function __construct(string $ci, string $nombre, string $apellido){
     $this->ci = $ci;
     $this->nombre = $nombre;
@@ -40,7 +40,9 @@ public function setApellido(String $value):void{
 
 //Método toString de la clase Persona
 public function __toString(): string {
-    return "CI: {$this->getCi()} Nombre: {$this->getNombre()} Apellido: {$this->getApellido()}";
+    return "CI: {$this->getCi()} 
+            Nombre: {$this->getNombre()} 
+            Apellido: {$this->getApellido()}";
 }
 
 }
