@@ -34,7 +34,7 @@ class LoginController
      * Método para iniciar sesión en el sistema.
      * @param array $data Datos del usuario (username, password, role)
      */
-    public function logInApp($data) {
+    public function logInPage($data) {
         try {
             $nombre = $data['username'];
             $password = $data['password'];
@@ -47,7 +47,7 @@ class LoginController
 
                 if ($resultados && $password == $resultados['contrasena']) {
                     $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
-                    header('Location: ../views/usuarios/index.php');
+                    header('Location: ../views/usuarios/startPage.php');
                     exit();
                 } else {
                     echo "<p>El usuario no existe</p>";
@@ -59,7 +59,7 @@ class LoginController
 
                 if ($resultados && $password == $resultados['contrasena']) {
                     $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
-                    header('Location: ../views/administradores/index.php');
+                    header('Location: ../views/administradores/startPage.php');
                     exit();
                 } else {
                     echo "<p>El administrador no existe</p>";
