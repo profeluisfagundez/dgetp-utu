@@ -1,6 +1,6 @@
 <?php
 /*require_once("../../controllers/LoginController.php");
-
+//Se vienen cositas chicos guiño guiño
 $loginController = new LoginController();
 $loginController->checkUserLoggedIn();*/
 ?>
