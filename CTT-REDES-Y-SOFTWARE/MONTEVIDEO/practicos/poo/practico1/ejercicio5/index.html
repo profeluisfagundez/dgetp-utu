@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Biblioteca</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="listarLibros.php">Listar Libros</a></li>
+        </ul>
+    </nav>
+    <form action="procesar.php" method="POST">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" required><br><br>
+
+        <label for="precio">Precio:</label>
+        <input type="number" step="0.01" id="precio" name="precio" required><br><br>
+
+        <button type="submit">Agregar Libro</button>
+    </form>
+    <br>
+
+</body>
+
+</html>
