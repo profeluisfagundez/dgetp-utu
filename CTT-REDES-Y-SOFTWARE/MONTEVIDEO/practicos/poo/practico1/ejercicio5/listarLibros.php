@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+require_once("Biblioteca.php");
+session_start();
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Libros</title>
-</head>
-
-<body>
-    <div id="listaLibros">
-        <?php
-        if (isset($_SESSION['biblioteca'])) {
-            echo $_SESSION['biblioteca']->listarLibros();
-        } else {
-            echo "<p>Aún no hay libros en la aplicación</p>";
-        }
-        ?>
-    </div>
-</body>
-
-</html>
+if (isset($_SESSION['biblioteca'])) {
+    echo "<p>Biblioteca cargada correctamente.</p>";
+    echo $_SESSION['biblioteca']->listarLibros();
+} else {
+    echo "<p>Aún no hay libros en la aplicación</p>";
+}
+?>

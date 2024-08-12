@@ -14,5 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['biblioteca']->agregarLibro($libro);
 
     echo $_SESSION['biblioteca']->listarLibros();
+
+    echo '<a href="index.html">Volver</a>';
 }
 ?>
