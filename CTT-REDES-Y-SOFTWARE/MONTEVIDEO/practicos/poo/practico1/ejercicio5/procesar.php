@@ -1,20 +1,34 @@
-<?php
-require_once("Biblioteca.php");
-session_start();
-if (!isset($_SESSION['biblioteca'])) {
-    $_SESSION['biblioteca'] = new Biblioteca();
-}
+<!DOCTYPE html>
+<html lang="en">
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $titulo = $_POST['titulo'];
-    $autor = $_POST['autor'];
-    $precio = $_POST['precio'];
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesar el dato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    $libro = new Libro($titulo, $autor, $precio);
-    $_SESSION['biblioteca']->agregarLibro($libro);
+<body>
+    <?php
+    require_once("Biblioteca.php");
+    session_start();
+    if (!isset($_SESSION['biblioteca'])) {
+        $_SESSION['biblioteca'] = new Biblioteca();
+    }
 
-    echo $_SESSION['biblioteca']->listarLibros();
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $titulo = $_POST['titulo'];
+        $autor = $_POST['autor'];
+        $precio = $_POST['precio'];
 
-    echo '<a href="index.html">Volver</a>';
-}
-?>
+        $libro = new Libro($titulo, $autor, $precio);
+        $_SESSION['biblioteca']->agregarLibro($libro);
+
+        echo "<p>Se agrego un nuevo libro en el sistema</p>";
+
+        echo '<a href="index.html">Volver</a>';
+    }
+    ?>
+</body>
+
+</html>
