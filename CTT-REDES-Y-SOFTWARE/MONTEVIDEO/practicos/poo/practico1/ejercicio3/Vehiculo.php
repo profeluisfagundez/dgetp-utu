@@ -12,8 +12,10 @@ class Vehiculo {
         $this->kilometraje = $kilometraje;
     }
 
+
     public function actualizarKilometraje($nuevoKilometraje) {
         $this->kilometraje += $nuevoKilometraje;
+        //$this->kilometraje = $this->kilometraje + $nuevoKilometraje;
     }
 
     public function mostrarInformacion() {
