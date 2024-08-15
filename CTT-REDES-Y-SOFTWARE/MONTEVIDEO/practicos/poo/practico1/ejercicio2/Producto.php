@@ -12,27 +12,27 @@ class Producto {
         $this->stock = $stock;
     }
 
-    public function getNombre(){
+    public function getNombre():string {
         return $this->nombre;
     }
 
-    public function setNombre(String $value){
+    public function setNombre(String $value):void {
         $this->nombre = $value;
     }
 
-    public function getPrecio(){
+    public function getPrecio():string {
         return $this->precio;
     }
 
-    public function setPrecio(String $value){
+    public function setPrecio(String $value):void {
         $this->precio = $value;
     }
 
-    public function getStock(){
+    public function getStock(): string{
         return $this->stock;
     }
 
-    public function setStock(String $value){
+    public function setStock(String $value): void{
         $this->stock = $value;
     }
 }
