@@ -12,6 +12,13 @@ class Vehiculo {
         $this->kilometraje = $kilometraje;
     }
 
+    public function getMarca(){
+
+    }
+
+    public function setMarca($value){
+
+    }
 
     public function actualizarKilometraje($nuevoKilometraje) {
         $this->kilometraje += $nuevoKilometraje;

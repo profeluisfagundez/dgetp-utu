@@ -9,4 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $persona = new Persona($nombre, $apellido, $edad);
     echo $persona->mostrarInformacion();
+
+    echo "-------------------------------------";
+    $persona->setNombre("Eduardo");
+    echo $persona->mostrarInformacion();
 }

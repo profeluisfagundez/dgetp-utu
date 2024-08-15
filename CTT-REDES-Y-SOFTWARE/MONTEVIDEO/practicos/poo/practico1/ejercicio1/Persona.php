@@ -14,6 +14,10 @@ class Persona {
         return $this->nombre;
     }
 
+    public function setNombre(string $value){
+        $this->nombre = $value;
+    }
+
     public function mostrarInformacion() {
         return "<p>Nombre: $this->nombre</p>
                 <p>Apellido: $this->apellido</p>
