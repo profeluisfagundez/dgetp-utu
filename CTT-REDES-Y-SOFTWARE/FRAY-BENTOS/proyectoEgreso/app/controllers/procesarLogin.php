@@ -1,6 +1,6 @@
 <?php
-require_once("LoginController.php");
-$login = new LoginController();
-$login->logInPage($_POST);
-
+    if ($_POST['type'] == 'login') {
+        require_once("LoginController.php");
+        LoginController::getInstance()->logInPage($_POST);
+    }
 ?>

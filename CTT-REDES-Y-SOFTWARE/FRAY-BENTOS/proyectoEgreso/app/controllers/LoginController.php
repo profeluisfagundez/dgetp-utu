@@ -15,26 +15,37 @@ require_once("../models/ConexionModel.php");
 class LoginController
 {
     private $conn;
+    private static $instance;
 
-    public function __construct()
+    private function __construct()
     {
         $this->conn = ConexionModel::getInstance()->getDatabaseInstance();
     }
 
-    public function index() { }
-    public function create() { }
-    public function delete() { }
-    public function store($data) { }
-    public function show($id) { }
-    public function edit($id) { }
-    public function update($data) { }
-    public function destroy($data) { }
+    public static function getInstance()
+    {
+        if (!self::$instance instanceof self) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
+    public function index() {}
+    public function create() {}
+    public function delete() {}
+    public function store($data) {}
+    public function show($id) {}
+    public function edit($id) {}
+    public function update($data) {}
+    public function destroy($data) {}
 
     /**
      * Método para iniciar sesión en el sistema.
      * @param array $data Datos del usuario (username, password, role)
      */
-    public function logInPage($data) {
+    public function logInPage($data)
+    {
         try {
             $nombre = $data['username'];
             $password = $data['password'];
@@ -78,10 +89,22 @@ class LoginController
      * Método para verificar si un usuario está cargado en la sesión.
      * Redirige a la página de inicio de sesión si no está cargado.
      */
-    public function checkUserLoggedIn() {
+    public function checkUserLoggedIn()
+    {
         if (!isset($_SESSION['usuario'])) {
             header('Location: ../../public/index.php');
             exit();
         }
-    }    
+    }
+
+    /**
+     * Método para cerrar la sesión.
+     * Redirige a la página de inicio de sesión luego de cerrarla.
+     */
+    public function logOut()
+    {
+        session_destroy();
+        header('Location: ../../public/index.php');
+        exit();
+    }
 }

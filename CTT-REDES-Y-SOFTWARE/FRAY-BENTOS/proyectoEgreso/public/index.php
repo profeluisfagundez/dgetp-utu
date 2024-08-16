@@ -19,7 +19,7 @@
                 <option value="usuario">Usuario</option>
                 <option value="administrador">Administrador</option>
             </select>
-            
+            <input type="hidden" name="type" value="login">
             <button type="submit">Iniciar Sesión</button>
         </form>
     </div>
