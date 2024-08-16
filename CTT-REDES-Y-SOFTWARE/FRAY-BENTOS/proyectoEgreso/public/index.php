@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2>Buzón Ciudadano de Fray Bentos</h2>
-        <form action="../app/controllers/procesarLogin.php" method="post">
+        <form action="../app/controllers/routerHandlers.php" method="post">
             <label for="username">Nombre de Usuario</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Contraseña</label>
@@ -25,4 +25,3 @@
     </div>
 </body>
 </html>
-
