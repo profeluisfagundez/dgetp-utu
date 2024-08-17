@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['usuario'])) {
-    header('Location: ../../../public/index.php'); // Redirigir si no hay sesión
-    exit;
-}
+require_once("../../controllers/LoginController.php");
+//LoginController::getInstance()->checkUserLoggedIn();
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +33,7 @@ if (!isset($_SESSION['usuario'])) {
                         <a class="nav-link" href="#">Ver consultas realizadas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php  ?>">Cerrar sesión</a>
+                        <a class="nav-link" href="<?php /*LoginController::getInstance()->logOut(); */?>">Cerrar sesión</a>
                     </li>
                 </ul>
             </div>
