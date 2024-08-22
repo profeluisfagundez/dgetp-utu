@@ -33,7 +33,10 @@ require_once("../../controllers/LoginController.php");
                         <a class="nav-link" href="#">Ver consultas realizadas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php /*LoginController::getInstance()->logOut(); */?>">Cerrar sesión</a>
+                        <form action="../../controllers/routerHandlers.php">
+                            <input type="hidden" name="type" value="logout">
+                            <button type="submit">Cerrar Sesión</button>
+                        </form>
                     </li>
                 </ul>
             </div>
