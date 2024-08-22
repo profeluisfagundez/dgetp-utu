@@ -44,7 +44,8 @@ class LoginController
 
                 if ($resultados && $password == $resultados['contrasena']) {
                     $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
-                    header('Location: ' . dirname(__DIR__) . '/views/usuarios/startPage.php');
+                    //header('Location: ' . dirname(__DIR__) . '/views/usuarios/startPage.php');
+                    header('Location: ../views/usuarios/startPage.php');
                     exit();
                 } else {
                     echo "<p>El usuario no existe</p>";
