@@ -61,6 +61,7 @@ class LoginController
                     exit();
                 } else {
                     header('Location: ../../public/index.php?error=1');
+                    exit();
                 }
             } else {
                 header('Location: ../../public/index.php?error=2');
