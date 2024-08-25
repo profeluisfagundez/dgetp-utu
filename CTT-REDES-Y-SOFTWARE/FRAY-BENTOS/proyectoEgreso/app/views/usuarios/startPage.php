@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once("../../controllers/LoginController.php");
-//LoginController::getInstance()->checkUserLoggedIn();
+LoginController::getInstance()->checkUserLoggedIn();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ require_once("../../controllers/LoginController.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú de administración de usuarios</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +33,7 @@ require_once("../../controllers/LoginController.php");
                         <a class="nav-link" href="#">Ver consultas realizadas</a>
                     </li>
                     <li class="nav-item">
-                        <form action="../../controllers/routerHandlers.php">
+                        <form action="../../controllers/routerHandlers.php" method="post">
                             <input type="hidden" name="type" value="logout">
                             <button type="submit">Cerrar Sesión</button>
                         </form>

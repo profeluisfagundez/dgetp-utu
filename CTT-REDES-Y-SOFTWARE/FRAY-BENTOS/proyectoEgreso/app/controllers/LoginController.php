@@ -44,11 +44,11 @@ class LoginController
 
                 if ($resultados && $password == $resultados['contrasena']) {
                     $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
-                    //header('Location: ' . dirname(__DIR__) . '/views/usuarios/startPage.php');
                     header('Location: ../views/usuarios/startPage.php');
                     exit();
                 } else {
-                    echo "<p>El usuario no existe</p>";
+                    //echo "<p>El usuario no existe</p>";
+                    header('Location: ../../public/index.php?error=1');
                 }
             } elseif ($role == "administrador") {
                 $consulta = $this->conn->prepare("SELECT contrasena FROM administradores WHERE nombre_usuario = :nombre;");
@@ -60,10 +60,10 @@ class LoginController
                     header('Location: ' . dirname(__DIR__) . '/views/administradores/startPage.php');
                     exit();
                 } else {
-                    echo "<p>El administrador no existe</p>";
+                    header('Location: ../../public/index.php?error=1');
                 }
             } else {
-                header('Location: ' . dirname(dirname(__DIR__)) . '/public/index.php');
+                header('Location: ../../public/index.php?error=2');
                 exit();
             }
         } catch (PDOException $e) {
@@ -75,7 +75,7 @@ class LoginController
     public function checkUserLoggedIn()
     {
         if (!isset($_SESSION['usuario'])) {
-            header('Location: ' . dirname(dirname(__DIR__)) . '/public/index.php');
+            header('Location: ../../public/index.php');
             exit();
         }
     }
@@ -83,7 +83,8 @@ class LoginController
     public function logOut()
     {
         session_destroy();
-        header('Location: ' . dirname(dirname(__DIR__)) . '/public/index.php');
+        //header('Location: ' . dirname(dirname(__DIR__)) . '/public/index.php');
+        header('Location: ../../public/index.php');
         exit();
     }
 }
