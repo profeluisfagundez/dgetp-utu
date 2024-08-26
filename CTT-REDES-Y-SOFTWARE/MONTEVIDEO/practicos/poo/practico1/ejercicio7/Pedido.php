@@ -4,12 +4,12 @@
 class Pedido {
     private $productos; // Arreglo para almacenar los productos
 
-    // Constructor
+    // Constructor de la clase pedido, Importante, acá inicializamos el producto
     public function __construct() {
         $this->productos = [];
     }
 
-    // Método para agregar un producto al pedido
+    // Método para agregar un producto al pedido, recibe por parámetro un objeto de tipo Producto
     public function agregarProducto(Producto $producto) {
         $this->productos[] = $producto;
     }

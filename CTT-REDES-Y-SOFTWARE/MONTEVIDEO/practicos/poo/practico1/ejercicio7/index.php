@@ -27,7 +27,6 @@
 
     <script>
         let contador = 1;
-
         function agregarProducto() {
             contador++;
             const div = document.createElement('div');
@@ -35,10 +34,8 @@
             div.innerHTML = `
                 <label for="nombre${contador}">Nombre del Producto:</label>
                 <input type="text" name="nombre[]" id="nombre${contador}" required>
-
                 <label for="precio${contador}">Precio:</label>
                 <input type="number" name="precio[]" id="precio${contador}" step="0.01" required>
-
                 <label for="cantidad${contador}">Cantidad:</label>
                 <input type="number" name="cantidad[]" id="cantidad${contador}" required>
             `;
