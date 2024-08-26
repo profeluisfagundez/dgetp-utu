@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestión de Alumnos</title>
+    <link rel="stylesheet" href="indexStyle.css">
 </head>
 <body>
     <h1>Gestión de Alumnos</h1>

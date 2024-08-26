@@ -17,7 +17,7 @@ if (isset($_SESSION['alumnos'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Promedios</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="verPromediosStyle.css">
 </head>
 <body>
     <h1>Promedios de Todos los Alumnos</h1>
