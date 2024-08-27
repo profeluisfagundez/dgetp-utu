@@ -1,6 +1,7 @@
 <?php
 require_once('Libro.php');
 
+//Colección de libros
 class Biblioteca {
     private $libros = [];
 
@@ -14,5 +15,11 @@ class Biblioteca {
             $resultado .= $libro->__toString();
         }
         return $resultado;
+    }
+
+    public function listarObjetosParaDiego() {
+        foreach ($this->libros as $libro) {
+            echo $libro->__toString();
+        }
     }
 }
