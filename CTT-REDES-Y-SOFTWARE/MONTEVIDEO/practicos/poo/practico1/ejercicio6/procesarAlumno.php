@@ -7,7 +7,7 @@ if (!isset($_SESSION['alumnos'])) {
     $_SESSION['alumnos'] = [];
 }
 
-// Procesar la acción según el botón presionado
+// Procesar la acción según el botón presionado del formulario ubicado en index.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $accion = $_POST['accion'] ?? '';
     /*if (isset($_POST['accion'])){
@@ -16,8 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_POST['accion'] = '';
     }*/
     
-    //Accion = Variable que viene del formulario y puede tener dos valores
-    // Valor1= agregarAlumno Valor2= agregarNota
+    // Accion = Variable que viene del formulario y puede tener dos valores
+    // Valor1= agregarAlumno 
+    // Valor2= agregarNota
     if ($accion == 'agregarAlumno') {
         /*$nombre = al valor que viene del formulario para 
         agregar un alumno y que en caso de que venga vacio con ??
