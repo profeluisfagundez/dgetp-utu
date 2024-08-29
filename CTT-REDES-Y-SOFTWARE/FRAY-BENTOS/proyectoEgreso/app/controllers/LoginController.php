@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once __DIR__ . '/../models/ConexionModel.php';
 
 class LoginController
@@ -57,7 +59,7 @@ class LoginController
 
                 if ($resultados && $password == $resultados['contrasena']) {
                     $_SESSION['usuario'] = ["username" => $nombre, "role" => $role];
-                    header('Location: ' . dirname(__DIR__) . '/views/administradores/startPage.php');
+                    header('Location: ../views/administradores/startPage.php');
                     exit();
                 } else {
                     header('Location: ../../public/index.php?error=1');

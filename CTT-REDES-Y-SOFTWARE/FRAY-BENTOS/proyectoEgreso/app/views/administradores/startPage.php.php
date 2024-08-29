@@ -1,9 +1,9 @@
 <?php
-/*require_once("../../controllers/LoginController.php");
-//Se vienen cositas chicos guiño guiño
-$loginController = new LoginController();
-$loginController->checkUserLoggedIn();*/
+session_start();
+require_once("../../controllers/LoginController.php");
+LoginController::getInstance()->checkUserLoggedIn();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
