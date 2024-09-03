@@ -19,6 +19,7 @@
     $miGato = new Gato("Gatito");
     $miPerro = new Perro("Perrito");
     $miPajaro = new Pajaro("Canario");
+    $claseAbstracta = new Animal("Animalito");
     ?>
     
     <div class="animal-info">
