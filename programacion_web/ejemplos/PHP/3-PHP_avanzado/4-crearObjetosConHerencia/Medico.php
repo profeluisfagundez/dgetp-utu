@@ -1,21 +1,21 @@
 <?php
 class Medico extends Persona {
 
-    private $codigo_area;
+    private $codigoArea;
     private $especialidad;
 
     public function __construct(String $ci,String $nombre, String $apellido,String $codigoArea, String $especialidad){
         parent::__construct($ci,$nombre,$apellido);
-        $this->codigo_area = $codigoArea;
+        $this->codigoArea = $codigoArea;
         $this->especialidad = $especialidad;
     }
 
     public function getCodigoArea():String{
-        return $this->codigo_area;
+        return $this->codigoArea;
     }
 
     public function setCodigoArea(String $value):void{
-        $this->codigo_area = $value;
+        $this->codigoArea = $value;
     }
 
     public function getEspecialidad():String{
