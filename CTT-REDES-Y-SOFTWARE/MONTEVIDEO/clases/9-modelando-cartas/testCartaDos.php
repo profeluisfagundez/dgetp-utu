@@ -1,8 +1,8 @@
 <?php
-require_once("Carta2.php");
-echo "<hr>";
+require_once("CartaModel.php");
+/*echo "<hr>";
 // Crear una carta (palo 0 => 'o' y número 5)
-$carta = new Carta2(0, 5);
+$carta = new CartaModel(0, 5);
 echo $carta;  // Muestra <img src='imagenes/c_o_5.png' alt='Carta'>
 echo "<hr>";
 
@@ -14,4 +14,11 @@ echo "<hr>";
 $carta->setPalo(1);
 echo $carta;  // Muestra <img src='imagenes/c_c_7.png' alt='Carta'>
 echo "<hr>";
+*/
+try {
+    $cartaDos = new CartaModel(5,5);
+}catch (Exception $ex){
+    echo $ex->getMessage();
+}
+
 
