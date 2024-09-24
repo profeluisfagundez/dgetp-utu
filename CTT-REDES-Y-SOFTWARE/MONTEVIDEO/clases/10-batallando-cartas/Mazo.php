@@ -25,6 +25,7 @@ class Mazo
     {
         foreach ($this->mazo as $carta) {
             echo $carta;
+            // echo $carta->__toString();
         }
     }
 
