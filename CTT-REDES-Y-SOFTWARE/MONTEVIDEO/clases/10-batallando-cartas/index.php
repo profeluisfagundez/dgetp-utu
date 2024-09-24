@@ -12,6 +12,7 @@ $_SESSION['mazo']->barajarMazo(); // Barajamos el mazo para obtener cartas aleat
 $carta1 = null;
 $carta2 = null;
 $resultado = null;
+$cantidadCartas = null;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Obtener dos cartas aleatorias
@@ -26,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $resultado = "Es un empate";
     }
+    $cantidadCartas = $_SESSION['mazo']->contarCartasMazo();
 }
 ?>
 
@@ -67,6 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p><?php echo $resultado; ?></p>
         <?php endif; ?>
     </div>
-
+    <p>Quedan la siguiente cantidad de cartas: </p><?php echo $cantidadCartas; ?>
 </body>
 </html>
