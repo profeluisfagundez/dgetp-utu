@@ -25,7 +25,6 @@ class Mazo
     {
         foreach ($this->mazo as $carta) {
             echo $carta;
-            // echo $carta->__toString();
         }
     }
 
@@ -34,23 +33,24 @@ class Mazo
         return count($this->mazo);
     }
 
-    public function getCartaAleatoria(): Carta
+    public function getCartaAleatoria(): ?Carta
     {
-        //Contar las cartas disponibles en el mazo
-        $cantCartasMazo = $this->contarCartasMazo();
-        //Seleccionar un índice aleatorio
-        $indiceAleatorio = mt_rand(0, $cantCartasMazo - 1);
-        //Obtener la carta correspondiente:
+        // Si no quedan cartas, devolver null
+        if ($this->contarCartasMazo() == 0) {
+            return null;
+        }
+        
+        // Seleccionar un índice aleatorio
+        $indiceAleatorio = mt_rand(0, $this->contarCartasMazo() - 1);
+        // Obtener la carta correspondiente:
         $carta = $this->mazo[$indiceAleatorio];
-        //Eliminar la carta del mazo (queda el hueco en el array)
+        // Eliminar la carta del mazo
         unset($this->mazo[$indiceAleatorio]);
-        //Reindexar el arreglo para evitar los huecos
+        // Reindexar el arreglo para evitar los huecos
         $this->mazo = array_values($this->mazo);
-        //Devolver la carta
         return $carta;
     }
 
-    // Barajar el mazo
     public function barajarMazo(): void
     {
         shuffle($this->mazo);

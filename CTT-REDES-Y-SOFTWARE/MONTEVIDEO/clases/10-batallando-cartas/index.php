@@ -2,32 +2,38 @@
 // Incluir las clases Mazo y Carta
 require_once('Mazo.php');
 
-// Inicializamos el mazo y obtenemos dos cartas aleatorias 
-// solo si se presiona el botón "Batallar"
+session_start();  // Iniciar sesión
+
+// Inicializamos el mazo solo si no está ya en sesión
 if (!isset($_SESSION['mazo'])) {
     $_SESSION['mazo'] = new Mazo();
 }
 
-$_SESSION['mazo']->barajarMazo(); // Barajamos el mazo para obtener cartas aleatorias
 $carta1 = null;
 $carta2 = null;
 $resultado = null;
-$cantidadCartas = null;
+$contador = null;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Obtener dos cartas aleatorias
-    $carta1 = $_SESSION['mazo']->getCartaAleatoria();
-    $carta2 = $_SESSION['mazo']->getCartaAleatoria();
+    // Barajar el mazo antes de sacar cartas solo si quedan cartas en el mazo
+    if ($_SESSION['mazo']->contarCartasMazo() >= 2) {
+        $_SESSION['mazo']->barajarMazo(); // Barajamos el mazo
+        $carta1 = $_SESSION['mazo']->getCartaAleatoria();
+        $carta2 = $_SESSION['mazo']->getCartaAleatoria();
 
-    // Comparar las cartas
-    if ($carta1->getNumero() > $carta2->getNumero()) {
-        $resultado = "¡La carta 1 gana!";
-    } elseif ($carta1->getNumero() < $carta2->getNumero()) {
-        $resultado = "¡La carta 2 gana!";
+        // Comparar las cartas
+        if ($carta1->getNumero() > $carta2->getNumero()) {
+            $resultado = "¡La carta 1 gana!";
+        } elseif ($carta1->getNumero() < $carta2->getNumero()) {
+            $resultado = "¡La carta 2 gana!";
+        } else {
+            $resultado = "Es un empate";
+        }
     } else {
-        $resultado = "Es un empate";
+        $resultado = "No quedan suficientes cartas en el mazo.";
     }
-    $cantidadCartas = $_SESSION['mazo']->contarCartasMazo();
+    
+    $contador = $_SESSION['mazo']->contarCartasMazo();
 }
 ?>
 
@@ -67,8 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div id="resultado">
         <?php if ($resultado): ?>
             <p><?php echo $resultado; ?></p>
+            <p>Quedan: <?php echo $contador; ?> cartas</p>
         <?php endif; ?>
     </div>
-    <p>Quedan la siguiente cantidad de cartas: </p><?php echo $cantidadCartas; ?>
+
 </body>
 </html>
