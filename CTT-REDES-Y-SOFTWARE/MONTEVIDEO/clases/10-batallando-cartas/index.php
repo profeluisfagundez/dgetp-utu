@@ -20,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['mazo']->barajarMazo(); // Barajamos el mazo
         $carta1 = $_SESSION['mazo']->getCartaAleatoria();
         $carta2 = $_SESSION['mazo']->getCartaAleatoria();
-
         // Comparar las cartas
         if ($carta1->getNumero() > $carta2->getNumero()) {
             $resultado = "¡La carta 1 gana!";
@@ -32,22 +31,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $resultado = "No quedan suficientes cartas en el mazo.";
     }
-    
+
     $contador = $_SESSION['mazo']->contarCartasMazo();
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batalla de Cartas</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Batalla de Cartas</h1>
-    
+
     <div class="container">
         <div class="card">
             <?php if ($carta1): ?>
@@ -56,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p>Carta 1</p>
             <?php endif; ?>
         </div>
-        
+
         <div class="card">
             <?php if ($carta2): ?>
                 <?php echo $carta2->__toString(); ?>
@@ -78,4 +79,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
 </body>
+
 </html>
