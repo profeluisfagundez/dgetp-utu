@@ -10,7 +10,6 @@ if (!isset($_SESSION['jugadores'])) {
         new Jugador('Jugador 1', 3), 
         new Jugador('Jugador 2', 3)
     ];
-
     // Barajamos los mazos de cada jugador
     foreach ($_SESSION['jugadores'] as $jugador) {
         $jugador->getMazo()->barajarMazo();
@@ -35,14 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             $ganador = "El juego termina en empate!";
         }
-
         // Reiniciamos los jugadores
         $resultado = "No quedan cartas. " . $ganador;
         $_SESSION['jugadores'] = [
             new Jugador('Jugador 1', 3),
             new Jugador('Jugador 2', 3)
         ];
-
         // Barajamos los mazos de cada jugador nuevamente
         foreach ($_SESSION['jugadores'] as $jugador) {
             $jugador->getMazo()->barajarMazo();
@@ -51,7 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Obtener cartas aleatorias de cada jugador
         $carta1 = $_SESSION['jugadores'][0]->getCartaMazoAleatoria();
         $carta2 = $_SESSION['jugadores'][1]->getCartaMazoAleatoria();
-
         // Comparar las cartas
         if ($carta1->getNumero() > $carta2->getNumero()) {
             $resultado = $_SESSION['jugadores'][0]->getNombre() . " gana la ronda!";
@@ -63,7 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $resultado = "Es un empate";
         }
     }
-
     // Contar las cartas restantes de cada jugador
     $contador1 = $_SESSION['jugadores'][0]->getMazo()->contarCartasMazo();
     $contador2 = $_SESSION['jugadores'][1]->getMazo()->contarCartasMazo();
