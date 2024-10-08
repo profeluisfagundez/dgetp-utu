@@ -1,4 +1,7 @@
 <?php
+
+use Ramsey\Uuid\Type\Integer;
+
 require_once('Mazo.php');
 
 class Jugador
@@ -13,7 +16,7 @@ class Jugador
         $this->nombre = $nombre;
         $this->cantVidas = $cantVidas;
         $this->mazo = new Mazo();
-        $this->rondasGanadas = 0; // Inicializamos las rondas ganadas a cero
+        $this->rondasGanadas = 0; // Inicializamos las rondas ganadas a cero SIEMPRE
     }
 
     public function getVidas(): int
@@ -23,9 +26,7 @@ class Jugador
 
     public function setVidas(int $value): void
     {
-        if ($this->cantVidas >= 0) {
-            $this->cantVidas -= $value;
-        }
+        $this->cantVidas = $this->cantVidas - $value;
     }
 
     public function getNombre(): string
@@ -53,9 +54,17 @@ class Jugador
         $this->rondasGanadas++;
     }
 
+    public function cartasEnMazo(): int {
+        return count($this->mazo->getMazo());
+    }
+
     public function getRondasGanadas(): int
     {
         return $this->rondasGanadas;
+    }
+
+    public function reducirVidas(): void {
+        $this->cantVidas--;
     }
 
     public function __toString(): string

@@ -55,4 +55,14 @@ class Mazo
     {
         shuffle($this->mazo);
     }
+
+    public function reiniciarMazo():void {
+        $this->mazo = [];
+        for ($i = 0; $i < 4; $i++) {
+            for ($j = 1; $j <= 12; $j++) {
+                $carta = new Carta($i, $j);
+                array_push($this->mazo, $carta);
+            }
+        }
+    }
 }
