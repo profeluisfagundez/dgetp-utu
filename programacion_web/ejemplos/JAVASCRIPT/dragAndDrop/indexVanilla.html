@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Juego ISBO</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            height: 100vh; 
+            justify-content: space-between;
+        }
+
+        h2 {
+            margin: 20px 0;
+        }
+
+        .area-jugador {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        .jugador {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+
+        .mazo, .deposito {
+            width: 100px;
+            height: 150px;
+            margin: 10px;
+            border: 1px solid black;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .mazo {
+            background-color: #e0e0e0;
+        }
+
+        .deposito {
+            background-color: #d0d0d0;
+        }
+
+        .cartas {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .carta {
+            width: 80px;
+            height: 120px;
+            border: 1px solid black;
+            background-color: #cce5ff;
+            margin: 5px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 120px;
+        }
+
+        .area-juego {
+            display: flex;
+            justify-content: center;
+            width: 80%; 
+            margin-top: 20px; 
+        }
+
+        .espacio-juego {
+            width: 100px;
+            height: 140px;
+            border: 1px dashed #000;
+            margin: 10px;
+            position: relative;
+            background-color: #e8f4f8;
+        }
+
+        .info-jugador {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .esquina {
+            position: absolute;
+        }
+
+        .esquina-izquierda {
+            left: 10px; 
+            top: 50px;
+        }
+
+        .esquina-derecha {
+            right: 10px; 
+            top: 50px; 
+        }
+
+        .titulo-jugador {
+            position: absolute;
+            top: -30px; 
+            font-weight: bold;
+            font-size: 1.2em; 
+            color: #333; 
+        }
+    </style>
+    <script>
+        function permitirSoltar(ev) {
+            ev.preventDefault();
+        }
+
+        function arrastrar(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function soltar(ev) {
+            ev.preventDefault();
+            var datos = ev.dataTransfer.getData("text");
+            var destino = ev.target;
+            if (destino.classList.contains('espacio-juego')) {
+                destino.appendChild(document.getElementById(datos));
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h2>Tablero de Juego ISBO</h2>
+
+<!-- Áreas de juego de cada jugador, colocadas en la parte superior -->
+<div class="area-juego">
+    <div class="titulo-jugador">Jugador 1</div>
+    <div class="espacio-juego" ondrop="soltar(event)" ondragover="permitirSoltar(event)">Personaje</div>
+    <div class="espacio-juego" ondrop="soltar(event)" ondragover="permitirSoltar(event)">Objeto</div>
+    <div class="espacio-juego" ondrop="soltar(event)" ondragover="permitirSoltar(event)">Campo</div>
+</div>
+
+<div class="area-juego">
+    <div class="titulo-jugador">PC</div>
+    <div class="espacio-juego" ondrop="soltar(event)" ondragover="permitirSoltar(event)">Personaje</div>
+    <div class="espacio-juego" ondrop="soltar(event)" ondragover="permitirSoltar(event)">Objeto</div>
+    <div class="espacio-juego" ondrop="soltar(event)" ondragover="permitirSoltar(event)">Campo</div>
+</div>
+
+<div class="area-jugador">
+    <div class="jugador esquina esquina-izquierda">
+        <div class="info-jugador">
+            <h3>Jugador 1</h3>
+            <p>Vidas: <span id="vidas1">5</span></p>
+        </div>
+        <div class="mazo" id="mazo1">Mazo</div>
+        <div class="deposito" id="deposito1">Deposito</div>
+        <div class="cartas">
+            <div class="carta" id="carta1" draggable="true" ondragstart="arrastrar(event)">Carta 1</div>
+            <div class="carta" id="carta2" draggable="true" ondragstart="arrastrar(event)">Carta 2</div>
+            <div class="carta" id="carta3" draggable="true" ondragstart="arrastrar(event)">Carta 3</div>
+        </div>
+    </div>
+
+    <div class="jugador esquina esquina-derecha">
+        <div class="info-jugador">
+            <h3>PC</h3>
+            <p>Vidas: <span id="vidas2">5</span></p>
+        </div>
+        <div class="mazo" id="mazo2">Mazo</div>
+        <div class="deposito" id="deposito2">Deposito</div>
+        <div class="cartas">
+            <div class="carta" id="carta4" draggable="true" ondragstart="arrastrar(event)">Carta 4</div>
+            <div class="carta" id="carta5" draggable="true" ondragstart="arrastrar(event)">Carta 5</div>
+            <div class="carta" id="carta6" draggable="true" ondragstart="arrastrar(event)">Carta 6</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
