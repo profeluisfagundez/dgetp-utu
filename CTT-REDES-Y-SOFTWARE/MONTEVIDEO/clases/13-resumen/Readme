@@ -1,0 +1,10 @@
+Si les sale un error como este:
+
+PHP Fatal error:  Uncaught Error: The script tried to call a method on an incomplete object. 
+Please ensure that the class definition "Mazo" of the object you are trying to operate on was loaded _before_ unserialize()
+gets called or provide an autoloader to load the class definition in 10-batallando-cartas/index.php:18
+Stack trace:
+#0 {main}
+  thrown in /10-batallando-cartas/index.php on line 18
+
+Se debe a que antes de llamar a session_start();  es necesario requerir todos los archivos que vamos a usar.

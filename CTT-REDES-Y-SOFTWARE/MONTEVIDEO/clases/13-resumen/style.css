@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+/*Esquina de los jugadores*/
+.jugadores {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.jugador {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+.jugador1 {
+    text-align: left;
+}
+
+.jugador2 {
+    text-align: right;
+}
+
+/*Contenedor para las cartas al medio*/
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    border: 1px solid #333;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #333;
+}
+
+form {
+    margin-top: 30px;
+}
+
+button {
+    background-color: #0000ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0000ff;
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+}
