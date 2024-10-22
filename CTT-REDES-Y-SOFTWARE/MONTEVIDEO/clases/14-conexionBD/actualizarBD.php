@@ -7,8 +7,8 @@ $baseDatos = 'ejemplo'; // Nombre de la base de datos para este ejemplo
 // Creamos el objeto de conexión
 $conexion = new mysqli($host, $usuario, $password, $baseDatos);
 
-$nuevoEmail = "lefagundez@profeluis.com";
-$idUsuario = 1;
+$nuevoEmail = "pepe@profeluis.com";
+$idUsuario = 2;
 
 $sql = "UPDATE usuarios SET email = ? WHERE id = ?";
 

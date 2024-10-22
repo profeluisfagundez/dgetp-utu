@@ -15,9 +15,9 @@ if ($conexion->connect_error) {
 }
 
 // Insertar un nuevo usuario
-$nombre = "Luis Fagúndez";
-$email = "lfagundez@profeluisfagundez.com";
-$password = password_hash("luisPHP", PASSWORD_DEFAULT);
+$nombre = "Luis Fagúndezzz";
+$email = "lllfagundez@profeluisfagundez.com";
+$password = password_hash("lluisPHP", PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)";
 
