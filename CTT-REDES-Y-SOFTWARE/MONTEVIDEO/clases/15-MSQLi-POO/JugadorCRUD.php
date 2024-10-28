@@ -183,7 +183,7 @@ class JugadorCRUD
      * @param string $contraIngresada La contraseña ingresada por el jugador para la verificación.
      * @return void
      */
-    public function verificarContraseña(int $idUsuario, String $contraIngresada): void
+    public function verificarContra(int $idUsuario, String $contraIngresada): void
     {
         // Obtener la contraseña almacenada en la base de datos
         $sql = "SELECT Contra FROM Jugador WHERE IDUsuario = ?";
