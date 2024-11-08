@@ -47,6 +47,6 @@ class ConexionModel {
     private function __clone() {}
 
     // Evitar que se pueda deserializar (parte del patrón Singleton)
-    private function __wakeup() {}
+    public function __wakeup() {}
 }
 ?>

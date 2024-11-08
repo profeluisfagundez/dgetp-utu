@@ -1,6 +1,6 @@
 <?php
-require_once 'Conexion.php';
-require_once 'JugadorCRUD.php';
+require_once '../models/ConexionModel.php';
+require_once 'JugadorController.php';
 
 session_start();
 
@@ -9,11 +9,11 @@ if (isset($_POST['nombre'], $_POST['contra'])) {
     $contraIngresada = $_POST['contra'];
 
     // Crear instancia de JugadorCRUD
-    $jugadorCRUD = new JugadorCRUD();
+    $jugadorController = new JugadorController();
 
     // Buscar el ID del usuario en la tabla Usuario
     $sql = "SELECT IDUsuario FROM Usuario WHERE Nombre = ?";
-    $stmt = Conexion::getInstancia()->getConexion()->prepare($sql);
+    $stmt = ConexionModel::getInstancia()->getConexion()->prepare($sql);
     $stmt->bind_param('s', $nombre);
     $stmt->execute();
     $resultado = $stmt->get_result();
@@ -24,10 +24,10 @@ if (isset($_POST['nombre'], $_POST['contra'])) {
         $idUsuario = $usuario['IDUsuario'];
         
         // Verificar la contraseña
-        if ($jugadorCRUD->verificarContra($idUsuario, $contraIngresada)) {
+        if ($jugadorController->verificarContra($idUsuario, $contraIngresada)) {
             // Almacenar el ID de usuario en la sesión
             $_SESSION['IDUsuario'] = $idUsuario;
-            header("Location: bienvenida.php");
+            header("Location: ../views/bienvenida.php");
             exit();
         } else {
             echo "Contraseña incorrecta.";
