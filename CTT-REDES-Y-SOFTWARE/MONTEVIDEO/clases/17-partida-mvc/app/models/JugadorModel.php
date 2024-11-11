@@ -1,21 +1,19 @@
 <?php
 
-use Ramsey\Uuid\Type\Integer;
-
-require_once('Mazo.php');
+require_once('MazoModel.php');
 
 class JugadorModel
 {
     private int $cantVidas;
     private string $nombre;
-    private Mazo $mazo;
+    private MazoModel $mazo;
     private int $rondasGanadas;
 
     public function __construct(string $nombre, int $cantVidas)
     {
         $this->nombre = $nombre;
         $this->cantVidas = $cantVidas;
-        $this->mazo = new Mazo();
+        $this->mazo = new MazoModel();
         $this->rondasGanadas = 0; // Inicializamos las rondas ganadas a cero SIEMPRE
     }
 
@@ -34,12 +32,12 @@ class JugadorModel
         return $this->nombre;
     }
 
-    public function getMazo(): Mazo
+    public function getMazo(): MazoModel
     {
         return $this->mazo;
     }
 
-    public function getCartaMazoAleatoria(): Carta
+    public function getCartaMazoAleatoria(): CartaModel
     {
         return $this->mazo->getCartaAleatoria();
     }

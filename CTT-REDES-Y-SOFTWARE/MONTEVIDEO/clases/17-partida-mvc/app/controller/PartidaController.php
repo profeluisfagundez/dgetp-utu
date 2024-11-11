@@ -1,22 +1,22 @@
 <?php
-require_once('JugadorModel.php');
-require_once('CartaModel.php');
+require_once('../../models/JugadorModel.php');
+require_once('../../models/CartaModel.php');
 
 class PartidaController {
-    private Jugador $jugadorHumano;
-    private Jugador $jugadorPC;
+    private JugadorModel $jugadorHumano;
+    private JugadorModel $jugadorPC;
     private int $manosGanadasHumano;
     private int $manosGanadasPC;
     private int $rondaActual;
     private int $manoActual;
-    private ?Carta $cartaHumanoActual;  // Con esta variable imprimimos en el tablero
-    private ?Carta $cartaPCActual;      // Con esta variable imprimimos en el tablero
+    private ?CartaModel $cartaHumanoActual;  // Con esta variable imprimimos en el tablero
+    private ?CartaModel $cartaPCActual;      // Con esta variable imprimimos en el tablero
 
     public function __construct() {
         session_start();
         if (!isset($_SESSION['jugadorHumano'])) {
-            $this->jugadorHumano = new Jugador('Jugador Humano', 3);
-            $this->jugadorPC = new Jugador('PC', 3);
+            $this->jugadorHumano = new JugadorModel('Jugador Humano', 3);
+            $this->jugadorPC = new JugadorModel('PC', 3);
             $_SESSION['jugadorHumano'] = $this->jugadorHumano;
             $_SESSION['jugadorPC'] = $this->jugadorPC;
             $this->rondaActual = 1;

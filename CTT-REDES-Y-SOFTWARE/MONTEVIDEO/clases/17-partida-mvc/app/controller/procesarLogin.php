@@ -27,6 +27,7 @@ if (isset($_POST['nombre'], $_POST['contra'])) {
         if ($jugadorController->verificarContra($idUsuario, $contraIngresada)) {
             // Almacenar el ID de usuario en la sesión
             $_SESSION['IDUsuario'] = $idUsuario;
+            $_SESSION['Nombre'] = $nombre;
             header("Location: ../views/bienvenida.php");
             exit();
         } else {

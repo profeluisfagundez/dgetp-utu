@@ -34,7 +34,7 @@ if (!isset($_SESSION['IDUsuario'])) {
                         <a class="nav-link" href="#">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cerrarSesion.php">Salir</a>
+                        <a class="nav-link" href="../controller/cerrarSesion.php">Salir</a>
                     </li>
                 </ul>
             </div>
@@ -47,10 +47,11 @@ if (!isset($_SESSION['IDUsuario'])) {
             <?php
             // Mensaje de bienvenida
             echo "<h3 class='text-primary'>Bienvenido, usuario con ID: " . $_SESSION['IDUsuario'] . "</h3>";
+            echo "<h3 class='text-primary'>Bienvenido, usuario con Nombre: " . $_SESSION['Nombre'] . "</h3>";
             ?>
         </div>
         <div class="d-flex gap-3">
-            <a href="comenzarPartida.php" class="btn btn-success btn-lg">Comenzar Partida</a>
+            <a href="juego/tablero.php" class="btn btn-success btn-lg">Comenzar Partida</a>
             <a href="verEstadisticas.php" class="btn btn-info btn-lg">Ver Estadísticas</a>
         </div>
     </div>

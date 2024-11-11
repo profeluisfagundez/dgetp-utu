@@ -1,5 +1,5 @@
 <?php
-require_once('PartidaController.php');
+require_once("../../../app/controller/PartidaController.php");
 
 session_start();
 
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 
-    <form method="post" action="index.php">
+    <form method="post" action="tablero.php">
         <button type="submit">Batallar</button>
     </form>
 
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="ganador">
             <h2>¡<?php echo $ganador; ?> gana el juego!</h2>
         </div>
-        <form method="post" action="index.php">
+        <form method="post" action="tablero.php">
             <button type="submit">Reiniciar juego</button>
         </form>
     <?php endif; ?>
