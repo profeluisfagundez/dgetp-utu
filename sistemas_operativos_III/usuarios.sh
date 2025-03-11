@@ -1,0 +1,15 @@
+sudo useradd -G users -d /home/juanperez -m -s /bin/bash juanperez && echo "juanperez:Pass123!" | sudo chpasswd
+sudo useradd -G users -d /home/mariafernandez -m -s /bin/bash mariafernandez && echo "mariafernandez:Segura456!" | sudo chpasswd
+sudo useradd -G users -d /home/carlosgomez -m -s /bin/bash carlosgomez && echo "carlosgomez:Clave789@" | sudo chpasswd
+sudo useradd -G users -d /home/lauraramirez -m -s /bin/bash lauraramirez && echo "lauraramirez:Linux#001" | sudo chpasswd
+sudo useradd -G users -d /home/pedrolopez -m -s /bin/bash pedrolopez && echo "pedrolopez:Root@2024" | sudo chpasswd
+sudo useradd -G users -d /home/sofiamartinez -m -s /bin/bash sofiamartinez && echo "sofiamartinez:1234Secure!" | sudo chpasswd
+sudo useradd -G users -d /home/andresrojas -m -s /bin/bash andresrojas && echo "andresrojas:Test#Pass8" | sudo chpasswd
+sudo useradd -G users -d /home/antoniotorres -m -s /bin/bash antoniotorres && echo "antoniotorres:User9@Linux" | sudo chpasswd
+sudo useradd -G users -d /home/martavargas -m -s /bin/bash martavargas && echo "martavargas:Safe*PWD12" | sudo chpasswd
+sudo useradd -G users -d /home/franciscoruiz -m -s /bin/bash franciscoruiz && echo "franciscoruiz:Login#000" | sudo chpasswd
+sudo useradd -G users -d /home/patriciacastro -m -s /bin/bash patriciacastro && echo "patriciacastro:SecretPass1!" | sudo chpasswd
+sudo useradd -G users -d /home/gustavoperez -m -s /bin/bash gustavoperez && echo "gustavoperez:Shell2023@" | sudo chpasswd
+sudo useradd -G users -d /home/monicamendez -m -s /bin/bash monicamendez && echo "monicamendez:MyPass#77" | sudo chpasswd
+sudo useradd -G users -d /home/ricardosalinas -m -s /bin/bash ricardosalinas && echo "ricardosalinas:LinuxLogin88" | sudo chpasswd
+sudo useradd -G users -d /home/elenamorales -m -s /bin/bash elenamorales && echo "elenamorales:Key_2025!" | sudo chpasswd
