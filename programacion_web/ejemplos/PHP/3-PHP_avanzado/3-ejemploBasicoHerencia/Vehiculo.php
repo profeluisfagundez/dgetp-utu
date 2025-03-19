@@ -17,4 +17,8 @@ class Vehiculo {
         return "Marca: {$this->marca}, Modelo: {$this->modelo}";
     }
 
+    public function saludoAFranca() {
+        return "Hola Franca";
+    }
+
 }

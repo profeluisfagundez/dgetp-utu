@@ -4,25 +4,23 @@ $num1 = 10;
 $num2 = 5;
 $suma = $num1 + $num2;
 if ($num1 > $num2) {
-    $mayor = $num1;
+    echo "La variable $num1 es mayor que la variable $num2";
 } else {
-    $mayor = $num2;
+    echo "La variable $num2 es mayor que la variable $num1";
 }
-echo "La suma de los dos números es: $suma<br>";
-echo "El mayor de los dos números es: $mayor<br>";
 
 // 2. Mayor de tres números
 $num1 = 15;
 $num2 = 30;
 $num3 = 10;
+// && Y lógico, AND
 if ($num1 > $num2 && $num1 > $num3) {
-    $mayor = $num1;
+    echo "El mayor es $num1";
 } elseif ($num2 > $num1 && $num2 > $num3) {
-    $mayor = $num2;
+    echo "El mayor es $num2";
 } else {
-    $mayor = $num3;
+    echo "El mayor es $num3";
 }
-echo "El mayor de los tres números es: $mayor<br>";
 
 // 3. Número par o impar
 $num = 7;

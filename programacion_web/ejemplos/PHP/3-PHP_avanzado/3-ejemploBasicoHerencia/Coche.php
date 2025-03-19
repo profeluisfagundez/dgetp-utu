@@ -14,4 +14,8 @@ class Coche extends Vehiculo {
     public function getNumeroPuertas() {
         return $this->numeroPuertas;
     }
+
+    public function saludoAFranca() {
+        return "Hola Franca desde Coche";
+    }
 }
