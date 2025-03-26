@@ -1,0 +1,65 @@
+Los comandos dnf y yum son herramientas de gestión de paquetes en sistemas Linux basados en Red Hat (como CentOS, Fedora, RHEL y Rocky Linux). 
+Estos comandos permiten a los usuarios instalar, actualizar, eliminar y gestionar paquetes de software en el sistema operativo.
+1. dnf (Dandified YUM)
+dnf es el sucesor de yum en las versiones más recientes de sistemas basados en Red Hat. dnf es más eficiente, rápido y tiene una mejor gestión 
+de dependencias que yum. Se utiliza principalmente en distribuciones de Linux como Fedora y CentOS 8 en adelante. 
+A pesar de ser una herramienta más moderna, dnf mantiene una gran compatibilidad con yum.
+Ejemplos de uso de dnf:
+
+Instalar un paquete
+Para instalar un paquete, por ejemplo vim, se usa el siguiente comando:
+
+$ sudo dnf install vim
+
+Actualizar todos los paquetes del sistema
+Para actualizar todos los paquetes instalados en el sistema:
+
+$ sudo dnf update
+
+Eliminar un paquete
+Para desinstalar un paquete, como vim:
+
+$ sudo dnf remove vim
+
+Buscar un paquete
+Para buscar un paquete por nombre, por ejemplo nginx:
+
+$ dnf search nginx
+
+Ver los detalles de un paquete instalado
+Para ver información sobre un paquete específico:
+
+$ dnf info vim
+
+2. yum (Yellowdog Updater, Modified)
+
+yum es una herramienta más antigua que se utilizaba ampliamente en versiones anteriores de sistemas basados en Red Hat (como CentOS 7 y RHEL 7). 
+Aunque ha sido reemplazada en las versiones más recientes de estos sistemas, todavía se usa en muchas instalaciones existentes y es 
+completamente funcional.
+
+Ejemplos de uso de yum:
+
+Instalar un paquete
+Para instalar vim:
+
+$ sudo yum install vim
+
+Actualizar todos los paquetes del sistema
+Para actualizar todos los paquetes:
+
+$ sudo yum update
+
+Eliminar un paquete
+Para desinstalar vim:
+
+$ sudo yum remove vim
+
+Buscar un paquete
+Para buscar el paquete nginx:
+
+$ yum search nginx
+
+Ver los detalles de un paquete instalado
+Para obtener información sobre el paquete vim:
+
+$ yum info vim
