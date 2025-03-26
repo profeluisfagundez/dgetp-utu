@@ -1,8 +1,13 @@
 <?php
+
+// Esto es un comentario de una línea
+/*
 // 1. Suma de dos números y determinar el mayor
 $num1 = 10;
+// nombreDeLaVariable = valor;
 $num2 = 5;
 $suma = $num1 + $num2;
+// Creo una tercer variable llamada suma y le asigno la suma de dos valores
 if ($num1 > $num2) {
     echo "La variable $num1 es mayor que la variable $num2";
 } else {
@@ -14,6 +19,7 @@ $num1 = 15;
 $num2 = 30;
 $num3 = 10;
 // && Y lógico, AND
+// AND -> Comparar si las dos condiciones son verdaderas
 if ($num1 > $num2 && $num1 > $num3) {
     echo "El mayor es $num1";
 } elseif ($num2 > $num1 && $num2 > $num3) {
@@ -23,6 +29,7 @@ if ($num1 > $num2 && $num1 > $num3) {
 }
 
 // 3. Número par o impar
+// MODULO -> % -> Resto de la división
 $num = 7;
 if ($num % 2 == 0) {
     echo "El número $num es par<br>";
@@ -39,8 +46,8 @@ if ($edad >= 18) {
 }
 
 // 5. Calculadora de IMC (Índice de Masa Corporal)
-$peso = 70;
-$altura = 1.75;
+$peso = 80;
+$altura = 1.62;
 $imc = $peso / ($altura * $altura);
 if ($imc < 18.5) {
     $mensaje = "Bajo peso";
@@ -55,6 +62,8 @@ echo "El IMC es: $imc, lo que indica: $mensaje<br>";
 
 // 6. Año bisiesto
 $anio = 2024;
+// || OR lógico
+// OR -> Comparar si una de las dos condiciones es verdadera
 if (($anio % 4 == 0 && $anio % 100 != 0) || $anio % 400 == 0) {
     echo "El año $anio es bisiesto<br>";
 } else {
@@ -89,4 +98,25 @@ if ($es_primo) {
 } else {
     echo "El número $num no es primo<br>";
 }
+
+*/
+?>
+
+<?php 
+// El for tiene 3 partes: inicialización, condición y incremento
+// Primero la variable se inicializa en un valor que nos sirva para nuestra app
+// Se establece una condición para cortar el ciclo
+// Se establece como se va a incrementar el ciclo
+echo "Ciclo for<br>";
+for ($i = 1; $i <= -10; $i--) {
+    echo "El valor de la variable i es: $i <br>";
+}
+echo "Fin del ciclo";
+
+echo "<br>";
+for($i=60; $i<=110; $i++) {  
+    $letra = chr($i);  
+    echo $letra . "<br>" . $i . "<br>";  
+} 
+
 ?>
