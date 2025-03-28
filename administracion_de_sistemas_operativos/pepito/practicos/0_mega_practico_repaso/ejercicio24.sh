@@ -1,0 +1,1 @@
+sudo find / -type f -iname "*.jpg"

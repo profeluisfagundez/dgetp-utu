@@ -1,0 +1,1 @@
+lsblk -d -o name,rota

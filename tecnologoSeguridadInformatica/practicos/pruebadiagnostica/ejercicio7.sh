@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -ne 4 ]; then
-    echo "Debe de agregar 3 parámetros posicionales"
+    echo "Debe de agregar 4 parámetros posicionales"
     exit 1
 fi
 

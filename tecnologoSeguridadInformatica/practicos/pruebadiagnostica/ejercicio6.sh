@@ -1,20 +1,20 @@
 #!/bin/bash
-#if [ $# -ne 5 ]; then
-#    echo "Uso: $0 nombre1 nombre2 nombre3 nombre4 nombre5"
-#    exit 1
-#fi
+if [ $# -ne 5 ]; then
+    echo "Uso: $0 nombre1 nombre2 nombre3 nombre4 nombre5"
+    exit 1
+fi
 
-#USUARIO_ACTUAL=$(whoami)
+USUARIO_ACTUAL=$(whoami)
 
-#for NOMBRE in "$@"; do
-#    if [ "$NOMBRE" == "$USUARIO_ACTUAL" ]; then
-#        echo "¡Coincidencia! El nombre '$NOMBRE' es el usuario actual."
-#        exit 0
-#    fi
-#done
+for NOMBRE in "$@"; do
+    if [ "$NOMBRE" == "$USUARIO_ACTUAL" ]; then
+        echo "¡Coincidencia! El nombre '$NOMBRE' es el usuario actual."
+        exit 0
+    fi
+done
 
-#echo "Ninguno de los nombres ingresados coincide con el usuario actual ($USUARIO_ACTUAL)."
-#exit 1
+echo "Ninguno de los nombres ingresados coincide con el usuario actual ($USUARIO_ACTUAL)."
+exit 1
 
 USUARIO_ACTUAL=$(whoami)
 if [ $1 == $USUARIO_ACTUAL ]; then
