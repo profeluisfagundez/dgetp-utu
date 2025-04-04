@@ -6,8 +6,10 @@ if ($nombre == "Eduardo") {
     echo "El nombre es Eduardo";
 } else if($nombre == "Luis") {
     echo "El nombre es Luis";
+} else if ($nombre == "Roberto") {
+    echo "El nombre es Roberto";
 } else {
-    echo "El nombre es Otro";
+    echo "El nombre no es ninguno de los anteriores";
 }
 
 $nombre = "Luis";
@@ -35,6 +37,15 @@ if ( $numero_entero >= 18 ){
 else {
     echo "El usuario es menor a 18 años";
 }
+
+$edad = 18;
+if ($edad <= 18) {
+    echo "El usuario es menor de edad";
+} else {
+    echo "El usuario es mayor de edad";
+}
+
+
 
 ?>
 

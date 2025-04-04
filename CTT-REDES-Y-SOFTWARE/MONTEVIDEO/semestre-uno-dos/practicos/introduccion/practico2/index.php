@@ -13,15 +13,16 @@ for ($i = 10; $i >= 1; $i--) {
 //3 - Calcular la suma de los primeros 10 números naturales:
 $suma = 0;
 for ($i = 1; $i <= 10; $i++) {
-    //$suma += $i;
-    $suma = $suma + $i;
+    $suma += $i;
+    //$suma = $suma + $i;
 }
 echo "La suma de los primeros 10 números naturales es: " . $suma;
 
 //4 - Imprimir la tabla de multiplicar del 5:
 $numero = 5;
 for ($i = 1; $i <= 10; $i++) {
-    echo $numero . " x " . $i . " = " . ($numero * $i) . "<br>";
+    $resultado = $numero * $i;
+    echo $numero . " x " . $i . " = " . $resultado . "<br>";
 }
 
 //5 - Imprimir una secuencia de letras del abecedario de la 'A' a la 'Z':
