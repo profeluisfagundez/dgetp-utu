@@ -1,1 +1,0 @@
-find / -type f -ctime 20

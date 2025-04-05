@@ -1,1 +1,0 @@
-find /etc /var -type f -name "*conf*"

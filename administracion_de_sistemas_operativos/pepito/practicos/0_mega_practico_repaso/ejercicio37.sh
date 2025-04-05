@@ -1,1 +1,0 @@
-find . -type f -perm -u=w
