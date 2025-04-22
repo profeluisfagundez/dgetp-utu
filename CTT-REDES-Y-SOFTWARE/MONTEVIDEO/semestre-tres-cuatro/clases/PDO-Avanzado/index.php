@@ -8,7 +8,7 @@ $trabador = new TrabajadorModel('48225577', 'Luis', 'Eduardo', 'Regimiento 9 198
 
 
 //Obtener todos los datos desde la BD
-$consulta = CRUDModel::getInstance()->obtenerTodosLosUsuarios();
+$consulta = CRUDModel::getInstance()->obtenerTodosLosTrabajadores();
 echo "<table border='1'>";
 echo "<tr>
         <th>CI</th>

@@ -33,7 +33,7 @@ class CRUDModel
   }
 
   // Alta de un nuevo trabajador en la base de datos.
-  public function altaTrabajador(Trabajador $trabajador): bool
+  public function altaTrabajador(TrabajadorModel $trabajador): bool
   {
     try {
       $this->con->beginTransaction();
