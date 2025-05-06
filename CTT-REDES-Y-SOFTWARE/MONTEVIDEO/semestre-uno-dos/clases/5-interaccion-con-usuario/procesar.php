@@ -7,9 +7,12 @@
 <body>
     <h1>Datos ingresados por el usuario</h1>
     <br>
-    <?php 
-        $nombreUno = $_POST['nombre'];
-        echo  "<p> El nombre es: $nombreUno</p><br>"; 
+    <?php
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $edad = $_POST['edad'];
+    echo "<p>El nombre es: $nombre, el apellido es: $apellido
+    y su edad actual es: $edad</p>";
     ?>
 </body>
 </html>
