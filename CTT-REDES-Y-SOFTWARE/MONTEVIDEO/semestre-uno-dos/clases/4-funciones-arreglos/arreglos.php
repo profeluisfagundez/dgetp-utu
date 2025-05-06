@@ -1,18 +1,17 @@
 <?php
 
-// Declaramos un arreglo indexado php 5.6 hasta 7.4
-$arreglo = Array("Fabricio", "Gonzalez");
-
-$arregloDos = ["Fabricio", "Gonzalez"];
-var_dump($arregloDos);
+//Definición de un arreglo con cadenas de texto
+$arregloLetras = ["Fabricio", "Gonzalez"];
+echo "$arregloLetras[0]";
+echo "$arregloLetras[1]";
 echo "<br>";
-
-$arregloMixto = ["Fabricio", 1, 2.5, true, false, null];
-var_dump($arregloMixto);
-echo "<br>";
-
-//echo "El primer valor es: " . $arregloDos[0] . "<br>";
-//echo "El primer valor es: " . $arregloDos[1] . "<br>";
-//echo "El primer valor es: " . $arregloDos[2] . "<br>";
-
+// Definición de un arreglo de enteros
+$arregloNumeros = [1, 2, 3, 4, 5];
+$arregloAsociativo = [
+    "Ciudad" => "Montevideo",
+    "Barrio" => "Brazo Oriental",
+    "Población" => 2500
+];
+echo "$arregloAsociativo[Ciudad]";
+echo "$arregloAsociativo[Barrio]";
 ?>

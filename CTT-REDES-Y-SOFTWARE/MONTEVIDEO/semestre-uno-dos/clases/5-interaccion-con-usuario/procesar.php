@@ -9,9 +9,7 @@
     <br>
     <?php 
         $nombreUno = $_POST['nombre'];
-        $edadUno = $_POST['edad'];
-        echo "<p>El nombre ingresado fue: $nombreUno </p>";
-        echo  "<p> y la edad fue: $edad</p><br>"; 
+        echo  "<p> El nombre es: $nombreUno</p><br>"; 
     ?>
 </body>
 </html>
