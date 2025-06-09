@@ -1,0 +1,1 @@
+composer require pragmarx/google2fa bacon/bacon-qr-code

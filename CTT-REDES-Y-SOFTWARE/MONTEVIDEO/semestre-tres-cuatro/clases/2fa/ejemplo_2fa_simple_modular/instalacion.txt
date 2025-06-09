@@ -1,0 +1,28 @@
+composer require pragmarx/google2fa bacon/bacon-qr-code
+
+en caso de ya estar instalado ejecutar:
+composer install
+
+arbol recomendado:
+
+/2fa/
+│
+├── app/
+│   ├── controllers/
+│   │   └── AuthController.php
+│   ├── models/
+│   │   └── TwoFAModel.php
+│   └── views/
+│       ├── auth/
+│       │   ├── setup-2fa.php
+│       │   └── verify-2fa.php
+│       └── layouts/
+│           ├── header.php
+│           ├── footer.php
+│           └── styles.css
+│
+├── config/
+│   └── config.php
+│
+└── public/
+    └── index.php
