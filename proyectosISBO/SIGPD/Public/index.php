@@ -4,18 +4,53 @@ session_start();
 $page = $_GET['page'] ?? 'login';
 
 switch ($page) {
+
   case 'login':
+    // Si ya está logueado redirige al dashboard inmediatamente, es una buena práctica "en teoría"
+    if (isset($_SESSION['user'])) {
+      header('Location: index.php?page=dashboard');
+      exit;
+    }
+
+    // Controlador que carga la vista de login,
     require_once '../app/Controllers/AuthController.php';
     $controller = new AuthController();
     $controller->showLoginForm();
     break;
 
   case 'dashboard':
+    // Verificar si hay sesión iniciada
+    //Importante el uso de las variables para cheaquear a donde ir
     if (!isset($_SESSION['user'])) {
       header('Location: index.php?page=login');
       exit;
     }
-    echo "<h1>Bienvenido al panel, " . $_SESSION['user'] . "!</h1>";
+    // Muestra el panel principal de la página web
+    require_once __DIR__ . '../../app/Views/Dashboard/panel.php';
+    break;
+
+  case 'configurar':
+    if (!isset($_SESSION['user'])) {
+      header('Location: index.php?page=login');
+      exit;
+    }
+    echo "<h2>Configuración de partida (en desarrollo)</h2>";
+    break;
+
+  case 'seguimiento':
+    if (!isset($_SESSION['user'])) {
+      header('Location: index.php?page=login');
+      exit;
+    }
+    echo "<h2>Seguimiento de partida (en desarrollo)</h2>";
+    break;
+
+  case 'perfil':
+    if (!isset($_SESSION['user'])) {
+      header('Location: index.php?page=login');
+      exit;
+    }
+    echo "<h2>Perfil del jugador (en desarrollo)</h2>";
     break;
 
   case 'logout':
@@ -25,5 +60,6 @@ switch ($page) {
 
   default:
     http_response_code(404);
-    echo "Página no encontrada";
+    echo "<h1>Página no encontrada</h1>";
+    break;
 }

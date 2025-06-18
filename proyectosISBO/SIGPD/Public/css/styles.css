@@ -10,13 +10,18 @@ body {
 
 /* Centrado del contenedor */
 .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.container.login-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Tarjeta del formulario */
+/* Cards del formulario */
 .card {
   background-color: #ffffff;
   border: none;
@@ -25,10 +30,15 @@ body {
   padding: 30px;
 }
 
-/* Título */
+.container h1 {
+  text-align: center;
+}
+
+/* Títulos de laS cards, no de la página principal */
 .card h2 {
   font-weight: 700;
   color: #2e7d32;
+  text-align: center;
 }
 
 /* Botón */
@@ -54,7 +64,7 @@ body {
   box-shadow: none;
 }
 
-/* Mensajes de error */
+/* Mensajes de error personalizados */
 .alert-danger {
   border-radius: 10px;
   font-size: 0.9rem;

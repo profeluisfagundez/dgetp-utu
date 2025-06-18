@@ -1,3 +1,10 @@
+<?php
+// Redirigir si ya está logueado
+if (isset($_SESSION['user'])) {
+  header('Location: index.php?page=dashboard');
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,12 +32,13 @@
           <button type="submit" class="btn btn-success">Ingresar</button>
         </div>
       </form>
+
       <?php
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-          $user = $_POST['email'];
-          $pass = $_POST['password'];
+          $user = htmlspecialchars($_POST['email'] ?? '');
+          $pass = htmlspecialchars($_POST['password'] ?? '');
 
-          // Login simulado (luego a futuro se conectara a la DB, por ahora no es necesario)
+          // Login simulado
           if ($user === 'admin' && $pass === '1234') {
             $_SESSION['user'] = $user;
             header('Location: index.php?page=dashboard');
@@ -45,3 +53,4 @@
 
 </body>
 </html>
+
