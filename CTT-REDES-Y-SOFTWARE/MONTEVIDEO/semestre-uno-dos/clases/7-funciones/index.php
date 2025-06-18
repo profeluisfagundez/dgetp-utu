@@ -1,30 +1,22 @@
 <?php 
-
-echo "<h1> Funciones en PHP </h1>";
-$valorUno = 15;
-$valorDos = 20;
-
-function sumar($numUno, $numDos):bool {
-    $suma = $numUno + $numDos;
-    if($suma >= 30) {
-        return true;
-    } else {
-        return false;
-    }
+// (Funciones) y (Procedimientos) en PHP
+ 
+//Función suma
+function sumar(int $varUno,int $varDos):int {
+    $valor = $varUno + $varDos;
+    return $valor;
 }
 
-$suma = sumar($valorUno, $valorDos);
-if ($suma == 1) {
-    echo "El resultado es true";
-} else {
-    echo "El resultado es false";
+$suma = sumar(14,17);
+echo $suma;
+
+
+function mostrarHead(): void{
+    echo "<head>";
+    echo "<title>Nombre de la página web</title>";
+    echo "<p>Esto es un texto</p>";
+    echo "</head>";
 }
 
-function mostrarPruebaSoftware():void{
-    echo "<h2>Esto es una versión de prueba</h2>";
-    echo "<h3>Favor pague la versión final</h3>";
-    echo "<h4>Necesito llegar a fin de mes</h4>";
-}
+mostrarHead();
 
-
-?>

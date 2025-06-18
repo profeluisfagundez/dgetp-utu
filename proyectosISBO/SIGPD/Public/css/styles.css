@@ -1,0 +1,71 @@
+/* Fondo general con gradiente suave */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #d7f0e6, #f0f9ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("../assets/fondo.jpg");
+  background-size: cover;
+}
+
+/* Centrado del contenedor */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tarjeta del formulario */
+.card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* Título */
+.card h2 {
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+/* Botón */
+.btn-success {
+  background-color: #4caf50;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #388e3c;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #cfd8dc;
+  transition: border-color 0.2s;
+}
+
+.form-control:focus {
+  border-color: #4caf50;
+  box-shadow: none;
+}
+
+/* Mensajes de error */
+.alert-danger {
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+/* Texto adicional */
+.text-muted a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.text-muted a:hover {
+  text-decoration: underline;
+}
