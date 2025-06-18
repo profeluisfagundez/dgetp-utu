@@ -30,7 +30,7 @@
           $user = $_POST['email'];
           $pass = $_POST['password'];
 
-          // Login simulado (luego se conecta a DB)
+          // Login simulado (luego a futuro se conectara a la DB, por ahora no es necesario)
           if ($user === 'admin' && $pass === '1234') {
             $_SESSION['user'] = $user;
             header('Location: index.php?page=dashboard');
