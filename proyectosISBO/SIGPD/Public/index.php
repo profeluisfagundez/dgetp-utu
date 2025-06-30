@@ -20,7 +20,7 @@ switch ($page) {
 
   case 'dashboard':
     // Verificar si hay sesión iniciada
-    //Importante el uso de las variables para cheaquear a donde ir
+    //Más adelante realizaremos un chequeo más especifico
     if (!isset($_SESSION['user'])) {
       header('Location: index.php?page=login');
       exit;
@@ -51,6 +51,14 @@ switch ($page) {
       exit;
     }
     echo "<h2>Perfil del jugador (en desarrollo)</h2>";
+    break;
+
+  case 'ranking':
+    if (!isset($_SESSION['user'])) {
+      header('Location: index.php?page=login');
+      exit;
+    }
+    echo "<h2>Ranking de los mejores jugadores (en desarrollo)</h2>";
     break;
 
   case 'logout':
