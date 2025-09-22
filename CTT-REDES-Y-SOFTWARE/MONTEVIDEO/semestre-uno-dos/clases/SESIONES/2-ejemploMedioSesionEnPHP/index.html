@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action="login.php" method="post">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br>
+        
+        <input type="submit" value="Iniciar sesión">
+    </form>
+
+    <div id="error-message" style="color:red;"></div>
+
+    <script>
+        // Este código Javascript lo verán más a futuro, en este momento no le presten atención
+        // Función para obtener el valor de un parámetro de la URL
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Mostrar mensaje de error si el parámetro 'error' está presente
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let errorMessage = document.getElementById('error-message');
+            if (getQueryParam('error') == 1) {
+                errorMessage.textContent = 'Usuario o contraseña incorrectos.';
+            }
+        });
+    </script>
+</body>
+</html>
