@@ -2,6 +2,8 @@
 session_start();
 
 // Declarar el arreglo asociativo con múltiples usuarios
+
+
 $_SESSION['users'] = [
     ['user' => 'luis', 'password' => '1234'],
     ['user' => 'eduardo', 'password' => '12345'],

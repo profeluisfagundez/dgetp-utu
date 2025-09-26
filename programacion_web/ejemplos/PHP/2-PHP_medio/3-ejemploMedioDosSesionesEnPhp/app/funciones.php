@@ -1,3 +1,6 @@
+
+
+
 <?php
 session_start();
 require_once 'config.php';
@@ -10,6 +13,22 @@ function existeUsuario($username, $password) {
         }
     }
     return false;
+}
+
+//Función que permite borrar un trabajador del sistema
+// Función para eliminar un trabajador por email
+function BorrarTrabajador($email) {
+    if (!isset($_SESSION['trabajadores'])) {
+        return false; // No hay trabajadores cargados
+    }
+    foreach ($_SESSION['trabajadores'] as $indice => $trabajador) {
+        if ($trabajador['email'] === $email) {
+            unset($_SESSION['trabajadores'][$indice]);
+            $_SESSION['trabajadores'] = array_values($_SESSION['trabajadores']); // Reindexar
+            return true; // Eliminado correctamente
+        }
+    }
+    return false; // No se encontró
 }
 
 // Función para agregar un trabajador al arreglo global
@@ -40,5 +59,23 @@ function logout() {
     session_destroy();
     header("Location: ../index.html");
     exit();
+}
+
+
+// Función para modificar un trabajador por email
+function modificarTrabajador($email, $nuevoNombre, $nuevaPosicion, $nuevoEmail) {
+    if (!isset($_SESSION['trabajadores'])) {
+        return false; // No hay trabajadores cargados
+    }
+    foreach ($_SESSION['trabajadores'] as $indice => $trabajador) {
+        if ($trabajador['email'] === $email) {
+            $_SESSION['trabajadores'][$indice]['nombre'] = $nuevoNombre;
+            $_SESSION['trabajadores'][$indice]['posicion'] = $nuevaPosicion;
+            $_SESSION['trabajadores'][$indice]['email'] = $nuevoEmail;
+            return true; // Se modificó correctamente
+        }
+    }
+
+    return false; // No se encontró el trabajador
 }
 ?>
