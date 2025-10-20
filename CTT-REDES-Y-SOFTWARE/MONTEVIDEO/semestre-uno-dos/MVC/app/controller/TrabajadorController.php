@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("../app/models/TrabajadorModel.php");
+require_once("../models/TrabajadorModel.php");
 
 class TrabajadorController {
 
@@ -17,7 +17,6 @@ class TrabajadorController {
                 return;
             }
         }
-
         $nuevo = new TrabajadorModel($nombre, $apellido, $cedula);
         $_SESSION['trabajadores'][] = $nuevo;
         echo "Trabajador agregado correctamente.<br>";
@@ -55,8 +54,10 @@ class TrabajadorController {
         foreach ($_SESSION['trabajadores'] as $index => $trabajador) {
             if ($trabajador->getCedula() === $cedula) {
                 unset($_SESSION['trabajadores'][$index]);
-                $_SESSION['trabajadores'] = array_values($_SESSION['trabajadores']); // reindexar
-                echo "🗑️ Trabajador eliminado correctamente.<br>";
+                //Datos importantes, reindexar el arreglo es necesario para tener mejor control
+                //De nuestra estructura de datos. array_values siempre es necesario
+                $_SESSION['trabajadores'] = array_values($_SESSION['trabajadores']);
+                echo "Trabajador eliminado correctamente.<br>";
                 return;
             }
         }
@@ -66,7 +67,7 @@ class TrabajadorController {
     public function limpiarTrabajadores(): void {
         unset($_SESSION['trabajadores']);
         $_SESSION['trabajadores'] = [];
-        echo "🧾 Se ha limpiado la lista de trabajadores.<br>";
+        echo "Se ha limpiado la lista de trabajadores.<br>";
     }
 }
 ?>
