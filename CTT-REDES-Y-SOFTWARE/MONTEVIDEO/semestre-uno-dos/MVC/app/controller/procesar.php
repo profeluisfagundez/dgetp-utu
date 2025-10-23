@@ -1,11 +1,11 @@
 <?php
-require_once('../controller/TrabajadorController.php');
+//require_once('../controller/TrabajadorController.php');
 require_once('../controller/config.php');
 
-$trabajador = new TrabajadorController();
+//$trabajador = new TrabajadorController();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $encontrado = false;
+    //$encontrado = false;
     $variable = $_POST['formulario'] ?? '';
     $user = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
