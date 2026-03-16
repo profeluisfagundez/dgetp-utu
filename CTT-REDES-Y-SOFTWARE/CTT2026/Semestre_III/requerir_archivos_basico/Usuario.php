@@ -9,10 +9,10 @@ class Usuario
     private $password;
 
     //Constructor de la clase, se ejecuta automáticamente al crear un objeto de la clase. Sirve para inicializar los atributos de la clase.
-    public function __construct($username, $password)
+    public function __construct($usernameU, $passwordU)
     {
-        $this->username = $username;
-        $this->password = $password;
+        $this->username = $usernameU;
+        $this->password = $passwordU;
     }
 
     //Obtener el valor del atributo
@@ -43,13 +43,3 @@ class Usuario
         return "Usuario: " . $this->username . ", Contraseña: " . $this->password;
     }
 }
-?>
-
-<?php
-
-$objertoUsuario = new Usuario("Luis", "1234");
-echo $objertoUsuario->__toString();
-echo "<br>";
-echo $objertoUsuario->getUsername();
-echo "<br>";
-echo $objertoUsuario->getPassword();
