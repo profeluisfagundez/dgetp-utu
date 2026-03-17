@@ -21,7 +21,7 @@ echo "División: " . $division . "<br>";
 
 // Ejercicio 2
 $celsius = 20;
-$fahrenheit = ($celsius * 9 / 5) + 32;
+$fahrenheit = 32 + ($celsius * 9 / 5);
 echo "Temperatura en Fahrenheit: " . $fahrenheit . "<br>";
 
 // Ejercicio 3
@@ -43,6 +43,7 @@ $peso_kg = 70;
 $altura_m = 1.75;
 $imc = $peso_kg / ($altura_m * $altura_m);
 echo "IMC: " . $imc . "<br>";
+//echo "IMC: $imc <br>";
 
 // Ejercicio 6
 $ancho = 5;
