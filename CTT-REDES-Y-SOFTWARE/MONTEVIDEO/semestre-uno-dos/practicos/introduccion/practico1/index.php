@@ -1,7 +1,7 @@
 <?php
 
 // Esto es un comentario de una línea
-/*
+///*
 // 1. Suma de dos números y determinar el mayor
 $num1 = 10;
 // nombreDeLaVariable = valor;
@@ -15,7 +15,7 @@ if ($num1 > $num2) {
 }
 
 // 2. Mayor de tres números
-$num1 = 15;
+$num1 = 45;
 $num2 = 30;
 $num3 = 10;
 // && Y lógico, AND
@@ -99,7 +99,7 @@ if ($es_primo) {
     echo "El número $num no es primo<br>";
 }
 
-*/
+//*/
 ?>
 
 <?php 
