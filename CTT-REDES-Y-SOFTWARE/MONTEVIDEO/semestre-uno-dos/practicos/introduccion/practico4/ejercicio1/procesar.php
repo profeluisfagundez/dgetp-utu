@@ -1,7 +1,7 @@
 <?php
-    $nombres = $_POST['nombres'];
-    $arregloNombres = explode(',', $nombres);
-    array_push($arregloNombres, "Carlos", "Ana");
+    $nombrecito = $_POST['nombres'];
+    $arregloNombres = explode(',', $nombrecito);
+    array_push($arregloNombres, "Juan", "Pedrito");
     echo "Arreglo final:<br>";
     print_r($arregloNombres);
 ?>
