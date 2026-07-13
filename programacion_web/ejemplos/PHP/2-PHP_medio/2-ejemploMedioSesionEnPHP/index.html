@@ -3,14 +3,11 @@
 <body>
     <form action="login.php" method="post">
         <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" required><br>
-        
+        <input type="text" id="username" name="username" required><br>   
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" required><br>
-        
         <input type="submit" value="Iniciar sesión">
     </form>
-
     <div id="error-message" style="color:red;"></div>
 
     <script>
@@ -20,7 +17,6 @@
             let urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
         }
-
         // Mostrar mensaje de error si el parámetro 'error' está presente
         document.addEventListener('DOMContentLoaded', (event) => {
             let errorMessage = document.getElementById('error-message');

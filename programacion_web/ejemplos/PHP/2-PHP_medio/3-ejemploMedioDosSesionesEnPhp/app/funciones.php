@@ -6,7 +6,7 @@ session_start();
 require_once 'config.php';
 
 // Función para comprobar si un usuario existe en el arreglo
-function existeUsuario($username, $password) {
+function existeUsuario(string $username,string $password): bool {
     foreach ($_SESSION['users'] as $user) {
         if ($user['user'] === $username && $user['password'] === $password) {
             return true;
@@ -17,7 +17,7 @@ function existeUsuario($username, $password) {
 
 //Función que permite borrar un trabajador del sistema
 // Función para eliminar un trabajador por email
-function BorrarTrabajador($email) {
+function BorrarTrabajador(string $email) {
     if (!isset($_SESSION['trabajadores'])) {
         return false; // No hay trabajadores cargados
     }
@@ -31,14 +31,21 @@ function BorrarTrabajador($email) {
     return false; // No se encontró
 }
 
+
+
+
+
 // Función para agregar un trabajador al arreglo global
-function agregarTrabajador($nombre, $posicion, $email) {
+function agregarTrabajador(string $nombre, string $posicion, string  $email): void {
     $_SESSION['trabajadores'][] = [
         'nombre' => $nombre,
         'posicion' => $posicion,
         'email' => $email
     ];
 }
+
+
+
 // USUARIO -> los usuarios que uso para iniciar sesión 
 // TRABAJADOR -> Las personas cargadas en el sistema
 // 1 - Función para buscar un trabajador con su CI y mostrar sus datos.

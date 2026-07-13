@@ -1,0 +1,289 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================================
+   GENERALES
+========================================== */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#f4f4f4;
+    color:#333;
+}
+
+a{
+    text-decoration:none;
+}
+
+h1{
+    text-align:center;
+    color:#1f3b73;
+    margin-bottom:15px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+.contenedor-login{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+
+    background-color:white;
+
+    width:500px;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+/* ==========================================
+   FORMULARIOS
+========================================== */
+
+form{
+    width:100%;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:10px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+}
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:5px;
+
+    background-color:#1f3b73;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#294f99;
+}
+
+/* ==========================================
+   MENUS
+========================================== */
+
+.menu{
+
+    width:80%;
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.menu ul{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:15px;
+}
+
+.menu a{
+
+    display:block;
+
+    background-color:#1f3b73;
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:5px;
+}
+
+.menu a:hover{
+    background-color:#294f99;
+}
+
+/* ==========================================
+   CONTENEDOR GENERAL
+========================================== */
+
+.contenedor{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:20px auto;
+}
+
+/* ==========================================
+   TABLAS
+========================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+}
+
+table th{
+
+    background-color:#1f3b73;
+
+    color:white;
+
+    padding:12px;
+}
+
+table td{
+
+    border:1px solid #ccc;
+
+    padding:10px;
+
+    text-align:center;
+}
+
+table tr:nth-child(even){
+    background-color:#f9f9f9;
+}
+
+/* ==========================================
+   BOTONES DE ACCIÓN
+========================================== */
+
+.boton{
+
+    display:inline-block;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+
+    color:white;
+}
+
+.boton-editar{
+    background-color:#28a745;
+}
+
+.boton-eliminar{
+    background-color:#dc3545;
+}
+
+.boton-volver{
+    background-color:#6c757d;
+}
+
+.boton-editar:hover{
+    background-color:#218838;
+}
+
+.boton-eliminar:hover{
+    background-color:#c82333;
+}
+
+.boton-volver:hover{
+    background-color:#5a6268;
+}
+
+/* ==========================================
+   MENSAJES
+========================================== */
+
+.exito{
+
+    background-color:#d4edda;
+
+    color:#155724;
+
+    padding:15px;
+
+    border-radius:5px;
+
+    margin-bottom:15px;
+}
+
+.error{
+
+    background-color:#f8d7da;
+
+    color:#721c24;
+
+    padding:15px;
+
+    border-radius:5px;
+
+    margin-bottom:15px;
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
+
+footer{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    padding:15px;
+
+    color:#666;
+}
