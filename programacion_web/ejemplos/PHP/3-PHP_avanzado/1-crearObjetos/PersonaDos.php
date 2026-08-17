@@ -4,9 +4,9 @@
 
         //Atributos
         // private, public, protected  
-        private $nombre;
-        private $apellido;
-        private $cedula;
+        private string $nombre;
+        private string $apellido;
+        private string $cedula;
 
         //Constructor
         public function __construct(String $nombreU, 

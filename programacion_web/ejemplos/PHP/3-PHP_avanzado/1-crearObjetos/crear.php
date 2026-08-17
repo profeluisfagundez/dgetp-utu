@@ -13,9 +13,16 @@
         $nomb = $_POST['nombre'];
         $apell = $_POST['apellido'];
         $persona = new Persona($ci, $nomb, $apell);
-        $valor = $persona->__toString();
+        echo $persona->getNombre();
+        echo $persona->getApellido();
+        //echo $persona->getCi();
+        echo("<br>");
+        $persona->setNombre("Juan");
+        echo $persona->getNombre();
+        echo("<br>");
+        //$valor = $persona->__toString();
         echo("<h2>Se ha creado la persona con los siguientes atributos:</h2>");
-        echo("<p>$valor</p>");
+        //echo("<p>$valor</p>");
     ?>
     <input type="button" onclick="history.back()" name="volver" value="volver atrás">
 </body>

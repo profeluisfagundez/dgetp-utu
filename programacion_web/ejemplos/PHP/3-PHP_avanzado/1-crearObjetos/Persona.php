@@ -3,16 +3,16 @@
 class Persona {
 
 //ATRIBUTOS
-private $ci;
-private $nombre;
-private $apellido; 
+private string $ci;
+private string $nombre;
+private string $apellido; 
 
-
-function __construct(string $ci, string $nombre, string $apellido){
+function __construct(string $ci, string $nombre, string $apellido) {
     $this->ci = $ci;
     $this->nombre = $nombre;
     $this->apellido = $apellido;
 }
+
 
 public function getCi():String{
     return $this->ci;
@@ -21,6 +21,7 @@ public function getCi():String{
 public function setCi(String $value):void{
     $this->ci = $value;
 }
+
 
 public function getNombre():String{
     return $this->nombre;
@@ -36,6 +37,17 @@ public function getApellido():String{
 
 public function setApellido(String $value):void{
     $this->apellido = $value;
+}
+
+public function mostrarInformacion(): string{
+    return "CI: " . $this->ci . " Nombre: " . 
+    $this->nombre . " Apellido: " .$this->apellido ;
+}
+
+public function mostrarInformacion2(): string{
+    return "CI: {$this->getCi()} 
+            Nombre: {$this->getNombre()} 
+            Apellido: {$this->getApellido()}";
 }
 
 //Método toString de la clase Persona
