@@ -10,7 +10,7 @@ echo $maria->caminar();
 echo "<br >";
 echo $maria->saltar();
 echo "<br >";
-echo $maria->__toString();
+echo $maria;
 
 
 

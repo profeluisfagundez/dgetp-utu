@@ -1,8 +1,8 @@
 <?php
 abstract class Animal {
-    private $nombre;
+    private String $nombre;
     
-    public function __construct($nombre) {
+    public function __construct(String $nombre) {
         $this->nombre = $nombre;
     }
 
@@ -10,7 +10,7 @@ abstract class Animal {
         return $this->nombre;
     }
 
-    public function setNombre($value){
+    public function setNombre(String $value){
         $this->nombre = $value;
     }
     

@@ -1,26 +1,20 @@
 <?php
 class Vehiculo {
-    public $marca;
-    public $modelo;
-    public $año;
-    public $kilometraje;
+    public String $marca;
+    public String $modelo;
+    public String $año;
+    public String $kilometraje;
 
-    public function __construct($marca, $modelo, $año, $kilometraje) {
+    public function __construct(String $marca, String $modelo, String $año, String $kilometraje) {
         $this->marca = $marca;
         $this->modelo = $modelo;
         $this->año = $año;
         $this->kilometraje = $kilometraje;
     }
 
-    public function getMarca(){
+ 
 
-    }
-
-    public function setMarca($value){
-
-    }
-
-    public function actualizarKilometraje($nuevoKilometraje) {
+    public function actualizarKilometraje(String $nuevoKilometraje) {
         $this->kilometraje += $nuevoKilometraje;
         //$this->kilometraje = $this->kilometraje + $nuevoKilometraje;
     }

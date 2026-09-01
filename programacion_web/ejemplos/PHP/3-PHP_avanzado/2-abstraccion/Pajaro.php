@@ -1,6 +1,6 @@
 <?php
 class Pajaro extends Animal implements Volador {
-    public function __construct($nombre) {
+    public function __construct(String $nombre) {
         parent::__construct($nombre);
     }
 
