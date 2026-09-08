@@ -3,17 +3,17 @@
 class Vehiculo {
     //Atributos
     //Alcance Público, protegido, privado
-    protected $marca; //Permite ser visualizado a través de las clases que hereden vehículo
-    protected $modelo;
+    protected String $marca; //Permite ser visualizado a través de las clases que hereden vehículo
+    protected String $modelo;
 
     //Constructor
-    public function __construct($marca, $modelo) {
+    public function __construct(String $marca, String $modelo) {
         $this->marca = $marca;
         $this->modelo = $modelo;
     }
 
     //Métodos / Comportamientos
-    public function getInformacion() {
+    public function getInformacion():String {
         return "Marca: {$this->marca}, Modelo: {$this->modelo}";
     }
 

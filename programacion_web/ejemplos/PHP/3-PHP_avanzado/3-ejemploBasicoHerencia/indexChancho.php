@@ -3,11 +3,11 @@
 class Vehiculo {
     //Atributos
     //Alcance Público, protegido, privado
-    protected $marca; //Permite ser visualizado a través de las clases que hereden vehículo
-    protected $modelo;
+    protected String $marca; //Permite ser visualizado a través de las clases que hereden vehículo
+    protected String $modelo;
 
     //Constructor
-    public function __construct($marca, $modelo) {
+    public function __construct(String $marca, String $modelo) {
         $this->marca = $marca;
         $this->modelo = $modelo;
     }
@@ -20,9 +20,9 @@ class Vehiculo {
 }
 
 class Coche extends Vehiculo {
-    private $numeroPuertas;
+    private int $numeroPuertas;
 
-    public function __construct($marca, $modelo, $numeroPuertas) {
+    public function __construct(String $marca, String $modelo, int $numeroPuertas) {
         // Llamamos al constructor de la clase base para inicializar la marca y el modelo
         parent::__construct($marca, $modelo);
         // Inicializamos el atributo específico de la clase Coche
