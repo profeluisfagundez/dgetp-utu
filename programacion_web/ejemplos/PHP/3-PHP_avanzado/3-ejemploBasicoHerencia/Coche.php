@@ -15,7 +15,22 @@ class Coche extends Vehiculo {
         return $this->numeroPuertas;
     }
 
-    public function saludoAFranca():string {
-        return "Hola Franca desde Coche";
+    public function setNumeroPuertas(int $numeroPuertas):void {
+        $this->numeroPuertas = $numeroPuertas;
     }
+
+    public function getModelo():string {
+        return $this->modelo;
+    }
+
+    public function getInfoImportante(): string {
+        return $this->marca;
+    }
+
+    //Este método sobrescribe el método de la clase base para proporcionar información específica del coche
+    public function getInformacion():String {
+        return "Marca: {$this->marca}, Modelo: {$this->modelo}, Número de puertas: {$this->numeroPuertas}";
+    }
+
+
 }

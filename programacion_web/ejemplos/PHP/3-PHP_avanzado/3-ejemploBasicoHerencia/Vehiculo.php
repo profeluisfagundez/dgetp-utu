@@ -17,8 +17,12 @@ class Vehiculo {
         return "Marca: {$this->marca}, Modelo: {$this->modelo}";
     }
 
-    public function saludoAFranca() {
-        return "Hola Franca";
+    public function getMarca():String {
+        return $this->marca;
+    }
+
+    public function getModelo():String {
+        return $this->modelo;
     }
 
 }
