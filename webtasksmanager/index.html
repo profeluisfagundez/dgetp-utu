@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Web Tasks Manager</title>
+</head>
+<body>
+    <!--Menu de navegación para la APP-->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a href="#" class="navbar-brand">Web Task Manager</a>
+        </div>
+    </nav>
+
+    <!--Contenido principal de la aplciación-->
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                         <!--Formulario-->
+                        <form id="initTask">
+                            <div class="form-group">
+                                <input type="text" id="title" placeholder="Nombre de la tarea" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="description" cols="30" rows="8" class="form-control" placeholder="Descripción de la tarea"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary">Agregar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div id="tasks">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
